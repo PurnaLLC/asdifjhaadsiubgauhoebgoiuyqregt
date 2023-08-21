@@ -7,20 +7,33 @@
 
 import SwiftUI
 
-struct ContentView: View {
+
+
+struct ContentsView: View {
+    @EnvironmentObject var viewModel: AuthViewModel
+    let getUserDataTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, Jack!")
+        Group {
+            if viewModel.userSession != nil {
+                Home()
+                    .background(HelperView())   // << here !!
+            } else {
+                LoginView()
+                    .background(HelperView())   // << here !!
+            }
         }
-        .padding()
+      
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+
+//currentUser
+//userSession
+
+struct ContentsView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentsView().environmentObject(AuthViewModel())
+        }
     }
-}
+
