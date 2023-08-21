@@ -61,6 +61,7 @@
 		3053F4232A92E01800046BD1 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053F4222A92E01800046BD1 /* ChatViewModel.swift */; };
 		3053F4252A92E02400046BD1 /* OpenAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053F4242A92E02400046BD1 /* OpenAIService.swift */; };
 		3053F4272A92E03000046BD1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053F4262A92E03000046BD1 /* Constants.swift */; };
+		3053F4292A92F72A00046BD1 /* InformationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053F4282A92F72A00046BD1 /* InformationData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +92,7 @@
 		3053F4222A92E01800046BD1 /* ChatViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		3053F4242A92E02400046BD1 /* OpenAIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenAIService.swift; sourceTree = "<group>"; };
 		3053F4262A92E03000046BD1 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3053F4282A92F72A00046BD1 /* InformationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,11 +195,11 @@
 		3053F3B82A92DAAA00046BD1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3053F3B92A92DAAF00046BD1 /* Auth */,
 				3053F41F2A92DFFE00046BD1 /* Home */,
 				3053F41C2A92DFCA00046BD1 /* Calendar */,
 				3053F4152A92DF0800046BD1 /* TabView */,
 				3053F40E2A92DD4700046BD1 /* Profile */,
-				3053F3B92A92DAAF00046BD1 /* Auth */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -269,6 +271,7 @@
 		3053F41F2A92DFFE00046BD1 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				3053F4282A92F72A00046BD1 /* InformationData.swift */,
 				3053F4202A92E01100046BD1 /* ChatView.swift */,
 				3053F4222A92E01800046BD1 /* ChatViewModel.swift */,
 				3053F4242A92E02400046BD1 /* OpenAIService.swift */,
@@ -394,6 +397,7 @@
 				3053F3A92A92B19B00046BD1 /* Self_HelpApp.swift in Sources */,
 				3053F40B2A92DD3200046BD1 /* LoginView.swift in Sources */,
 				3053F41B2A92DF3400046BD1 /* TabPosition.swift in Sources */,
+				3053F4292A92F72A00046BD1 /* InformationData.swift in Sources */,
 				3053F3FF2A92DD0200046BD1 /* ShimmerEffect.swift in Sources */,
 				3053F4142A92DEE600046BD1 /* User.swift in Sources */,
 				3053F4032A92DD1100046BD1 /* InputView.swift in Sources */,

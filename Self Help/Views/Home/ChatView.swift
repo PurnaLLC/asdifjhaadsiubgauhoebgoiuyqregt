@@ -102,6 +102,10 @@ struct ChatView: View {
                     
                 }
                 
+                Image("SussyFlower")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width:50, height: 100)
                 
                 VStack {
                     ScrollView {
