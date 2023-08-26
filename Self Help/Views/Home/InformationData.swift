@@ -4,7 +4,8 @@
 
 
 import Foundation
-import UIKit
+import SwiftUI
+
 
 struct DataOfTheDay {
     let date: String

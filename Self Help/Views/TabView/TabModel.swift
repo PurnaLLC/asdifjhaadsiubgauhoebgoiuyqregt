@@ -8,9 +8,9 @@
 import SwiftUI
 
 enum Tab: String, CaseIterable {
-    case wordofthedaytab = "Wordz"
+    case wordofthedaytab = "Calender"
     
-    case chatview = "Learning"
+    case chatview = "Home"
     case profiletab = "Profile"
     
     var systemImage: String {
@@ -18,7 +18,7 @@ enum Tab: String, CaseIterable {
         case .wordofthedaytab:
             return "sun.max"
         case .chatview:
-            return "book"
+            return "house"
         case .profiletab:
             return "person.crop.circle"
         }

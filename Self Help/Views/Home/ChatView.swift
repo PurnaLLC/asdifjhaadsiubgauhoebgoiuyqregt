@@ -102,29 +102,34 @@ struct ChatView: View {
                     
                 }
                 
-                Image("SussyFlower")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width:50, height: 100)
-                
-                VStack {
-                    ScrollView {
-                        ForEach(viewModel.messages.filter({$0.role != .system}), id: \.id) { message in
-                            messageView(message: message)
+                VStack{
+                    Image("SussyFlower")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width:150, height: 300)
+                        .padding (.bottom, 40)
+                    
+                    VStack {
+                        ScrollView {
+                            ForEach(viewModel.messages.filter({$0.role != .system}), id: \.id) { message in
+                                messageView(message: message)
+                            }
+                        }
+                        HStack {
+                            TextField("Enter a message...", text: $viewModel.currentInput)
+                            
+                            Button {
+                                viewModel.sendMessage()
+                            } label: {
+                                Text("Send")
+                            }
+                            
                         }
                     }
-                    HStack {
-                        TextField("Enter a message...", text: $viewModel.currentInput)
-                        
-                        Button {
-                            viewModel.sendMessage()
-                        } label: {
-                            Text("Send")
-                        }
-                        
-                    }
+                    
+                    .frame(width:350, height: 300)
+                    .padding()
                 }
-                .padding()
             }
             
             

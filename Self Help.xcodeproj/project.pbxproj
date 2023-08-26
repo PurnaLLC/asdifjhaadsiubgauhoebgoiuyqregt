@@ -271,11 +271,11 @@
 		3053F41F2A92DFFE00046BD1 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				3053F4282A92F72A00046BD1 /* InformationData.swift */,
 				3053F4202A92E01100046BD1 /* ChatView.swift */,
 				3053F4222A92E01800046BD1 /* ChatViewModel.swift */,
 				3053F4242A92E02400046BD1 /* OpenAIService.swift */,
 				3053F4262A92E03000046BD1 /* Constants.swift */,
+				3053F4282A92F72A00046BD1 /* InformationData.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";

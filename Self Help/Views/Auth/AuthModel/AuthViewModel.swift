@@ -75,8 +75,7 @@ class AuthViewModel: ObservableObject{
                let messageDocumentRef = try await messagesCollectionRef.addDocument(data: subcollectionData)
                
                // Create favorites subcollection within messages subcollection
-               let favoritesCollectionRef = Firestore.firestore().collection("users").document(user.id).collection("favorites")
-               try await favoritesCollectionRef.addDocument(data: [:])
+        
                
                await fetchUser()
            } catch {
