@@ -8,19 +8,25 @@
 import SwiftUI
 
 enum Tab: String, CaseIterable {
-    case wordofthedaytab = "Calender"
+    case calendar = "Calendar"
     
     case chatview = "Home"
     case profiletab = "Profile"
     
+    case breathe = "Breathe"
+    
     var systemImage: String {
         switch self {
-        case .wordofthedaytab:
-            return "sun.max"
+        case .calendar:
+            return "calendar"
         case .chatview:
             return "house"
         case .profiletab:
             return "person.crop.circle"
+            
+        case .breathe:
+            return "lungs"
+            
         }
     }
     

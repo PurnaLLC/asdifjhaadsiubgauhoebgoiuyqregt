@@ -7,10 +7,13 @@ import Foundation
 import SwiftUI
 
 
+
+
 struct DataOfTheDay {
     let date: String
     let affirmation: String
     var challenge: String?
+    var greeting: String?
     
     init(date: String, affirmation: String) {
         self.date = date
@@ -21,9 +24,11 @@ struct DataOfTheDay {
 func fetchDataOfTheDay(completion: @escaping (DataOfTheDay?) -> Void) {
     // Define the dictionary mapping each day to data
     let dataOfTheDayMapping: [String: [String: Any]] = [
-        "2023-07-14": [
-            "affirmation": "FURBISHING",
-            "challenge": "verb",
+        "2023-08-27": [
+            "affirmation": "I AM SUS",
+            "challenge": "KISS A BOY",
+            "greeting": "HELLO"
+            
         ],
         // Add more entries for other days
     ]
@@ -38,6 +43,7 @@ func fetchDataOfTheDay(completion: @escaping (DataOfTheDay?) -> Void) {
     // Retrieve the data of the day based on the current date
     guard let fetchedData = dataOfTheDayMapping[dateString],
           let fetchedAffirmation = fetchedData["affirmation"] as? String,
+          let fetchedGreeting = fetchedData["greeting"] as? String,
           let fetchedChallenge = fetchedData["challenge"] as? String else {
         // Handle if the data is not available for the current day
         print("OHHHH CRAPE FROM THE INFORMATION DATA.")
@@ -48,6 +54,6 @@ func fetchDataOfTheDay(completion: @escaping (DataOfTheDay?) -> Void) {
     // Create a DataOfTheDay instance
     var dataOfTheDayInstance = DataOfTheDay(date: dateString, affirmation: fetchedAffirmation)
     dataOfTheDayInstance.challenge = fetchedChallenge
-    
+    dataOfTheDayInstance.greeting = fetchedGreeting
     completion(dataOfTheDayInstance) // Call the completion handler with the fetched instance
 }

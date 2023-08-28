@@ -27,6 +27,8 @@ let speechSynthesizer = AVSpeechSynthesizer()
 struct ChatView: View {
     @ObservedObject var viewModel = ViewModel()
     
+    @ObservedObject private var view2Model = DataViewModel()
+    
     @EnvironmentObject var viewsModel: AuthViewModel
     
     
@@ -36,6 +38,7 @@ struct ChatView: View {
     @Environment (\.dismiss) var dismiss
     
     
+    @State private var dataOfTheDay: DataOfTheDay?
     
     var body: some View {
         
@@ -103,32 +106,17 @@ struct ChatView: View {
                 }
                 
                 VStack{
-                    Image("SussyFlower")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width:150, height: 300)
-                        .padding (.bottom, 40)
-                    
-                    VStack {
-                        ScrollView {
-                            ForEach(viewModel.messages.filter({$0.role != .system}), id: \.id) { message in
-                                messageView(message: message)
-                            }
-                        }
-                        HStack {
-                            TextField("Enter a message...", text: $viewModel.currentInput)
-                            
-                            Button {
-                                viewModel.sendMessage()
-                            } label: {
-                                Text("Send")
-                            }
-                            
-                        }
+                   
+  
+                    if let dataOfTheDay = view2Model.dataOfTheDay {
+                        Text("Date: \(dataOfTheDay.date)")
+                        Text("Affirmation: \(dataOfTheDay.affirmation)")
+                        Text("Challenge: \(dataOfTheDay.challenge ?? "No challenge today")")
+                        Text("Greeting: \(dataOfTheDay.greeting ?? "Hello!")")
+                    } else {
+                        Text("Loading data...")
                     }
                     
-                    .frame(width:350, height: 300)
-                    .padding()
                 }
             }
             
@@ -137,6 +125,7 @@ struct ChatView: View {
             
             
         }
+        
     }
     
     

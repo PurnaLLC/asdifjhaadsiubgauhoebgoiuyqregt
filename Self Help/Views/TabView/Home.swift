@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct Home: View {
-    @State private var activeTab: Tab = .wordofthedaytab
+    @State private var activeTab: Tab = .calendar
     @Namespace private var animation
     @State private var tabShapePosition: CGPoint = .zero
     
@@ -21,6 +21,8 @@ struct Home: View {
     var body: some View {
         VStack(spacing: 0) {
             TabView(selection: $activeTab) {
+                
+                
                 ChatView().environmentObject(AuthViewModel())
                     .tabItem {
                         Image(systemName: Tab.chatview.systemImage)
@@ -29,12 +31,20 @@ struct Home: View {
                     }
                     .tag(Tab.chatview)
                 
+                Breathe()
+                    .tabItem {
+                        Image(systemName: Tab.breathe.systemImage)
+                        Text(Tab.breathe.rawValue)
+                    }
+                    .tag(Tab.breathe)
+                
+                
                 CalendarView()
                     .tabItem {
-                        Image(systemName: Tab.wordofthedaytab.systemImage)
-                        Text(Tab.wordofthedaytab.rawValue)
+                        Image(systemName: Tab.calendar.systemImage)
+                        Text(Tab.calendar.rawValue)
                     }
-                    .tag(Tab.wordofthedaytab)
+                    .tag(Tab.calendar)
                 
                 ProfileView()
                     .tabItem {
@@ -51,7 +61,7 @@ struct Home: View {
     
     // Custom tab bar
     @ViewBuilder
-    func CustomTabBar(_ tint: Color = Color("Logoblue"), _ inactiveTint: Color = .blue) -> some View {
+    func CustomTabBar(_ tint: Color = .black, _ inactiveTint: Color = .black) -> some View {
       
         HStack(alignment: .bottom, spacing: 0) {
             TabItem(
@@ -62,10 +72,21 @@ struct Home: View {
                 activeTab: $activeTab,
                 position: $tabShapePosition
             )
+            
+            
             TabItem(
                 tint: tint,
                 inactiveTint: inactiveTint,
-                tab: .wordofthedaytab,
+                tab:.breathe,
+                animation: animation,
+                activeTab: $activeTab,
+                position: $tabShapePosition
+            )
+            
+            TabItem(
+                tint: tint,
+                inactiveTint: inactiveTint,
+                tab: .calendar,
                 animation: animation,
                 activeTab: $activeTab,
                 position: $tabShapePosition
@@ -80,8 +101,8 @@ struct Home: View {
             )
         }
         .padding(.horizontal, 20)
-        .padding(.vertical, -25)
-        .padding(.bottom, 28)
+        .padding(.vertical, -10)
+        .padding(.bottom, 0)
         .background(content: {
             Rectangle()
                 .fill(.white)
@@ -105,14 +126,13 @@ struct TabItem: View {
     var body: some View {
         VStack(spacing: 5) {
             Image(systemName: tab.systemImage)
-                .font(.title2)
-                .foregroundColor(activeTab == tab ? .white : inactiveTint)
-                .frame(width: activeTab == tab ? 58 : 18, height: activeTab == tab ? 58 : 18)
+                .font(.system(size: activeTab == tab ? 24 : 20))
+                .foregroundColor(activeTab == tab ? .black : inactiveTint)
+                .frame(width: activeTab == tab ? 58 : 45, height: activeTab == tab ? 58 : 45)
+                .fixedSize()
                 .background {
                     if activeTab == tab {
-                        Circle()
-                            .fill(tint.gradient)
-                            .matchedGeometryEffect(id: "ACTIVETAB", in: animation)
+                    
                     }
                 }
             

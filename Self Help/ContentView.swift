@@ -15,7 +15,7 @@ struct ContentsView: View {
 
     var body: some View {
         Group {
-            if viewModel.currentUser != nil {
+            if viewModel.userSession != nil {
                 Home()
                     .background(HelperView())   // << here !!
             } else {
