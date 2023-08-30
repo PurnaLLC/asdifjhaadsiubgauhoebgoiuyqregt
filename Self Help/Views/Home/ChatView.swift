@@ -57,7 +57,7 @@ struct ContentView: View {
             .frame(width: 500, height: 500)
         }
     }
-
+    
     
     struct ChatView: View {
         var body: some View {
@@ -163,6 +163,7 @@ struct ContentView: View {
         
         
     }
+}
     
     
     
@@ -208,3 +209,4 @@ struct ContentView: View {
         
     }
     
+
