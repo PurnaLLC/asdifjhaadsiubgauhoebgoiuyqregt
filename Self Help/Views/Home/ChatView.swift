@@ -21,119 +21,152 @@ let speechSynthesizer = AVSpeechSynthesizer()
 
 
 
-
-
-
-struct ChatView: View {
-    @ObservedObject var viewModel = ViewModel()
-    
-    @ObservedObject private var view2Model = DataViewModel()
-    
-    @EnvironmentObject var viewsModel: AuthViewModel
+   
     
     
-    //   @Bindable var datamodel: DataModel
-    //    @Environment(\.modelContext) private var modelContext
-    //    @Query var extractedDatas: [ExtractedData]
-    @Environment (\.dismiss) var dismiss
-    
-    
-    @State private var dataOfTheDay: DataOfTheDay?
-    
-    var body: some View {
+    struct ChatView: View {
+        @ObservedObject var viewModel = ViewModel()
         
-        NavigationStack{
-            
-            
-            ZStack{
-                
-                LinearGradient(
-                    colors: [Color("logoblue"),Color("logoblue")],
-                    startPoint: .top,
-                    endPoint: .bottom)
-                .ignoresSafeArea()
-                
-                // Gloss Background....
-                GeometryReader{proxy in
-                    
-                    let size = proxy.size
-                    
-                    // Slighlty Darkening ...
-                    Color.black
-                        .opacity(0.7)
-                        .blur(radius: 200)
-                        .ignoresSafeArea()
-                    
-                    Circle()
-                        .fill(Color("Logoblue"))
-                        .padding(50)
-                        .blur(radius: 120)
-                    // Moving Top...
-                        .offset(x: -size.width / 1.8, y: -size.height / 5)
-                    
-                    Circle()
-                        .fill(Color("Logoblue"))
-                        .padding(50)
-                        .blur(radius: 150)
-                    // Moving Top...
-                        .offset(x: size.width / 1.8, y: -size.height / 2)
-                    
-                    
-                    Circle()
-                        .fill(Color("Logoblue"))
-                        .padding(50)
-                        .blur(radius: 90)
-                    // Moving Top...
-                        .offset(x: size.width / 1.8, y: size.height / 2)
-                    
-                    // Adding Purple on both botom ends...
-                    
-                    Circle()
-                        .fill(Color("Logoblue"))
-                        .padding(100)
-                        .blur(radius: 110)
-                    // Moving Top...
-                        .offset(x: size.width / 1.8, y: size.height / 2)
-                    
-                    Circle()
-                        .fill(Color("Logoblue"))
-                        .padding(100)
-                        .blur(radius: 110)
-                    // Moving Top...
-                        .offset(x: -size.width / 1.8, y: size.height / 2)
-                    
-                    
+        @ObservedObject private var view2Model = DataViewModel()
+        
+        @EnvironmentObject var viewsModel: AuthViewModel
+        
+        
+        //   @Bindable var datamodel: DataModel
+        //    @Environment(\.modelContext) private var modelContext
+        //    @Query var extractedDatas: [ExtractedData]
+        @Environment (\.dismiss) var dismiss
+        
+        
+        @State private var dataOfTheDay: DataOfTheDay?
+        
+        
+        struct CustomLine: View {
+            var body: some View {
+                Path { path in
+                    path.move(to: CGPoint(x: 0, y: 0))
+                    path.addLine(to: CGPoint(x: 500, y: -500))
                 }
+                .stroke(Color.red, lineWidth: 3)
+                .background(Color.black.opacity(0.3))
+                .frame(width: 500, height: 500)
+            }
+        }
+        
+        var body: some View {
+            
+            
+            VStack{
                 
-                VStack{
-                   
-  
-                    if let dataOfTheDay = view2Model.dataOfTheDay {
-                        Text("Date: \(dataOfTheDay.date)")
-                        Text("Affirmation: \(dataOfTheDay.affirmation)")
-                        Text("Challenge: \(dataOfTheDay.challenge ?? "No challenge today")")
-                        Text("Greeting: \(dataOfTheDay.greeting ?? "Hello!")")
-                    } else {
-                        Text("Loading data...")
+                
+                if let dataOfTheDay = view2Model.dataOfTheDay {
+                    ZStack(alignment: .top) {
+                        VStack{
+                            Text("Make \(dataOfTheDay.date) a great day???")
+                                .frame(minWidth: 200, idealWidth: 200, maxWidth: 200, minHeight: 5, idealHeight: 50, maxHeight: 100, alignment: .topLeading)
+                                .padding(5)
+                            
+                            VStack(alignment: .leading){
+                                HStack{
+                                    
+                                    Text("Dailys")
+                                        .font(.title)
+                                        .frame(alignment: .top)
+                                        .padding(22)
+                                    Spacer()
+                                }
+                            }
+                            
+                            
+                        }
+                        Spacer()
+                        
+                    }
+                    HStack{
+                        Text("Affirmation")
+                        Spacer()
+                    }
+                    .padding(.leading, 60)
+                    HStack{
+                        Spacer()
+                        Text("  \(dataOfTheDay.affirmation)")
+                            .frame(minWidth: 335, idealWidth: 335, maxWidth: 335, minHeight: 1, idealHeight: 10, maxHeight: 100, alignment: .leading)
+                        
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.red, lineWidth: 3)
+                                    .padding(0)
+                            )
+                            .padding(.trailing, 20)
                     }
                     
+                    
+                    VStack{
+                        HStack{
+                            Text("Challenge")
+                            Spacer()
+                        }
+                        .padding(.leading, 60)
+                        
+                        HStack{
+                            Spacer()
+                            Text("  \(dataOfTheDay.challenge ?? "No challenge today")")
+                                .frame(minWidth: 335, idealWidth: 335, maxWidth: 335, minHeight: 1, idealHeight: 10, maxHeight: 100, alignment: .leading)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.red, lineWidth: 3)
+                                        .padding(0)
+                                )
+                                .padding(.trailing, 20)
+                        }
+                    }
+                    Spacer()
+                    
+                    
+                    VStack{
+                        HStack{
+                            Text("AI Therapy")
+                                .font(.title)
+                                .frame(alignment: .leading)
+                                .padding(2)
+                            Spacer()
+                        }
+                        .padding(.leading, 22)
+                        HStack{
+                            Spacer()
+                            Text("  Greeting: \(dataOfTheDay.greeting ?? "Hello!")")
+                                .frame(minWidth: 335, idealWidth: 335, maxWidth: 335, minHeight: 90, idealHeight: 100, maxHeight: 150, alignment: .leading)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.red, lineWidth: 3)
+                                        .padding(0)
+                                )
+                                .padding(.trailing, 20)
+                        }
+                    }
+                    
+                    Spacer()
+                } else {
+                    Text("Loading data...")
                 }
+                
             }
-            
-            
-            //       .navigationBarHidden(true)
-            
-            
         }
+        
+        
+        //       .navigationBarHidden(true)
+        
         
     }
     
     
     
     
+    
+    
     func messageView(message: Message) -> some View {
         HStack {
-          
+            
             if message.role == .assistant{
                 Text(message.content)
                 
@@ -143,14 +176,14 @@ struct ChatView: View {
             }
         }
     }
+
     
     
     
     
     
     
-    
-}
+
 
 
 
@@ -166,8 +199,8 @@ struct ContentView_Previews: PreviewProvider {
         
         
     }
+    
+    
 }
-
-
 
 

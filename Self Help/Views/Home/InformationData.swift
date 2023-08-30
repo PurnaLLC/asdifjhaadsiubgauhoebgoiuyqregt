@@ -24,10 +24,10 @@ struct DataOfTheDay {
 func fetchDataOfTheDay(completion: @escaping (DataOfTheDay?) -> Void) {
     // Define the dictionary mapping each day to data
     let dataOfTheDayMapping: [String: [String: Any]] = [
-        "2023-08-27": [
-            "affirmation": "I AM SUS",
-            "challenge": "KISS A BOY",
-            "greeting": "HELLO"
+        "2023-08-29": [
+            "affirmation": "Ameilia keen loves me",
+            "challenge": "talk to a girl",
+            "greeting": "tell me about your day virgin boy"
             
         ],
         // Add more entries for other days
