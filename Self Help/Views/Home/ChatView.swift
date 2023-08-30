@@ -24,40 +24,45 @@ let speechSynthesizer = AVSpeechSynthesizer()
    
     
     
-    struct ChatView: View {
-        @ObservedObject var viewModel = ViewModel()
-        
-        @ObservedObject private var view2Model = DataViewModel()
-        
-        @EnvironmentObject var viewsModel: AuthViewModel
-        
-        
-        //   @Bindable var datamodel: DataModel
-        //    @Environment(\.modelContext) private var modelContext
-        //    @Query var extractedDatas: [ExtractedData]
-        @Environment (\.dismiss) var dismiss
-        
-        
-        @State private var dataOfTheDay: DataOfTheDay?
-        
-        
-        struct CustomLine: View {
-            var body: some View {
-                Path { path in
-                    path.move(to: CGPoint(x: 0, y: 0))
-                    path.addLine(to: CGPoint(x: 500, y: -500))
-                }
-                .stroke(Color.red, lineWidth: 3)
-                .background(Color.black.opacity(0.3))
-                .frame(width: 500, height: 500)
-            }
-        }
-        
+struct ContentView: View {
+    @ObservedObject var viewModel = ViewModel()
+    
+    @ObservedObject private var view2Model = DataViewModel()
+    
+    @EnvironmentObject var viewsModel: AuthViewModel
+    
+    
+    //   @Bindable var datamodel: DataModel
+    //    @Environment(\.modelContext) private var modelContext
+    //    @Query var extractedDatas: [ExtractedData]
+    @Environment (\.dismiss) var dismiss
+    
+    
+    @State private var dataOfTheDay: DataOfTheDay?
+    
+    
+    
+    
+    var body: some View {
+        ChatView()
+    }
+    struct CustomLine: View {
         var body: some View {
-            
-            
+            Path { path in
+                path.move(to: CGPoint(x: 0, y: 0))
+                path.addLine(to: CGPoint(x: 500, y: -500))
+            }
+            .stroke(Color.red, lineWidth: 3)
+            .background(Color.black.opacity(0.3))
+            .frame(width: 500, height: 500)
+        }
+    }
+
+    
+    struct ChatView: View {
+        var body: some View {
             VStack{
-                
+                CustomLine()
                 
                 if let dataOfTheDay = view2Model.dataOfTheDay {
                     ZStack(alignment: .top) {
@@ -176,31 +181,30 @@ let speechSynthesizer = AVSpeechSynthesizer()
             }
         }
     }
-
     
     
     
     
     
     
-
-
-
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        // Create an instance of ChatView.DataModel
-        
-        ChatView().environmentObject(AuthViewModel())
-            .background(HelperView())   // << here !!
-        
-        // Fallback on earlier versions
-        
+    
+    
+    
+    
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            // Create an instance of ChatView.DataModel
+            
+            ChatView().environmentObject(AuthViewModel())
+                .background(HelperView())   // << here !!
+            
+            // Fallback on earlier versions
+            
+            
+            
+        }
         
         
     }
     
-    
-}
-
-
