@@ -1,13 +1,5 @@
-//
-//  WordOfTheDayModel.swift
-//  Wordz
-
-
 import Foundation
 import SwiftUI
-
-
-
 
 struct DataOfTheDay {
     let date: String
@@ -21,27 +13,34 @@ struct DataOfTheDay {
     }
 }
 
+func convertDateFormat(from date: Date) -> String {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "yyyy-MM-dd"
+    let dateString = formatter.string(from: date)
+    
+    if let originalDate = formatter.date(from: dateString) {
+        formatter.dateFormat = "MMMM d, yyyy"
+        return formatter.string(from: originalDate)
+    } else {
+        return dateString
+    }
+}
+
 func fetchDataOfTheDay(completion: @escaping (DataOfTheDay?) -> Void) {
     // Define the dictionary mapping each day to data
     let dataOfTheDayMapping: [String: [String: Any]] = [
-        "2023-08-29": [
+        "August 31, 2023": [
             "affirmation": "Ameilia keen loves me",
             "challenge": "talk to a girl",
             "greeting": "tell me about your day virgin boy"
-            
         ],
         // Add more entries for other days
     ]
     
-    // Get the current date
-    let currentDate = Date()
-    
-    let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "yyyy-MM-dd"
-    let dateString = dateFormatter.string(from: currentDate)
+    let currentDate = convertDateFormat(from: Date())
     
     // Retrieve the data of the day based on the current date
-    guard let fetchedData = dataOfTheDayMapping[dateString],
+    guard let fetchedData = dataOfTheDayMapping[currentDate],
           let fetchedAffirmation = fetchedData["affirmation"] as? String,
           let fetchedGreeting = fetchedData["greeting"] as? String,
           let fetchedChallenge = fetchedData["challenge"] as? String else {
@@ -52,7 +51,7 @@ func fetchDataOfTheDay(completion: @escaping (DataOfTheDay?) -> Void) {
     }
     
     // Create a DataOfTheDay instance
-    var dataOfTheDayInstance = DataOfTheDay(date: dateString, affirmation: fetchedAffirmation)
+    var dataOfTheDayInstance = DataOfTheDay(date: currentDate, affirmation: fetchedAffirmation)
     dataOfTheDayInstance.challenge = fetchedChallenge
     dataOfTheDayInstance.greeting = fetchedGreeting
     completion(dataOfTheDayInstance) // Call the completion handler with the fetched instance

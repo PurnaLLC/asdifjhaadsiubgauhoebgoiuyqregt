@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  WordzAI
+//  AIgirlfriend.proj
 //
 //  Created by Maxwell Meyer on 6/15/23.
 //
@@ -46,51 +46,61 @@ struct ChatView: View {
     var body: some View {
         
             VStack{
-                CustomLine()
+                
                 
                 if let dataOfTheDay = view2Model.dataOfTheDay {
-                    ZStack(alignment: .top) {
-                        VStack{
-                            Text("Make \(dataOfTheDay.date) a great day???")
-                                .frame(minWidth: 200, idealWidth: 200, maxWidth: 200, minHeight: 5, idealHeight: 50, maxHeight: 100, alignment: .topLeading)
-                                .padding(5)
+                   
+                     
+                            
+                        
+                            Spacer()
+                            Text("Make \(dataOfTheDay.date) a great day")
+                                .font(.system(size: 30, weight: .ultraLight, design: .default))
+                                .frame(minWidth: 300, idealWidth: 300, maxWidth: 300, minHeight: 0, idealHeight: 50, maxHeight: 100, alignment: .topLeading)
+                                .padding(0)
+                              
+                            
                             
                             VStack(alignment: .leading){
+                                CustomLine()
                                 HStack{
                                     
                                     Text("Dailys")
                                         .font(.title)
                                         .frame(alignment: .top)
                                         .padding(22)
-                                    Spacer()
+                                        .position(x: 59.34, y: -10)
+                                   
                                 }
+                              
                             }
                             
-                            
-                        }
-                        Spacer()
                         
-                    }
-                    HStack{
-                        Text("Affirmation")
-                        Spacer()
-                    }
-                    .padding(.leading, 60)
-                    HStack{
-                        Spacer()
-                        Text("  \(dataOfTheDay.affirmation)")
-                            .frame(minWidth: 335, idealWidth: 335, maxWidth: 335, minHeight: 1, idealHeight: 10, maxHeight: 100, alignment: .leading)
                         
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(Color.red, lineWidth: 3)
-                                    .padding(0)
-                            )
-                            .padding(.trailing, 20)
-                    }
-                    
-                    
+                       
+                        
                     VStack{
+                        HStack{
+                            Text("Affirmation")
+                            Spacer()
+                        }
+                        .padding(.leading, 60)
+                        
+                        HStack{
+                            Spacer()
+                            Text("  \(dataOfTheDay.affirmation)")
+                                .frame(minWidth: 335, idealWidth: 335, maxWidth: 335, minHeight: 1, idealHeight: 10, maxHeight: 100, alignment: .leading)
+                            
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.red, lineWidth: 3)
+                                        .padding(0)
+                                )
+                                .padding(.trailing, 20)
+                        }
+                        
+                        
+                        
                         HStack{
                             Text("Challenge")
                             Spacer()
@@ -108,11 +118,11 @@ struct ChatView: View {
                                 )
                                 .padding(.trailing, 20)
                         }
+                        Spacer()
                     }
-                    Spacer()
                     
                     
-                    VStack{
+                
                         HStack{
                             Text("AI Therapy")
                                 .font(.title)
@@ -124,7 +134,7 @@ struct ChatView: View {
                         HStack{
                             Spacer()
                             Text("  Greeting: \(dataOfTheDay.greeting ?? "Hello!")")
-                                .frame(minWidth: 335, idealWidth: 335, maxWidth: 335, minHeight: 90, idealHeight: 100, maxHeight: 150, alignment: .leading)
+                                .frame(minWidth: 335, idealWidth: 335, maxWidth: 335, minHeight: 1, idealHeight: 10, maxHeight: 60, alignment: .leading)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 10)
                                         .stroke(Color.red, lineWidth: 3)
@@ -132,7 +142,7 @@ struct ChatView: View {
                                 )
                                 .padding(.trailing, 20)
                         }
-                    }
+                    
                     
                     Spacer()
                 } else {
@@ -144,13 +154,29 @@ struct ChatView: View {
     }
     struct CustomLine: View {
         var body: some View {
-            Path { path in
-                path.move(to: CGPoint(x: 0, y: 0))
-                path.addLine(to: CGPoint(x: 500, y: -500))
+            VStack{
+                Path { path in
+                    path.move(to: CGPoint(x: 13, y: 433.5))
+                    path.addLine(to: CGPoint(x: 13, y: 112.7))
+                }
+                .stroke(Color.red, lineWidth: 3)
+                
+                
+                Path { path in
+                    path.move(to: CGPoint(x: 13, y: 250))
+                    path.addLine(to: CGPoint(x: 38, y: 250))
+                }
+                .stroke(Color.red, lineWidth: 3)
+                
+                
+         
+                Path { path in
+                    path.move(to: CGPoint(x: 13, y: 350))
+                    path.addLine(to: CGPoint(x: 38, y: 350))
+                }
+                .stroke(Color.red, lineWidth: 3)
+                
             }
-            .stroke(Color.red, lineWidth: 3)
-            .background(Color.black.opacity(0.3))
-            .frame(width: 500, height: 500)
         }
     }
     
@@ -174,7 +200,6 @@ struct ChatView: View {
             }
         }
     }
-    
     
     
     
