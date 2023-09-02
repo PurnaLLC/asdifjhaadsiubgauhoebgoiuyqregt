@@ -31,7 +31,7 @@ struct Home: View {
                     }
                     .tag(Tab.chatview)
                 
-                Breathe()
+                OnBoarding1()
                     .tabItem {
                         Image(systemName: Tab.breathe.systemImage)
                         Text(Tab.breathe.rawValue)

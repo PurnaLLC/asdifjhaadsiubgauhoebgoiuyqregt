@@ -65,6 +65,9 @@
 		3053F4252A92E02400046BD1 /* OpenAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053F4242A92E02400046BD1 /* OpenAIService.swift */; };
 		3053F4272A92E03000046BD1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053F4262A92E03000046BD1 /* Constants.swift */; };
 		3053F4292A92F72A00046BD1 /* InformationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053F4282A92F72A00046BD1 /* InformationData.swift */; };
+		30FD37962AA16BE70071F843 /* ChatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD37952AA16BE70071F843 /* ChatListView.swift */; };
+		30FD379A2AA1794F0071F843 /* OnBoarding1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD37992AA1794F0071F843 /* OnBoarding1.swift */; };
+		30FD379D2AA187700071F843 /* OnBoarding2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD379C2AA187700071F843 /* OnBoarding2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +102,9 @@
 		3053F4242A92E02400046BD1 /* OpenAIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenAIService.swift; sourceTree = "<group>"; };
 		3053F4262A92E03000046BD1 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3053F4282A92F72A00046BD1 /* InformationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationData.swift; sourceTree = "<group>"; };
+		30FD37952AA16BE70071F843 /* ChatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListView.swift; sourceTree = "<group>"; };
+		30FD37992AA1794F0071F843 /* OnBoarding1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding1.swift; sourceTree = "<group>"; };
+		30FD379C2AA187700071F843 /* OnBoarding2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +215,7 @@
 		3053F3B82A92DAAA00046BD1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				30FD37972AA1775E0071F843 /* UserOnBoarding */,
 				3053F3B92A92DAAF00046BD1 /* Auth */,
 				3053F41F2A92DFFE00046BD1 /* Home */,
 				303513592A9C2D8A00C432FF /* Breathe */,
@@ -287,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				3053F4202A92E01100046BD1 /* ChatView.swift */,
+				30FD37952AA16BE70071F843 /* ChatListView.swift */,
 				303513602A9C3C9200C432FF /* DataViewModel.swift */,
 				3053F4222A92E01800046BD1 /* ChatViewModel.swift */,
 				3053F4242A92E02400046BD1 /* OpenAIService.swift */,
@@ -295,6 +303,15 @@
 				3035135E2A9C365900C432FF /* ChatViewData.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		30FD37972AA1775E0071F843 /* UserOnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				30FD37992AA1794F0071F843 /* OnBoarding1.swift */,
+				30FD379C2AA187700071F843 /* OnBoarding2.swift */,
+			);
+			path = UserOnBoarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,6 +432,7 @@
 				3053F3A92A92B19B00046BD1 /* Self_HelpApp.swift in Sources */,
 				3053F40B2A92DD3200046BD1 /* LoginView.swift in Sources */,
 				3053F41B2A92DF3400046BD1 /* TabPosition.swift in Sources */,
+				30FD379A2AA1794F0071F843 /* OnBoarding1.swift in Sources */,
 				3053F4292A92F72A00046BD1 /* InformationData.swift in Sources */,
 				3053F3FF2A92DD0200046BD1 /* ShimmerEffect.swift in Sources */,
 				3053F4142A92DEE600046BD1 /* User.swift in Sources */,
@@ -423,10 +441,12 @@
 				3053F41E2A92DFF200046BD1 /* CalendarView.swift in Sources */,
 				3053F3BD2A92DB0B00046BD1 /* AuthViewModel.swift in Sources */,
 				3035135D2A9C2E4500C432FF /* Breathe.swift in Sources */,
+				30FD379D2AA187700071F843 /* OnBoarding2.swift in Sources */,
 				3053F40D2A92DD3600046BD1 /* ForgotPassword.swift in Sources */,
 				3053F4252A92E02400046BD1 /* OpenAIService.swift in Sources */,
 				3053F4072A92DD2800046BD1 /* GoogleSiginBtn.swift in Sources */,
 				3053F4102A92DD5000046BD1 /* ProfileView.swift in Sources */,
+				30FD37962AA16BE70071F843 /* ChatListView.swift in Sources */,
 				3053F4172A92DF2B00046BD1 /* Home.swift in Sources */,
 				3035135F2A9C365900C432FF /* ChatViewData.swift in Sources */,
 				3053F4012A92DD0900046BD1 /* SettingsRowView.swift in Sources */,

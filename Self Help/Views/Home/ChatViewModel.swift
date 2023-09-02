@@ -12,10 +12,7 @@ import Firebase
 import FirebaseFirestoreSwift
 import FirebaseFirestore
 
-
-
-
-extension ChatView {
+extension ChatList {
     
     
    
@@ -38,17 +35,15 @@ extension ChatView {
             currentInput = ""
             
             
-
   //          let newMessage = Message(id: UUID().uuidString, role: .user, content: " I want 1 word. In this category: \(selectedPickerIndex3). I want this difficulty: \(selectedPickerIndex2). Do NOT give me any of these old words: \(oldWords)", createdAt: Date())
             
             
             
-            messages.append(newMessage)
+       //     messages.append(newMessage)
             
             print(" MAX LOOK HERE \(newMessage)")
             
           
-
                         Task {
                        let response = await openAIService.sendMessage(messages: messages)
                             guard let receivedOpenAIMessage = response?.choices.first?.message else {
@@ -91,10 +86,84 @@ extension ChatView {
         
         
     }
+    
+    func storeUserMessage(currentUser: User?, message: Message) {
+        if message.role == .assistant {
+            guard let userId = currentUser?.id else { return }
+            let db = Firestore.firestore()
+            // Assuming you have a collection named "messages" in Firestore
+            let subcollectionRef = db.collection("users").document(userId).collection("messages")
+            let newDocumentRef = subcollectionRef.document()
+            let documentData: [String: Any] = [
+                "role": message.role.rawValue,
+                "content": message.content,
+                "timestamp": FieldValue.serverTimestamp(), // Add timestamp field
+                // Add more fields as necessary
+            ]
+            newDocumentRef.setData(documentData) { error in
+                if let error = error {
+                    print("Error saving message: \(error)")
+                } else {
+                    print("Message saved successfully!")
+                }
+            }
+        }
+        if message.role == .user {
+            guard let userId = currentUser?.id else { return }
+            let db = Firestore.firestore()
+            // Assuming you have a collection named "messages" in Firestore
+            let subcollectionRef = db.collection("users").document(userId).collection("messages")
+            let newDocumentRef = subcollectionRef.document()
+            let documentData: [String: Any] = [
+                "role": message.role.rawValue,
+                "content": message.content,
+                "timestamp": FieldValue.serverTimestamp(), // Add timestamp field
+                // Add more fields as necessary
+            ]
+            newDocumentRef.setData(documentData) { error in
+                if let error = error {
+                    print("Error saving message: \(error)")
+                } else {
+                    print("Message saved successfully!")
+                }
+            }
+        }
+    }
+    
+    func getUserData(currentUser: User?, completion: @escaping ([String], [Date], [String]) -> Void) {
+        guard let userId = currentUser?.id else {
+            completion([], [], [])
+            return
+        }
+        let db = Firestore.firestore()
+        let subcollectionRef = db.collection("users").document(userId).collection("messages")
+        subcollectionRef.order(by: "timestamp", descending: false).getDocuments { (querySnapshot, error) in
+            if let error = error {
+                print("Error getting documents: \(error)")
+                completion([], [], [])
+            } else {
+                var fetchedMessages: [String] = []
+                var fetchedTimestamps: [Date] = []
+                var fetchedRole: [String] = []
+                for document in querySnapshot?.documents ?? [] {
+                    let data = document.data()
+                    if let messageContent = data["content"] as? String {
+                        fetchedMessages.append(messageContent)
+                    }
+                    if let role = data["role"] as? String {
+                        fetchedRole.append(role)
+                    }
+                    if let timestamp = data["timestamp"] as? Timestamp {
+                        let date = timestamp.dateValue()
+                        fetchedTimestamps.append(date)
+                    }
+                }
+                completion(fetchedMessages, fetchedTimestamps, fetchedRole)
+            }
+        }
+    }
+    
 }
-
-
-
 struct newCharacter: Identifiable{
     var id: String = UUID().uuidString
     var value: String
@@ -104,15 +173,6 @@ struct newCharacter: Identifiable{
     var isCurrent: Bool = false
  //   var color: Color = .clear
 }
-
-
-
-
-
-
-
-
-
 struct Message: Decodable, Hashable {
     let id: String
     let role: SenderRole
@@ -125,20 +185,13 @@ struct Message: Decodable, Hashable {
     }
     
 }
-
-
-
-
-
 struct ChatStreamCompletionResponse: Decodable {
     let id: String
     let choices: [ChatStreamChoice]
 }
-
 struct ChatStreamChoice: Decodable {
     let delta: ChatStreamContent
 }
-
 struct ChatStreamContent: Decodable {
     let content: String
 }
