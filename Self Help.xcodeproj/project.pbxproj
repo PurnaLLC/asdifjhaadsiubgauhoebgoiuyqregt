@@ -65,6 +65,18 @@
 		3053F4252A92E02400046BD1 /* OpenAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053F4242A92E02400046BD1 /* OpenAIService.swift */; };
 		3053F4272A92E03000046BD1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053F4262A92E03000046BD1 /* Constants.swift */; };
 		3053F4292A92F72A00046BD1 /* InformationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053F4282A92F72A00046BD1 /* InformationData.swift */; };
+		30F3CACD2AA2CB8F0065BB25 /* OnBoarding3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F3CACC2AA2CB8F0065BB25 /* OnBoarding3.swift */; };
+		30F3CACF2AA2D2F50065BB25 /* OnBoarding1Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F3CACE2AA2D2F50065BB25 /* OnBoarding1Gender.swift */; };
+		30F3CAD52AA2EC0C0065BB25 /* Shame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F3CAD42AA2EC0C0065BB25 /* Shame.swift */; };
+		30F3CAD72AA2EC160065BB25 /* Anger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F3CAD62AA2EC160065BB25 /* Anger.swift */; };
+		30F3CAD92AA2EC210065BB25 /* Guilt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F3CAD82AA2EC210065BB25 /* Guilt.swift */; };
+		30F3CADB2AA2EC2D0065BB25 /* Anxiety.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F3CADA2AA2EC2D0065BB25 /* Anxiety.swift */; };
+		30F3CADD2AA2EC3B0065BB25 /* Fear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F3CADC2AA2EC3B0065BB25 /* Fear.swift */; };
+		30F3CADF2AA2EC4A0065BB25 /* Depression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F3CADE2AA2EC4A0065BB25 /* Depression.swift */; };
+		30F3CAE12AA2F2030065BB25 /* SelfHelpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F3CAE02AA2F2030065BB25 /* SelfHelpButton.swift */; };
+		30F3CAE32AA3EC390065BB25 /* OnBoarding4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F3CAE22AA3EC390065BB25 /* OnBoarding4.swift */; };
+		30F3CAE52AA3ECAA0065BB25 /* OnBoarding5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F3CAE42AA3ECAA0065BB25 /* OnBoarding5.swift */; };
+		30F3CAE72AA3F0F80065BB25 /* OnBoarding6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F3CAE62AA3F0F80065BB25 /* OnBoarding6.swift */; };
 		30FD37962AA16BE70071F843 /* ChatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD37952AA16BE70071F843 /* ChatListView.swift */; };
 		30FD379A2AA1794F0071F843 /* OnBoarding1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD37992AA1794F0071F843 /* OnBoarding1.swift */; };
 		30FD379D2AA187700071F843 /* OnBoarding2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD379C2AA187700071F843 /* OnBoarding2.swift */; };
@@ -102,6 +114,18 @@
 		3053F4242A92E02400046BD1 /* OpenAIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenAIService.swift; sourceTree = "<group>"; };
 		3053F4262A92E03000046BD1 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3053F4282A92F72A00046BD1 /* InformationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationData.swift; sourceTree = "<group>"; };
+		30F3CACC2AA2CB8F0065BB25 /* OnBoarding3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding3.swift; sourceTree = "<group>"; };
+		30F3CACE2AA2D2F50065BB25 /* OnBoarding1Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding1Gender.swift; sourceTree = "<group>"; };
+		30F3CAD42AA2EC0C0065BB25 /* Shame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shame.swift; sourceTree = "<group>"; };
+		30F3CAD62AA2EC160065BB25 /* Anger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anger.swift; sourceTree = "<group>"; };
+		30F3CAD82AA2EC210065BB25 /* Guilt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guilt.swift; sourceTree = "<group>"; };
+		30F3CADA2AA2EC2D0065BB25 /* Anxiety.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anxiety.swift; sourceTree = "<group>"; };
+		30F3CADC2AA2EC3B0065BB25 /* Fear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fear.swift; sourceTree = "<group>"; };
+		30F3CADE2AA2EC4A0065BB25 /* Depression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Depression.swift; sourceTree = "<group>"; };
+		30F3CAE02AA2F2030065BB25 /* SelfHelpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfHelpButton.swift; sourceTree = "<group>"; };
+		30F3CAE22AA3EC390065BB25 /* OnBoarding4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding4.swift; sourceTree = "<group>"; };
+		30F3CAE42AA3ECAA0065BB25 /* OnBoarding5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding5.swift; sourceTree = "<group>"; };
+		30F3CAE62AA3F0F80065BB25 /* OnBoarding6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding6.swift; sourceTree = "<group>"; };
 		30FD37952AA16BE70071F843 /* ChatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListView.swift; sourceTree = "<group>"; };
 		30FD37992AA1794F0071F843 /* OnBoarding1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding1.swift; sourceTree = "<group>"; };
 		30FD379C2AA187700071F843 /* OnBoarding2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding2.swift; sourceTree = "<group>"; };
@@ -309,7 +333,19 @@
 			isa = PBXGroup;
 			children = (
 				30FD37992AA1794F0071F843 /* OnBoarding1.swift */,
+				30F3CACE2AA2D2F50065BB25 /* OnBoarding1Gender.swift */,
 				30FD379C2AA187700071F843 /* OnBoarding2.swift */,
+				30F3CAD42AA2EC0C0065BB25 /* Shame.swift */,
+				30F3CAD62AA2EC160065BB25 /* Anger.swift */,
+				30F3CAD82AA2EC210065BB25 /* Guilt.swift */,
+				30F3CADA2AA2EC2D0065BB25 /* Anxiety.swift */,
+				30F3CADC2AA2EC3B0065BB25 /* Fear.swift */,
+				30F3CADE2AA2EC4A0065BB25 /* Depression.swift */,
+				30F3CACC2AA2CB8F0065BB25 /* OnBoarding3.swift */,
+				30F3CAE22AA3EC390065BB25 /* OnBoarding4.swift */,
+				30F3CAE42AA3ECAA0065BB25 /* OnBoarding5.swift */,
+				30F3CAE62AA3F0F80065BB25 /* OnBoarding6.swift */,
+				30F3CAE02AA2F2030065BB25 /* SelfHelpButton.swift */,
 			);
 			path = UserOnBoarding;
 			sourceTree = "<group>";
@@ -423,16 +459,21 @@
 				3053F4092A92DD2D00046BD1 /* SinginViewMOdel.swift in Sources */,
 				3053F4232A92E01800046BD1 /* ChatViewModel.swift in Sources */,
 				303513612A9C3C9200C432FF /* DataViewModel.swift in Sources */,
+				30F3CAD72AA2EC160065BB25 /* Anger.swift in Sources */,
 				3053F3FB2A92DCB600046BD1 /* +View.swift in Sources */,
+				30F3CAE12AA2F2030065BB25 /* SelfHelpButton.swift in Sources */,
 				3053F3FD2A92DCBD00046BD1 /* FirebAuth.swift in Sources */,
 				3053F3AB2A92B19B00046BD1 /* ContentView.swift in Sources */,
 				3053F4052A92DD2200046BD1 /* RegistrationView.swift in Sources */,
 				3053F4272A92E03000046BD1 /* Constants.swift in Sources */,
 				3053F4192A92DF3000046BD1 /* TabModel.swift in Sources */,
+				30F3CAE32AA3EC390065BB25 /* OnBoarding4.swift in Sources */,
 				3053F3A92A92B19B00046BD1 /* Self_HelpApp.swift in Sources */,
+				30F3CACD2AA2CB8F0065BB25 /* OnBoarding3.swift in Sources */,
 				3053F40B2A92DD3200046BD1 /* LoginView.swift in Sources */,
 				3053F41B2A92DF3400046BD1 /* TabPosition.swift in Sources */,
 				30FD379A2AA1794F0071F843 /* OnBoarding1.swift in Sources */,
+				30F3CAD92AA2EC210065BB25 /* Guilt.swift in Sources */,
 				3053F4292A92F72A00046BD1 /* InformationData.swift in Sources */,
 				3053F3FF2A92DD0200046BD1 /* ShimmerEffect.swift in Sources */,
 				3053F4142A92DEE600046BD1 /* User.swift in Sources */,
@@ -442,14 +483,21 @@
 				3053F3BD2A92DB0B00046BD1 /* AuthViewModel.swift in Sources */,
 				3035135D2A9C2E4500C432FF /* Breathe.swift in Sources */,
 				30FD379D2AA187700071F843 /* OnBoarding2.swift in Sources */,
+				30F3CAE72AA3F0F80065BB25 /* OnBoarding6.swift in Sources */,
+				30F3CADD2AA2EC3B0065BB25 /* Fear.swift in Sources */,
 				3053F40D2A92DD3600046BD1 /* ForgotPassword.swift in Sources */,
+				30F3CAE52AA3ECAA0065BB25 /* OnBoarding5.swift in Sources */,
 				3053F4252A92E02400046BD1 /* OpenAIService.swift in Sources */,
 				3053F4072A92DD2800046BD1 /* GoogleSiginBtn.swift in Sources */,
+				30F3CAD52AA2EC0C0065BB25 /* Shame.swift in Sources */,
 				3053F4102A92DD5000046BD1 /* ProfileView.swift in Sources */,
+				30F3CACF2AA2D2F50065BB25 /* OnBoarding1Gender.swift in Sources */,
 				30FD37962AA16BE70071F843 /* ChatListView.swift in Sources */,
 				3053F4172A92DF2B00046BD1 /* Home.swift in Sources */,
 				3035135F2A9C365900C432FF /* ChatViewData.swift in Sources */,
+				30F3CADB2AA2EC2D0065BB25 /* Anxiety.swift in Sources */,
 				3053F4012A92DD0900046BD1 /* SettingsRowView.swift in Sources */,
+				30F3CADF2AA2EC4A0065BB25 /* Depression.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

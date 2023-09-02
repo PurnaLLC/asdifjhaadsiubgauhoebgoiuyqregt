@@ -1,74 +1,73 @@
 //
-//  OnBoarding1.swift
+//  OnBoarding1Gender.swift
 //  Self Help
 //
-//  Created by Maxwell Meyer on 8/31/23.
+//  Created by Maxwell Meyer on 9/1/23.
 //
 
 import SwiftUI
-import Combine
 
-class OnBoarding1VM: ObservableObject {
-    @Published var username: String = ""
-   
+class OnBoarding1GenderVM: ObservableObject {
+ 
+    @Published var userGender: String = ""
 }
-
-struct OnBoarding1: View {
-    @StateObject private var vm = OnBoarding1VM()
+struct OnBoarding1Gender: View {
+    
+    @State private var isShowingGender: Bool = false
+    @StateObject private var vm = OnBoarding1GenderVM()
+    
+    @StateObject private var vm2 = OnBoarding1VM()
+    
+    @State var username: String
+    
     @State private var isShowingFinishedButton: Bool = false
     
     var body: some View {
         NavigationView{
-            
             VStack {
                 VStack {
-                    Text("What should daddy call you")
+                    Text("What Gender are you \(username)")
                     
-                    InputView(text: $vm.username,
+                    InputView(text: $vm.userGender,
                               title: " ",
                               placeholder: "Name/Nick Name")
                     
                     .frame(width: 300)
                     .onReceive(
-                        vm.$username
+                        vm.$userGender
                             .debounce(for: .seconds(1), scheduler: DispatchQueue.main)
-                    ) { newText in
-                        if !newText.isEmpty {
-                            print(">> searchin g for: \(newText)")
+                    ) { userGender in
+                        if !userGender.isEmpty {
+                            print(">> searchin g for: \(userGender)")
                             isShowingFinishedButton = true
                         } else {
-                          
+                        
                             isShowingFinishedButton = false
                         }
                     }
                     
-                    
+                  
                     
                     if isShowingFinishedButton {
                         VStack {
                             NavigationLink {
                                 // destination view to navigation to
-                                OnBoarding1Gender(username: vm.username)
+                                OnBoarding2(usergender: vm.userGender, username: vm2.username)
                                     .navigationBarBackButtonHidden(true)
-                                
                             }  label: {
                                 Text("Jack is sus")
                             }
-                          
-                            
-                            
                         }
-                        
                     }
                 }
+            }
+            .onAppear {
+                // Load the username from UserDefaults when the view appears
+                let defaults = UserDefaults.standard
+                defaults.set(username, forKey: "username")
             }
         }
     }
 }
 
 
-struct OnBoarding1_Previews: PreviewProvider {
-    static var previews: some View {
-        OnBoarding1()
-    }
-}
