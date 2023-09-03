@@ -75,20 +75,9 @@ struct Shame: View {
                                 
                                 
                             }
-                            
-                            
-                            
                         }
-                        
-                        
-                    
-                    
-                    
-                    
-                    
-                    
                 } label: {
-                    Text("Jack is sus")
+                    OnBoardingNextButton()
                 }
                 
                 

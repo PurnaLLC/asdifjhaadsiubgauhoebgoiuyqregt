@@ -8,7 +8,6 @@
 import SwiftUI
 
 
-
 struct ContentsView: View {
     @EnvironmentObject var viewModel: AuthViewModel
     let getUserDataTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()

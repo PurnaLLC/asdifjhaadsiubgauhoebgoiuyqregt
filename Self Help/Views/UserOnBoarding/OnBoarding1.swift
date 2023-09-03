@@ -52,7 +52,7 @@ struct OnBoarding1: View {
                                     .navigationBarBackButtonHidden(true)
                                 
                             }  label: {
-                                Text("Jack is sus")
+                                OnBoardingNextButton()
                             }
                           
                             

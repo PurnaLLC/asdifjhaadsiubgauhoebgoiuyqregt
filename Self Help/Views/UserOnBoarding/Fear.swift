@@ -43,7 +43,8 @@ struct Fear: View {
                         }
        
             label: {
-                Text("Jack is sus")
+                OnBoardingNextButton()
+                
             }
 
                 

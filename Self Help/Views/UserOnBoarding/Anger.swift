@@ -76,7 +76,7 @@ struct Anger: View {
                                 
                             }
                      label: {
-                        Text("Jack is sus")
+                         OnBoardingNextButton()
                     }
                 }
                 

@@ -55,7 +55,7 @@ struct OnBoarding1Gender: View {
                                 OnBoarding2(usergender: vm.userGender, username: vm2.username)
                                     .navigationBarBackButtonHidden(true)
                             }  label: {
-                                Text("Jack is sus")
+                                OnBoardingNextButton()
                             }
                         }
                     }

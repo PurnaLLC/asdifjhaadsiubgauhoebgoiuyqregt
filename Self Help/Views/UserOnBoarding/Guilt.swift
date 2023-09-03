@@ -64,7 +64,7 @@ struct Guilt: View{
                     
                     
                 label: {
-                    Text("Jack is sus")
+                    OnBoardingNextButton()
                 }
                 }
                 
