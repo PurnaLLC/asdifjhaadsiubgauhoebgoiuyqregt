@@ -94,7 +94,7 @@ class UserDefaultDataService: DataService {
 
 
 class FirebaseDataService: DataService {
-    
+  
     
     
     private let db = Firestore.firestore()
@@ -121,17 +121,19 @@ class FirebaseDataService: DataService {
         checkinWithUserId.userId = userId
 
         do {
-            _ = try db.collection(collectionName).addDocument(from: checkinWithUserId)
+            let documentReference = try db.collection(collectionName).addDocument(from: checkinWithUserId)
+            checkinWithUserId.documentId = documentReference.documentID
         } catch {
             print("Error adding checkin to Firestore: \(error)")
         }
     }
 
+
     func update(_ checkin: CheckIn) {
         if let index = checkins.firstIndex(where: { $0.id == checkin.id }) {
             checkins[index] = checkin
             do {
-                try db.collection(collectionName).document(checkin.id.uuidString).setData(from: checkin)
+                try db.collection(collectionName).document(checkin.id ?? "").setData(from: checkin)
             } catch {
                 print("Error updating checkin in Firestore: \(error)")
             }
@@ -139,18 +141,30 @@ class FirebaseDataService: DataService {
     }
 
     func delete(indexSet: IndexSet) {
+        
+        guard let userId = Auth.auth().currentUser?.uid else {
+            print("User is not authenticated.")
+            return
+        }
+
         let checkinsToDelete = indexSet.map { checkins[$0] }
+
         for checkin in checkinsToDelete {
-            if let index = checkins.firstIndex(where: { $0.id == checkin.id }) {
+            if let index = checkins.firstIndex(where: { $0.id == checkin.id && $0.userId == userId }) {
                 checkins.remove(at: index)
-                do {
-                    try db.collection(collectionName).document(checkin.id.uuidString).delete()
-                } catch {
-                    print("Error deleting checkin from Firestore: \(error)")
+                
+                // Delete the document from Firestore
+                db.collection(collectionName).document(checkin.id ?? "").delete { error in
+                    if let error = error {
+                        print("Error deleting checkin from Firestore: \(error)")
+                    } else {
+                        print("Checkin deleted successfully.")
+                    }
                 }
             }
         }
     }
+   
 
     private func loadCheckins() {
         guard let userId = Auth.auth().currentUser?.uid else {

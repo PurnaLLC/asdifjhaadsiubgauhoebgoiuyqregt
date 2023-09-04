@@ -81,7 +81,6 @@ struct CheckInListView: View {
                         isShowingSheet = true
                         
                         
-                        
                     } label: {
                         Text("Add")
                     }

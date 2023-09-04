@@ -31,9 +31,12 @@ struct CheckInEditView: View {
                     Text("Increment")
                     
                     Text("Date: \(checkin.formattedDate())")
-                    
-                    TextField("Description of day", text: $checkin.name)
-                        .textFieldStyle(.roundedBorder)
+                
+                    VStack(alignment: .center){
+                        TextField("Description of day", text: $checkin.name)
+                            .textFieldStyle(.roundedBorder)
+                            
+                    }
                 }
                 
             }

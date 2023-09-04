@@ -6,15 +6,18 @@
 //
 
 import Foundation
+import FirebaseFirestoreSwift
 
 
 
 struct CheckIn: Identifiable, Codable {
-    var id = UUID()
+    @DocumentID var id: String? = UUID().uuidString
     var date = Date()
     var name = ""
     var day1to10 = 0
     var userId = ""
+    var documentId: String? // Store the Firestore document ID here
+
 
     
     func formattedDate() -> String {
