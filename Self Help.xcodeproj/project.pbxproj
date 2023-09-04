@@ -59,7 +59,6 @@
 		3053F4172A92DF2B00046BD1 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053F4162A92DF2B00046BD1 /* Home.swift */; };
 		3053F4192A92DF3000046BD1 /* TabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053F4182A92DF3000046BD1 /* TabModel.swift */; };
 		3053F41B2A92DF3400046BD1 /* TabPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053F41A2A92DF3400046BD1 /* TabPosition.swift */; };
-		3053F41E2A92DFF200046BD1 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053F41D2A92DFF200046BD1 /* CalendarView.swift */; };
 		3053F4212A92E01100046BD1 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053F4202A92E01100046BD1 /* ChatView.swift */; };
 		3053F4232A92E01800046BD1 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053F4222A92E01800046BD1 /* ChatViewModel.swift */; };
 		3053F4252A92E02400046BD1 /* OpenAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053F4242A92E02400046BD1 /* OpenAIService.swift */; };
@@ -78,6 +77,8 @@
 		30F3CAE52AA3ECAA0065BB25 /* OnBoarding5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F3CAE42AA3ECAA0065BB25 /* OnBoarding5.swift */; };
 		30F3CAE72AA3F0F80065BB25 /* OnBoarding6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F3CAE62AA3F0F80065BB25 /* OnBoarding6.swift */; };
 		30F3CAE92AA552A40065BB25 /* OnBoardingNextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F3CAE82AA552A40065BB25 /* OnBoardingNextButton.swift */; };
+		30F3CAED2AA57C070065BB25 /* CheckInListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F3CAEC2AA57C070065BB25 /* CheckInListView.swift */; };
+		30F3CAEF2AA586410065BB25 /* ChatInListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F3CAEE2AA586410065BB25 /* ChatInListModel.swift */; };
 		30FD37962AA16BE70071F843 /* ChatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD37952AA16BE70071F843 /* ChatListView.swift */; };
 		30FD379A2AA1794F0071F843 /* OnBoarding1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD37992AA1794F0071F843 /* OnBoarding1.swift */; };
 		30FD379D2AA187700071F843 /* OnBoarding2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD379C2AA187700071F843 /* OnBoarding2.swift */; };
@@ -109,7 +110,6 @@
 		3053F4162A92DF2B00046BD1 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		3053F4182A92DF3000046BD1 /* TabModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabModel.swift; sourceTree = "<group>"; };
 		3053F41A2A92DF3400046BD1 /* TabPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabPosition.swift; sourceTree = "<group>"; };
-		3053F41D2A92DFF200046BD1 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		3053F4202A92E01100046BD1 /* ChatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		3053F4222A92E01800046BD1 /* ChatViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		3053F4242A92E02400046BD1 /* OpenAIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenAIService.swift; sourceTree = "<group>"; };
@@ -128,6 +128,8 @@
 		30F3CAE42AA3ECAA0065BB25 /* OnBoarding5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding5.swift; sourceTree = "<group>"; };
 		30F3CAE62AA3F0F80065BB25 /* OnBoarding6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding6.swift; sourceTree = "<group>"; };
 		30F3CAE82AA552A40065BB25 /* OnBoardingNextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingNextButton.swift; sourceTree = "<group>"; };
+		30F3CAEC2AA57C070065BB25 /* CheckInListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckInListView.swift; sourceTree = "<group>"; };
+		30F3CAEE2AA586410065BB25 /* ChatInListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInListModel.swift; sourceTree = "<group>"; };
 		30FD37952AA16BE70071F843 /* ChatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListView.swift; sourceTree = "<group>"; };
 		30FD37992AA1794F0071F843 /* OnBoarding1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding1.swift; sourceTree = "<group>"; };
 		30FD379C2AA187700071F843 /* OnBoarding2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding2.swift; sourceTree = "<group>"; };
@@ -311,7 +313,8 @@
 		3053F41C2A92DFCA00046BD1 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
-				3053F41D2A92DFF200046BD1 /* CalendarView.swift */,
+				30F3CAEC2AA57C070065BB25 /* CheckInListView.swift */,
+				30F3CAEE2AA586410065BB25 /* ChatInListModel.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -471,9 +474,11 @@
 				3053F4272A92E03000046BD1 /* Constants.swift in Sources */,
 				3053F4192A92DF3000046BD1 /* TabModel.swift in Sources */,
 				30F3CAE32AA3EC390065BB25 /* OnBoarding4.swift in Sources */,
+				30F3CAED2AA57C070065BB25 /* CheckInListView.swift in Sources */,
 				3053F3A92A92B19B00046BD1 /* Self_HelpApp.swift in Sources */,
 				30F3CACD2AA2CB8F0065BB25 /* OnBoarding3.swift in Sources */,
 				3053F40B2A92DD3200046BD1 /* LoginView.swift in Sources */,
+				30F3CAEF2AA586410065BB25 /* ChatInListModel.swift in Sources */,
 				3053F41B2A92DF3400046BD1 /* TabPosition.swift in Sources */,
 				30FD379A2AA1794F0071F843 /* OnBoarding1.swift in Sources */,
 				30F3CAD92AA2EC210065BB25 /* Guilt.swift in Sources */,
@@ -482,7 +487,6 @@
 				3053F4142A92DEE600046BD1 /* User.swift in Sources */,
 				3053F4032A92DD1100046BD1 /* InputView.swift in Sources */,
 				3053F4212A92E01100046BD1 /* ChatView.swift in Sources */,
-				3053F41E2A92DFF200046BD1 /* CalendarView.swift in Sources */,
 				3053F3BD2A92DB0B00046BD1 /* AuthViewModel.swift in Sources */,
 				30F3CAE92AA552A40065BB25 /* OnBoardingNextButton.swift in Sources */,
 				3035135D2A9C2E4500C432FF /* Breathe.swift in Sources */,

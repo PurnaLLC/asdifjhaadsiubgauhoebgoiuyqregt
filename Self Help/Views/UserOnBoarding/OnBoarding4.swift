@@ -15,6 +15,8 @@ struct OnBoarding4: View {
                 Text("How do you deal with negative thoughts")
                 
                 
+                
+                
                 NavigationLink {
                     
                     OnBoarding5()

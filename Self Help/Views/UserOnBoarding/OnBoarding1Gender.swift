@@ -47,7 +47,6 @@ struct OnBoarding1Gender: View {
                     }
                     
                   
-                    
                     if isShowingFinishedButton {
                         VStack {
                             NavigationLink {

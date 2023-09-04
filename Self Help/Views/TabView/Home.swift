@@ -13,6 +13,9 @@ struct Home: View {
     @Namespace private var animation
     @State private var tabShapePosition: CGPoint = .zero
     
+    @StateObject var vm = CheckInViewModel(ds: UserDefaultDataService())
+    
+    
     init() {
         /// Hiding Tab Bar Due To SwiftUI iOS 16.4 Bug
         UITabBar.appearance().isHidden = true
@@ -39,7 +42,7 @@ struct Home: View {
                     .tag(Tab.breathe)
                 
                 
-                CalendarView()
+                CheckInListView(vm: vm)
                     .tabItem {
                         Image(systemName: Tab.calendar.systemImage)
                         Text(Tab.calendar.rawValue)
