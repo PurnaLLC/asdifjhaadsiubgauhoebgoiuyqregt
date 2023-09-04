@@ -8,11 +8,14 @@
 import Foundation
 
 
+
 struct CheckIn: Identifiable, Codable {
     var id = UUID()
     var date = Date()
     var name = ""
     var day1to10 = 0
+    var userId = ""
+
     
     func formattedDate() -> String {
         let dateFormatter = DateFormatter()

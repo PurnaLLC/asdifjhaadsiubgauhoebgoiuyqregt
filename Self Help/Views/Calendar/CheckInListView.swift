@@ -15,79 +15,7 @@
 
 import SwiftUI
 import Combine
-
-
-
-// ViewModel
-class CheckInViewModel: ObservableObject {
-    @Published private(set) var checkins: [CheckIn] = []
-    
-    private let ds: any DataService
-    private var cancellables = Set<AnyCancellable>()
-    
-    init(ds: any DataService = UserDefaultDataService()) {
-        self.ds = ds
-        ds.get()
-            .sink { error in
-                fatalError("\(error)")
-            } receiveValue: { checkins in
-                self.checkins = checkins
-            }
-            .store(in: &cancellables)
-    }
-    
-    func add(checkin: CheckIn) {
-        ds.add(checkin)
-    }
-    func update(checkin: CheckIn) {
-        ds.update(checkin)
-    }
-    func delete(indexSet: IndexSet) {
-        ds.delete(indexSet: indexSet)
-    }
-}
-
-struct CheckInEditView: View {
-    @State var checkin: CheckIn
-    var save: (CheckIn)->()
-    @Environment(\.dismiss) var dismiss
-    
-
-    var body: some View {
-        
-        
-        HStack {
-            
-
-            VStack{
-               
-                
-                
-                Text("Integer Value: \(checkin.day1to10)")
-                
-                Stepper(value: $checkin.day1to10, in: 0...10, step: 1) {
-                    Text("Increment")
-                    
-                    Text("Date: \(checkin.formattedDate())")
-                    
-                    TextField("Description of day", text: $checkin.name)
-                        .textFieldStyle(.roundedBorder)
-                }
-                
-            }
-            Button {
-                save(checkin)
-                dismiss()
-            } label: {
-                Text("Save")
-            }
-
-        }
-       
-        
-        .padding()
-    }
-}
+import Charts
 
 struct CheckInListView: View {
     @ObservedObject var vm: CheckInViewModel
@@ -100,15 +28,21 @@ struct CheckInListView: View {
     var body: some View {
         
         VStack{
+            
+            Chart{
+                ForEach(vm.checkins){checkin in
+                    BarMark(x:.value("Day", checkin.date, unit: .day),
+                             y: .value("Rating", checkin.day1to10))
+                    
+                }
+            }.frame(width: 375, height: 180)
+            
+            
             VStack {
                 Text("Daily Streak: \(streak)")
                     .font(.title)
                     .padding()
-                Button(action: {
-                    performCheckIn()
-                }) {
-                    Text("Mood Check-in")
-                }
+               
             }
             
             .onAppear {
@@ -142,7 +76,12 @@ struct CheckInListView: View {
                 .navigationTitle("Check Ins")
                 .toolbar {
                     Button {
+                        
+                        
                         isShowingSheet = true
+                        
+                        
+                        
                     } label: {
                         Text("Add")
                     }
@@ -196,84 +135,6 @@ struct CheckInListView: View {
         streak = UserDefaults.standard.integer(forKey: "streak")
         lastCheckedDate = UserDefaults.standard.object(forKey: "lastCheckedDate") as? Date
     }
-}
-
-
-
-protocol DataService: ObservableObject {
-    func get() -> AnyPublisher<[CheckIn], Error>
-    func add(_ checkin: CheckIn)
-    func update(_ checkin: CheckIn)
-    func delete(indexSet: IndexSet)
-}
-
-class MockDataService: DataService {
-    @Published private var checkins: [CheckIn] = []
-    
-    func get() -> AnyPublisher<[CheckIn], Error> {
-        $checkins.tryMap({$0}).eraseToAnyPublisher()
-    }
-    
-    func add(_ checkin: CheckIn) {
-        checkins.append(checkin)
-    }
-    
-    func update(_ checkin: CheckIn) {
-        guard let index = checkins.firstIndex(where: {$0.id == checkin.id}) else { return }
-        checkins[index] = checkin
-    }
-    
-    func delete(indexSet: IndexSet) {
-        checkins.remove(atOffsets: indexSet)
-    }
-}
-
-class UserDefaultDataService: DataService {
-    @Published private var checkins: [CheckIn] {
-        didSet {
-            save(items: checkins, key: key)
-        }
-    }
-    
-    private var key = "UserDefaultDataService"
-    init(){
-        checkins = []
-        checkins = load(key: key)
-    }
-    func get() -> AnyPublisher<[CheckIn], Error> {
-        $checkins.tryMap({$0}).eraseToAnyPublisher()
-    }
-    
-    func add(_ item: CheckIn) {
-        checkins.append(item)
-    }
-    
-    func update(_ item: CheckIn) {
-        guard let index = checkins.firstIndex(where: {$0.id == item.id}) else { return }
-        checkins[index] = item
-    }
-    
-    func delete(indexSet: IndexSet) {
-        checkins.remove(atOffsets: indexSet)
-    }
-    
-    // MARK: Private
-    func save<T: Identifiable & Codable> (items: [T], key: String) {
-        let encoder = JSONEncoder()
-        if let encoded = try? encoder.encode (items) {
-            let defaults = UserDefaults.standard
-            defaults.set(encoded, forKey: key)
-        }
-    }
-    func load<T: Identifiable & Codable> (key: String) -> [T] {
-        guard let data = UserDefaults.standard.object (forKey: key) as? Data else {return [] }
-        let decoder = JSONDecoder()
-        if let dataArray = try? decoder.decode ([T].self, from: data) {
-            return dataArray
-        }
-        return []
-    }
-    
 }
 
 

@@ -13,7 +13,7 @@ struct Home: View {
     @Namespace private var animation
     @State private var tabShapePosition: CGPoint = .zero
     
-    @StateObject var vm = CheckInViewModel(ds: UserDefaultDataService())
+    @StateObject var vm = CheckInViewModel(ds: FirebaseDataService())
     
     
     init() {

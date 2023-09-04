@@ -18,8 +18,10 @@ struct ContentsView: View {
                 Home()
                     .background(HelperView())   // << here !!
             } else {
-                OnBoarding1()
-                    .background(HelperView())   // << here !!
+              //  OnBoarding1()
+               //    .background(HelperView())   // << here !!
+                
+                LoginView()
             }
         }
       
