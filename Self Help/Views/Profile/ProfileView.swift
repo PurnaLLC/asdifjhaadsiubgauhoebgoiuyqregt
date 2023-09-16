@@ -21,9 +21,7 @@ struct ProfileView: View {
     
     @State var multiColor = false
     
-    
-    @State private var isLiked: Bool = false // Add this line to st
-    
+
     @State private var indexOffset = 0
     
     @State private var showMenu: Bool = false
@@ -33,12 +31,7 @@ struct ProfileView: View {
     let getUserDataTimerz = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
 
-     @State private var wordsInProfileView: [String] = [] // Add this @State propert
-    
-    
-  
-    
-    
+
     @State  private var isShowingPracticeWord = false
     
     

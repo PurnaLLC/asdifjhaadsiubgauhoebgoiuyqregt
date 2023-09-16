@@ -14,6 +14,8 @@ import Combine
 
 
 
+
+
 @main
 struct Self_HelpApp: App {
     
@@ -54,13 +56,6 @@ struct Self_HelpApp: App {
 
 
 
-class AppDelegate: NSObject, UIApplicationDelegate {
-  
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-           
-            return true
-        }
-}
 
 struct HelperView: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> some UIViewController {

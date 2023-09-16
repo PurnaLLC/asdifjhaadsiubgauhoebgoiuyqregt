@@ -24,46 +24,51 @@ struct OnBoarding1Gender: View {
     
     var body: some View {
         NavigationView{
-            VStack {
+            
+            ZStack{
+                
+                Video()
                 VStack {
-                    Text("What Gender are you \(username)")
-                    
-                    InputView(text: $vm.userGender,
-                              title: " ",
-                              placeholder: "Name/Nick Name")
-                    
-                    .frame(width: 300)
-                    .onReceive(
-                        vm.$userGender
-                            .debounce(for: .seconds(1), scheduler: DispatchQueue.main)
-                    ) { userGender in
-                        if !userGender.isEmpty {
-                            print(">> searchin g for: \(userGender)")
-                            isShowingFinishedButton = true
-                        } else {
+                    VStack {
+                        Text("What Gender are you \(username)")
                         
-                            isShowingFinishedButton = false
+                        InputView(text: $vm.userGender,
+                                  title: " ",
+                                  placeholder: "Name/Nick Name")
+                        
+                        .frame(width: 300)
+                        .onReceive(
+                            vm.$userGender
+                                .debounce(for: .seconds(1), scheduler: DispatchQueue.main)
+                        ) { userGender in
+                            if !userGender.isEmpty {
+                                print(">> searchin g for: \(userGender)")
+                                isShowingFinishedButton = true
+                            } else {
+                                
+                                isShowingFinishedButton = false
+                            }
                         }
-                    }
-                    
-                  
-                    if isShowingFinishedButton {
-                        VStack {
-                            NavigationLink {
-                                // destination view to navigation to
-                                OnBoarding2(usergender: vm.userGender, username: vm2.username)
-                                    .navigationBarBackButtonHidden(true)
-                            }  label: {
-                                OnBoardingNextButton()
+                        
+                        
+                        if isShowingFinishedButton {
+                            VStack {
+                                NavigationLink {
+                                    // destination view to navigation to
+                                    OnBoarding2(usergender: vm.userGender, username: vm2.username)
+                                        .navigationBarBackButtonHidden(true)
+                                }  label: {
+                                    OnBoardingNextButton()
+                                }
                             }
                         }
                     }
                 }
-            }
-            .onAppear {
-                // Load the username from UserDefaults when the view appears
-                let defaults = UserDefaults.standard
-                defaults.set(username, forKey: "username")
+                .onAppear {
+                    // Load the username from UserDefaults when the view appears
+                    let defaults = UserDefaults.standard
+                    defaults.set(username, forKey: "username")
+                }
             }
         }
     }

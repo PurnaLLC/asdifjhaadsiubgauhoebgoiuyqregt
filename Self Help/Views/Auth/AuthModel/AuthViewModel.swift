@@ -29,18 +29,18 @@ class AuthViewModel: ObservableObject{
     @Published var userSession: FirebaseAuth.User?
     @Published var currentUser: User?
     
-    
 
-    
-    
-    
+
+
     init() {
         self.userSession = Auth.auth().currentUser
         
-        Task{
+        Task {
             await fetchUser()
+       
         }
     }
+
     
     
     
@@ -186,9 +186,6 @@ class AuthViewModel: ObservableObject{
                 defaults.removeObject(forKey: "selectedPickerIndex4")
                 
                 
-
-                
-                
                 // Add more keys to remove if needed
 
                 print("User deleted successfully.")
@@ -230,6 +227,38 @@ class AuthViewModel: ObservableObject{
     }
     
     
- 
+    func updateLastCheckin() {
+        let db = Firestore.firestore()
+
+        if let userId = userSession?.uid {
+            let userRef = db.collection("users").document(userId)
+
+            userRef.updateData(["lastcheckin": FieldValue.serverTimestamp()]) { error in
+                if let error = error {
+                    print("Error updating last check-in: \(error.localizedDescription)")
+                } else {
+                    print("Last check-in updated successfully.")
+                    
+                    // Fetch the updated user data
+                    userRef.getDocument { (document, error) in
+                        if let document = document, document.exists {
+                            let updatedUserData = document.data()
+                            // Handle the updated user data here
+                            // For example, you can update your local user object with the latest data
+                        } else {
+                            print("Document does not exist")
+                        }
+                    }
+                }
+            }
+        }
+    }
     
+    
+   
+
+
+
+    
+
 }

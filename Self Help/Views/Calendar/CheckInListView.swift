@@ -21,119 +21,194 @@ struct CheckInListView: View {
     @ObservedObject var vm: CheckInViewModel
     @State private var isShowingSheet = false
     
-    @State private var streak: Int = 0
-    @State private var lastCheckedDate: Date?
-    
+   
+
+    @StateObject var uservm = UserDataViewModel(ds: UserFirebaseDataService())
     
     var body: some View {
         
         VStack{
             
+            
             Chart{
                 ForEach(vm.checkins){checkin in
-                    BarMark(x:.value("Day", checkin.date, unit: .day),
+                    BarMark (x:.value("Day", checkin.date, unit: .weekday ),
                              y: .value("Rating", checkin.day1to10))
                     
                 }
             }.frame(width: 375, height: 180)
-            
-            
-            VStack {
-                Text("Daily Streak: \(streak)")
-                    .font(.title)
-                    .padding()
-               
-            }
-            
-            .onAppear {
-                loadStreak()
-                print("Loaded streak: \(streak)")
-                print("Last checked date: \(String(describing: lastCheckedDate))")
-            }
-            
-            
-            
-            NavigationStack {
-                List {
-                    ForEach(vm.checkins.reversed()) { checkin in // Reverse the array here
-                        NavigationLink {
-                            CheckInEditView(checkin: checkin) { returnedCheckIn in
-                                vm.update(checkin: returnedCheckIn)
-                            }
-                        } label: {
-                            
-                            HStack{
-                                Text("Date: \(checkin.formattedDate())")
-                                Text("\(checkin.day1to10)")
-                                
-                                
-                            }
-                        }
-                        
-                    }
-                    .onDelete(perform: vm.delete)
-                }
-                .navigationTitle("Check Ins")
-                .toolbar {
-                    Button {
-                        
-                        
-                        isShowingSheet = true
-                        
-                        
-                    } label: {
-                        Text("Add")
-                    }
+            .chartYScale(domain: 0...10)
+            .chartXAxis{
+             
+                    AxisMarks(values: vm.checkins.map{ $0.date}){date in
+                        AxisValueLabel(format: .dateTime.weekday())
                     
                 }
-                .sheet(isPresented: $isShowingSheet) {
-                    NavigationStack {
-                        CheckInEditView(checkin: CheckIn()) { returnedCheckIn in
-                            vm.add(checkin: returnedCheckIn)
-                        }
-                        .navigationTitle("Add Checkin")
+            }
+            
+            VStack {
+                Text("\(uservm.userData.streak)")
+                      
+                Text("\(uservm.userData.lastcheckin)")
+                
+                }
+            
+            
+     
+            
+            VStack{
+                
+                
+                NavigationStack {
+                    
+                    
+                    
+                    VStack{
+                        Text("Checkin" )
                     }
+                    
+                    
+                    VStack{
+                       
+                    ScrollView{
+                        
+                        
+
+                            ForEach(vm.checkins.reversed()) { checkin in
+                                HStack{
+                                  
+                                    NavigationLink(destination: CheckInEditView(checkin: checkin, save: { returnedCheckIn in
+                                        vm.update(checkin: returnedCheckIn)
+                                    }, uservm: uservm)) {
+                                        // Your NavigationLink content
+                                    
+
+                                    
+                                        HStack{
+                                            Text("\(checkin.day1to10) \(checkin.formattedDate())")
+                                                .foregroundColor(.black)
+                                                .bold()
+                                                .lineLimit(1)
+                                                .minimumScaleFactor(0.00000000001)
+                                                .frame(maxWidth: .infinity, alignment: .leading)
+                                    
+                                        }
+                                        .padding(.leading, 8)
+                                        
+                                        
+                                    }
+                                    
+                                    HStack{
+                                        
+                                        Menu {
+                                            Button(role: .destructive) {
+                                                
+                                                vm.delete(checkin: checkin)
+                                                
+                                                
+                                                    
+                                                
+                                            } label: {
+                                                Image(systemName: "trash")
+                                                    .resizable()
+                                                    .frame(width: 24, height: 24)
+                                                    .foregroundColor(.red)
+                                                    .cornerRadius(10)
+                                                    .multilineTextAlignment(.center)
+                                                Text("Delete Checkin")
+                                                
+                                                
+                                            }
+                                            
+                                            
+                                            
+                                            
+                                            
+                                        } label: {
+                                            Image(systemName: "trash")
+                                                .resizable()
+                                                .frame(width: 24, height: 24)
+                                                .foregroundColor(.black)
+                                                .cornerRadius(10)
+                                                .multilineTextAlignment(.center)
+                                            
+                                            
+                                        }
+                                    }
+                                    .frame(maxWidth: 120, alignment: .trailing)
+                                    .padding(.trailing, 10)
+
+                                    
+                                    
+                                    
+                                }
+                                .frame(width: 350, height: 50)
+                                .background(getBackgroundColor(checkin:checkin))
+                              
+                                
+                                .cornerRadius(10)
+                                
+                                
+               
+                      
+                                
+                                
+                            }
+                        }
+                        
+                    }
+                    
+                    
+                    Button {
+                        
+                                isShowingSheet.toggle()
+                    } label: {
+                     Text("ADD")
+                        
+                      
+                     
+                    
+                    }
+
+                    
+                    
+                    .sheet(isPresented: $isShowingSheet) {
+                        NavigationStack {
+                            CheckInEditView(checkin: CheckIn(), save: { returnedCheckIn in
+                                vm.add(checkin: returnedCheckIn)
+                            }, uservm: uservm)
+                            .navigationTitle("Add Checkin")
+                        }
+                    }
+
                 }
             }
+            
+        }
+       
+              
+        
+        
+    }
+    
+    
+    
+    
+    func getBackgroundColor(checkin: CheckIn) -> Color {
+        switch checkin.day1to10 {
+        case 0...3:
+            return Color.red
+        case 4...7:
+            return Color.orange
+        case 8...10:
+            return Color.green
+        default:
+            return Color.gray
         }
     }
     
-    private func performCheckIn() {
-        let currentDate = Date()
-        
-        // Check if there's a last checked date
-        if let lastDate = lastCheckedDate {
-            let calendar = Calendar.current
-            
-            // Compare date components, excluding time
-            if calendar.isDateInToday(lastDate) {
-                // Already checked in today
-                return
-            }
-            
-            if calendar.isDateInYesterday(lastDate) {
-                // Checked in yesterday, increment the streak
-                streak += 1
-            } else {
-                // Missed a day, reset streak
-                streak = 0
-            }
-        } else {
-            // First time check-in
-            streak = 1
-        }
-        // Save the current date
-        lastCheckedDate = currentDate
-        saveStreak()
-    }
-    private func saveStreak() {
-        UserDefaults.standard.setValue(streak, forKey: "streak")
-        UserDefaults.standard.setValue(lastCheckedDate, forKey: "lastCheckedDate")
-    }
-    private func loadStreak() {
-        streak = UserDefaults.standard.integer(forKey: "streak")
-        lastCheckedDate = UserDefaults.standard.object(forKey: "lastCheckedDate") as? Date
-    }
+    
+
 }
 
 

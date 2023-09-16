@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		302EEBBE2AAD2B7D005F81AB /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302EEBBD2AAD2B7D005F81AB /* UserData.swift */; };
+		302EEBC02AAD2C8C005F81AB /* UserDataDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302EEBBF2AAD2C8C005F81AB /* UserDataDataService.swift */; };
+		302EEBC22AAD3368005F81AB /* UserDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302EEBC12AAD3368005F81AB /* UserDataViewModel.swift */; };
 		3035135D2A9C2E4500C432FF /* Breathe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3035135C2A9C2E4500C432FF /* Breathe.swift */; };
 		3035135F2A9C365900C432FF /* ChatViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3035135E2A9C365900C432FF /* ChatViewData.swift */; };
 		303513612A9C3C9200C432FF /* DataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303513602A9C3C9200C432FF /* DataViewModel.swift */; };
@@ -64,6 +67,11 @@
 		3053F4252A92E02400046BD1 /* OpenAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053F4242A92E02400046BD1 /* OpenAIService.swift */; };
 		3053F4272A92E03000046BD1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053F4262A92E03000046BD1 /* Constants.swift */; };
 		3053F4292A92F72A00046BD1 /* InformationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053F4282A92F72A00046BD1 /* InformationData.swift */; };
+		3097557E2AB538EA00A3BBA2 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3097557D2AB538EA00A3BBA2 /* Video.swift */; };
+		309755822AB53B1D00A3BBA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309755812AB53B1D00A3BBA2 /* SceneDelegate.swift */; };
+		309755842AB53B6800A3BBA2 /* LoopingPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309755832AB53B6800A3BBA2 /* LoopingPlayer.swift */; };
+		309755862AB53C5A00A3BBA2 /* AppDelagate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309755852AB53C5A00A3BBA2 /* AppDelagate.swift */; };
+		3097558B2AB53D1C00A3BBA2 /* Finalsnow2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3097558A2AB53D1C00A3BBA2 /* Finalsnow2.mp4 */; };
 		30B036F92AA6106900BA25D5 /* CheckInEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B036F82AA6106900BA25D5 /* CheckInEditView.swift */; };
 		30B036FB2AA6108800BA25D5 /* CheckInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B036FA2AA6108800BA25D5 /* CheckInViewModel.swift */; };
 		30B036FD2AA610D800BA25D5 /* CheckInDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B036FC2AA610D800BA25D5 /* CheckInDataService.swift */; };
@@ -88,6 +96,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		302EEBBD2AAD2B7D005F81AB /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		302EEBBF2AAD2C8C005F81AB /* UserDataDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataDataService.swift; sourceTree = "<group>"; };
+		302EEBC12AAD3368005F81AB /* UserDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataViewModel.swift; sourceTree = "<group>"; };
 		3035135C2A9C2E4500C432FF /* Breathe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breathe.swift; sourceTree = "<group>"; };
 		3035135E2A9C365900C432FF /* ChatViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewData.swift; sourceTree = "<group>"; };
 		303513602A9C3C9200C432FF /* DataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewModel.swift; sourceTree = "<group>"; };
@@ -118,6 +129,11 @@
 		3053F4242A92E02400046BD1 /* OpenAIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenAIService.swift; sourceTree = "<group>"; };
 		3053F4262A92E03000046BD1 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3053F4282A92F72A00046BD1 /* InformationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationData.swift; sourceTree = "<group>"; };
+		3097557D2AB538EA00A3BBA2 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		309755812AB53B1D00A3BBA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		309755832AB53B6800A3BBA2 /* LoopingPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoopingPlayer.swift; sourceTree = "<group>"; };
+		309755852AB53C5A00A3BBA2 /* AppDelagate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelagate.swift; sourceTree = "<group>"; };
+		3097558A2AB53D1C00A3BBA2 /* Finalsnow2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Finalsnow2.mp4; sourceTree = "<group>"; };
 		30B036F82AA6106900BA25D5 /* CheckInEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInEditView.swift; sourceTree = "<group>"; };
 		30B036FA2AA6108800BA25D5 /* CheckInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInViewModel.swift; sourceTree = "<group>"; };
 		30B036FC2AA610D800BA25D5 /* CheckInDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInDataService.swift; sourceTree = "<group>"; };
@@ -207,11 +223,14 @@
 		3053F3A72A92B19B00046BD1 /* Self Help */ = {
 			isa = PBXGroup;
 			children = (
+				309755892AB53D0D00A3BBA2 /* Assets */,
 				3053F3BE2A92DB8D00046BD1 /* Helper */,
 				3053F3B72A92DAA000046BD1 /* Components */,
 				3053F3B82A92DAAA00046BD1 /* Views */,
-				3053F3B62A92DA9C00046BD1 /* User */,
+				30B0371F2AA826B100BA25D5 /* DataProtocal */,
+				30B0371C2AA8262900BA25D5 /* Models */,
 				3053F3A82A92B19B00046BD1 /* Self_HelpApp.swift */,
+				309755852AB53C5A00A3BBA2 /* AppDelagate.swift */,
 				3053F3AA2A92B19B00046BD1 /* ContentView.swift */,
 				3053F4112A92DE6A00046BD1 /* GoogleService-Info.plist */,
 				3053F3AC2A92B19C00046BD1 /* Assets.xcassets */,
@@ -293,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				3053F3FA2A92DCB600046BD1 /* +View.swift */,
+				309755812AB53B1D00A3BBA2 /* SceneDelegate.swift */,
 				3053F3FC2A92DCBD00046BD1 /* FirebAuth.swift */,
 			);
 			path = Helper;
@@ -319,11 +339,9 @@
 		3053F41C2A92DFCA00046BD1 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				30B0371E2AA8266800BA25D5 /* CalendarViewModel */,
 				30F3CAEC2AA57C070065BB25 /* CheckInListView.swift */,
-				30F3CAEE2AA586410065BB25 /* ChatInListModel.swift */,
 				30B036F82AA6106900BA25D5 /* CheckInEditView.swift */,
-				30B036FA2AA6108800BA25D5 /* CheckInViewModel.swift */,
-				30B036FC2AA610D800BA25D5 /* CheckInDataService.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -341,6 +359,50 @@
 				3035135E2A9C365900C432FF /* ChatViewData.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		309755892AB53D0D00A3BBA2 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				3097558A2AB53D1C00A3BBA2 /* Finalsnow2.mp4 */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		30B0371C2AA8262900BA25D5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				30B0371D2AA8263B00BA25D5 /* CheckIN */,
+				3053F3B62A92DA9C00046BD1 /* User */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		30B0371D2AA8263B00BA25D5 /* CheckIN */ = {
+			isa = PBXGroup;
+			children = (
+				30F3CAEE2AA586410065BB25 /* ChatInListModel.swift */,
+				302EEBBD2AAD2B7D005F81AB /* UserData.swift */,
+			);
+			path = CheckIN;
+			sourceTree = "<group>";
+		};
+		30B0371E2AA8266800BA25D5 /* CalendarViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				30B036FA2AA6108800BA25D5 /* CheckInViewModel.swift */,
+				302EEBC12AAD3368005F81AB /* UserDataViewModel.swift */,
+			);
+			path = CalendarViewModel;
+			sourceTree = "<group>";
+		};
+		30B0371F2AA826B100BA25D5 /* DataProtocal */ = {
+			isa = PBXGroup;
+			children = (
+				30B036FC2AA610D800BA25D5 /* CheckInDataService.swift */,
+				302EEBBF2AAD2C8C005F81AB /* UserDataDataService.swift */,
+			);
+			path = DataProtocal;
 			sourceTree = "<group>";
 		};
 		30FD37972AA1775E0071F843 /* UserOnBoarding */ = {
@@ -361,6 +423,8 @@
 				30F3CAE62AA3F0F80065BB25 /* OnBoarding6.swift */,
 				30F3CAE02AA2F2030065BB25 /* SelfHelpButton.swift */,
 				30F3CAE82AA552A40065BB25 /* OnBoardingNextButton.swift */,
+				3097557D2AB538EA00A3BBA2 /* Video.swift */,
+				309755832AB53B6800A3BBA2 /* LoopingPlayer.swift */,
 			);
 			path = UserOnBoarding;
 			sourceTree = "<group>";
@@ -427,6 +491,7 @@
 				TargetAttributes = {
 					3053F3A42A92B19B00046BD1 = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -458,6 +523,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3097558B2AB53D1C00A3BBA2 /* Finalsnow2.mp4 in Resources */,
 				3053F4122A92DE6A00046BD1 /* GoogleService-Info.plist in Resources */,
 				3053F3B02A92B19C00046BD1 /* Preview Assets.xcassets in Resources */,
 				3053F3AD2A92B19C00046BD1 /* Assets.xcassets in Resources */,
@@ -480,6 +546,7 @@
 				3053F3FD2A92DCBD00046BD1 /* FirebAuth.swift in Sources */,
 				3053F3AB2A92B19B00046BD1 /* ContentView.swift in Sources */,
 				3053F4052A92DD2200046BD1 /* RegistrationView.swift in Sources */,
+				302EEBC22AAD3368005F81AB /* UserDataViewModel.swift in Sources */,
 				3053F4272A92E03000046BD1 /* Constants.swift in Sources */,
 				3053F4192A92DF3000046BD1 /* TabModel.swift in Sources */,
 				30F3CAE32AA3EC390065BB25 /* OnBoarding4.swift in Sources */,
@@ -497,9 +564,14 @@
 				3053F3FF2A92DD0200046BD1 /* ShimmerEffect.swift in Sources */,
 				3053F4142A92DEE600046BD1 /* User.swift in Sources */,
 				3053F4032A92DD1100046BD1 /* InputView.swift in Sources */,
+				309755822AB53B1D00A3BBA2 /* SceneDelegate.swift in Sources */,
+				309755862AB53C5A00A3BBA2 /* AppDelagate.swift in Sources */,
 				3053F4212A92E01100046BD1 /* ChatView.swift in Sources */,
+				3097557E2AB538EA00A3BBA2 /* Video.swift in Sources */,
+				302EEBC02AAD2C8C005F81AB /* UserDataDataService.swift in Sources */,
 				3053F3BD2A92DB0B00046BD1 /* AuthViewModel.swift in Sources */,
 				30F3CAE92AA552A40065BB25 /* OnBoardingNextButton.swift in Sources */,
+				302EEBBE2AAD2B7D005F81AB /* UserData.swift in Sources */,
 				3035135D2A9C2E4500C432FF /* Breathe.swift in Sources */,
 				30FD379D2AA187700071F843 /* OnBoarding2.swift in Sources */,
 				30F3CAE72AA3F0F80065BB25 /* OnBoarding6.swift in Sources */,
@@ -514,6 +586,7 @@
 				30F3CACF2AA2D2F50065BB25 /* OnBoarding1Gender.swift in Sources */,
 				30FD37962AA16BE70071F843 /* ChatListView.swift in Sources */,
 				3053F4172A92DF2B00046BD1 /* Home.swift in Sources */,
+				309755842AB53B6800A3BBA2 /* LoopingPlayer.swift in Sources */,
 				3035135F2A9C365900C432FF /* ChatViewData.swift in Sources */,
 				30F3CADB2AA2EC2D0065BB25 /* Anxiety.swift in Sources */,
 				3053F4012A92DD0900046BD1 /* SettingsRowView.swift in Sources */,
@@ -643,6 +716,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Self Help/Preview Content\"";
@@ -661,6 +735,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.MaxMeyer.wordz.Self-Help";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -671,6 +746,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Self Help/Preview Content\"";

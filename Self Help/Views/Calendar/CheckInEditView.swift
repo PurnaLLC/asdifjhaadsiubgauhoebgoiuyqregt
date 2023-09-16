@@ -10,87 +10,74 @@ import SwiftUI
 struct CheckInEditView: View {
     @State var checkin: CheckIn
     var save: (CheckIn)->()
-    @Environment(\.dismiss) var dismiss
     
-    @State private var streak: Int = 0
-    @State private var lastCheckedDate: Date?
+    @ObservedObject var uservm: UserDataViewModel
+    
+    @Environment(\.dismiss) var dismiss
 
     var body: some View {
-        
-        
-        HStack {
+
             
-
-            VStack{
-               
-                
-                
-                Text("Integer Value: \(checkin.day1to10)")
-                
-                Stepper(value: $checkin.day1to10, in: 0...10, step: 1) {
-                    Text("Increment")
-                    
-                    Text("Date: \(checkin.formattedDate())")
-                
-                    VStack(alignment: .center){
-                        TextField("Description of day", text: $checkin.name)
-                            .textFieldStyle(.roundedBorder)
-                            
-                    }
-                }
-                
-            }
-            Button {
-                save(checkin)
-                dismiss()
-                performCheckIn()
-            } label: {
-                Text("Save")
-            }
-
-        }
        
         
-        .padding()
-    }
-    
-    
-    private func performCheckIn() {
-        let currentDate = Date()
-        
-        // Check if there's a last checked date
-        if let lastDate = lastCheckedDate {
-            let calendar = Calendar.current
-            
-            // Compare date components, excluding time
-            if calendar.isDateInToday(lastDate) {
-                // Already checked in today
-                return
+            VStack{
+                HStack {
+                    
+                    
+                    VStack{
+                        
+                        
+                        
+                        Text("Integer Value: \(checkin.day1to10)")
+                        
+                        Stepper(value: $checkin.day1to10, in: 0...10, step: 1) {
+                            Text("Increment")
+                            
+                            Text("Date: \(checkin.formattedDate())")
+                            
+                            
+                            VStack(alignment: .center){
+                                
+                                TextField("Description of day", text: $checkin.name, axis: .vertical)
+                                    .lineLimit(6)
+                                    .textFieldStyle(.roundedBorder)
+                                    .padding()
+                                    .frame(width: 300)
+                            }
+                        }
+                        
+                        VStack {
+                            DatePicker("Finished By", selection: $checkin.date, in: Date()..., displayedComponents: .date)
+                            
+                              }
+                        
+                        
+
+                        
+                        
+                    }
+                    
+                    
+                }.padding(.leading, 7)
+                
+                Button {
+                    save(checkin)
+                    dismiss()
+                    
+                    uservm.updateStreak(uservm.userData.streak + 1) // Update the streak count
+                    
+                    
+                } label: {
+                    Text("Save")
+                }
             }
-            
-            if calendar.isDateInYesterday(lastDate) {
-                // Checked in yesterday, increment the streak
-                streak += 1
-            } else {
-                // Missed a day, reset streak
-                streak = 0
-            }
-        } else {
-            // First time check-in
-            streak = 1
+            .padding()
         }
-        // Save the current date
-        lastCheckedDate = currentDate
-        saveStreak()
-    }
+        
+      
     
     
-    private func saveStreak() {
-        UserDefaults.standard.setValue(streak, forKey: "streak")
-        UserDefaults.standard.setValue(lastCheckedDate, forKey: "lastCheckedDate")
-    }
-    private func loadStreak() {
-        streak = UserDefaults.standard.integer(forKey: "streak")
-        lastCheckedDate = UserDefaults.standard.object(forKey: "lastCheckedDate") as? Date
-    }
+
+
 }
+

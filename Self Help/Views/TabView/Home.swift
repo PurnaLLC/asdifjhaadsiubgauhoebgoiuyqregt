@@ -15,6 +15,7 @@ struct Home: View {
     
     @StateObject var vm = CheckInViewModel(ds: FirebaseDataService())
     
+    @StateObject var uservm = UserDataViewModel(ds: UserFirebaseDataService())
     
     init() {
         /// Hiding Tab Bar Due To SwiftUI iOS 16.4 Bug
@@ -42,7 +43,7 @@ struct Home: View {
                     .tag(Tab.breathe)
                 
                 
-                CheckInListView(vm: vm)
+                CheckInListView(vm: vm, uservm: uservm)
                     .tabItem {
                         Image(systemName: Tab.calendar.systemImage)
                         Text(Tab.calendar.rawValue)

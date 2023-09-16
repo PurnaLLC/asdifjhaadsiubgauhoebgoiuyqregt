@@ -20,45 +20,51 @@ struct OnBoarding1: View {
     var body: some View {
         NavigationView{
             
-            VStack {
+            ZStack{
+            Video()
+            
+            
+            
                 VStack {
-                    Text("What should daddy call you")
-                    
-                    InputView(text: $vm.username,
-                              title: " ",
-                              placeholder: "Name/Nick Name")
-                    
-                    .frame(width: 300)
-                    .onReceive(
-                        vm.$username
-                            .debounce(for: .seconds(1), scheduler: DispatchQueue.main)
-                    ) { newText in
-                        if !newText.isEmpty {
-                            print(">> searchin g for: \(newText)")
-                            isShowingFinishedButton = true
-                        } else {
-                          
-                            isShowingFinishedButton = false
-                        }
-                    }
-                    
-                    
-                    
-                    if isShowingFinishedButton {
-                        VStack {
-                            NavigationLink {
-                                // destination view to navigation to
-                                OnBoarding1Gender(username: vm.username)
-                                    .navigationBarBackButtonHidden(true)
+                    VStack {
+                        Text("What should daddy call you")
+                        
+                        InputView(text: $vm.username,
+                                  title: " ",
+                                  placeholder: "Name/Nick Name")
+                        
+                        .frame(width: 300)
+                        .onReceive(
+                            vm.$username
+                                .debounce(for: .seconds(1), scheduler: DispatchQueue.main)
+                        ) { newText in
+                            if !newText.isEmpty {
+                                print(">> searchin g for: \(newText)")
+                                isShowingFinishedButton = true
+                            } else {
                                 
-                            }  label: {
-                                OnBoardingNextButton()
+                                isShowingFinishedButton = false
                             }
-                          
-                            
-                            
                         }
                         
+                        
+                        
+                        if isShowingFinishedButton {
+                            VStack {
+                                NavigationLink {
+                                    // destination view to navigation to
+                                    OnBoarding1Gender(username: vm.username)
+                                        .navigationBarBackButtonHidden(true)
+                                    
+                                }  label: {
+                                    OnBoardingNextButton()
+                                }
+                                
+                                
+                                
+                            }
+                            
+                        }
                     }
                 }
             }
