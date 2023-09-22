@@ -9,19 +9,25 @@ import SwiftUI
 
 
 struct ContentsView: View {
+    
     @EnvironmentObject var viewModel: AuthViewModel
+    @State private var animationDuration: Double = 3
+    @State private var isMinimized: Bool = true
+    @State private var numberOfPetals: Double = 7
+
     let getUserDataTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
     var body: some View {
         Group {
             if viewModel.currentUser != nil {
-                Home()
-                    .background(HelperView())   // << here !!
+                FlowerView(isMinimized: $isMinimized, numberOfPetals: $numberOfPetals, animationDuration: $animationDuration)
             } else {
               //  OnBoarding1()
                //    .background(HelperView())   // << here !!
-                
-                OnBoarding1()
+//                FlowerView(isMinimized: .constant(false),
+//                           numberOfPetals: .constant(5),
+//                           animationDuration: .constant(4.2))
+               getSwifty()
             }
         }
       
