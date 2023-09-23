@@ -15,22 +15,29 @@ struct getSwifty: View {
     @State private var loopCount: Int = 0
     @State private var breathDuration = 4.2
     let maxLoopCount: Int = 5
+    static let petalDuration = 0.5
     
     private var fadeDuration: Double {
         return breathDuration * 0.6
     }
 
     func playAnimation() {
-            self.animationDuration = self.breathDuration
-            self.isMinimized.toggle()
+        
+                            self.animationDuration = self.breathDuration
+                            self.isMinimized.toggle()
 
-            DispatchQueue.main.asyncAfter(deadline: .now() + self.animationDuration) {
-                self.isMinimized.toggle()
+                            DispatchQueue.main.asyncAfter(deadline: .now() + self.animationDuration) {
+                                self.isMinimized.toggle()
+                            }
+                            
+                            // Add this
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 2 * self.animationDuration) {
+                                self.animationDuration = getSwifty.petalDuration
+                            }
+                        
             }
-        }
+        
     
-    
-
     func loopAnimation() {
           guard loopCount < maxLoopCount else {
               print("Completed all loops!")
@@ -39,19 +46,12 @@ struct getSwifty: View {
 
         playAnimation()
 
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2 * animationDuration) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + animationDuration) {
                 loopCount += 1
                 loopAnimation()
             }
         }
 
-    
-    
-    
-    
-    
-    
-    
     
     var body: some View {
         List {
