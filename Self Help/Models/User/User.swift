@@ -17,6 +17,8 @@ struct User: Identifiable, Codable {
         
     
     
+    //I hate sus
+    
     
     var initials: String{
         let formatter = PersonNameComponentsFormatter()
