@@ -10,22 +10,16 @@ import SwiftUI
 struct OnBoarding5: View {
     var body: some View {
         
-        NavigationView{
+ 
             VStack{
                 Text("Do you have aids")
-                
-                NavigationLink {
-                    
-                    OnBoarding5()
-                        .navigationBarBackButtonHidden(true)
-                    
-                }label: {
-                    OnBoardingNextButton()
-                }
+                    .foregroundColor(.white)
+
+              
                 
             }
         }
-    }
+    
 }
 
 struct OnBoarding5_Previews: PreviewProvider {

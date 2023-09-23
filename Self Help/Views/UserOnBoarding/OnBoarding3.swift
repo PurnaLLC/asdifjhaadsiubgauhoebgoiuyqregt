@@ -16,23 +16,16 @@ struct OnBoarding3: View {
     //  let savedArray = UserDefaults.standard.object(forKey: "usergender ") as? [String] ?? [String]()
     
     var body: some View {
-        NavigationView{
+     
             Text("What is your favorite color!")
+            .foregroundColor(.white)
+
             
             
-            
-            NavigationLink {
-                       
-                    OnBoarding4()
-                        .navigationBarBackButtonHidden(true)
- 
-            }label: {
-                OnBoardingNextButton()
-            }
+      
             
             
-            
-        }
+        
         
     }
 }
