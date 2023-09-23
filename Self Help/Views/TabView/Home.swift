@@ -15,7 +15,7 @@ struct Home: View {
     
     @StateObject var vm = CheckInViewModel(ds: FirebaseDataService())
     
-    @StateObject var uservm = UserDataViewModel(ds: UserFirebaseDataService())
+    @StateObject var uservm = UserDataViewModel(dataService: UserFirebaseDataService())
     
     init() {
         /// Hiding Tab Bar Due To SwiftUI iOS 16.4 Bug

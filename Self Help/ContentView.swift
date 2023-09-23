@@ -12,16 +12,19 @@ struct ContentsView: View {
     @EnvironmentObject var viewModel: AuthViewModel
     let getUserDataTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
+    
+    @ObservedObject var vm =  OnBoardingControlViewViewModel()
+    
+    
     var body: some View {
         Group {
             if viewModel.currentUser != nil {
-                Home()
-                    .background(HelperView())   // << here !!
-            } else {
-              //  OnBoarding1()
-               //    .background(HelperView())   // << here !!
                 
-                OnBoarding1()
+                Home()
+                .background(HelperView())   // << here !!
+            } else {
+             
+                OnBoardingControlView(usergender: vm.userName, username: vm.userGender)
             }
         }
       

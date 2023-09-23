@@ -149,7 +149,7 @@ struct LoginView: View {
                                 }
                             } .padding (.top, 200)
                                 .padding (.bottom, 20)
-
+                            
                             
                             
                             
@@ -161,12 +161,12 @@ struct LoginView: View {
                             }
                             .cornerRadius(10)
                             .frame(width: 350, height: 50, alignment: .center)
-                     
-
+                            
+                            
                             
                         }
-                    .frame(width: 350, height: 175, alignment: .center)
-
+                        .frame(width: 350, height: 175, alignment: .center)
+                        
                         
                         
                         Spacer()
@@ -185,23 +185,15 @@ struct LoginView: View {
                             
                         }
                         .font(.system(size:18))
-                        
+                            
                             
                         }
                     }
                 )
         }
+        .navigationBarHidden(true)
         
     }
-    
-    
-    
-
-    
-    
-    
-    
-    
 }
 
 extension LoginView: AuthenticationFormProtocol{

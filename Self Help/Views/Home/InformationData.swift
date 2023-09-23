@@ -29,7 +29,7 @@ func convertDateFormat(from date: Date) -> String {
 func fetchDataOfTheDay(completion: @escaping (DataOfTheDay?) -> Void) {
     // Define the dictionary mapping each day to data
     let dataOfTheDayMapping: [String: [String: Any]] = [
-        "August 31, 2023": [
+        "September 21, 2023": [
             "affirmation": "Ameilia keen loves me",
             "challenge": "talk to a girl",
             "greeting": "tell me about your day virgin boy"

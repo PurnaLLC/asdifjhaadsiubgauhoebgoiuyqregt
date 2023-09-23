@@ -118,6 +118,8 @@ class FirebaseDataService: DataService {
     init() {
         // Load initial data from Firebase when the app starts
         loadCheckins()
+        
+        
     }
 
     func get() -> AnyPublisher<[CheckIn], Error> {

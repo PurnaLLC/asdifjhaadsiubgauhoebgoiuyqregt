@@ -8,7 +8,8 @@
 
 import Foundation
 import FirebaseFirestoreSwift
-
+import Firebase
+import FirebaseFirestore
 
 
 struct UserData: Identifiable, Codable {
@@ -26,6 +27,8 @@ struct UserData: Identifiable, Codable {
     }
     
     
+    
+    
+    
+    
 }
-
-

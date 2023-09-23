@@ -67,12 +67,16 @@
 		3053F4252A92E02400046BD1 /* OpenAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053F4242A92E02400046BD1 /* OpenAIService.swift */; };
 		3053F4272A92E03000046BD1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053F4262A92E03000046BD1 /* Constants.swift */; };
 		3053F4292A92F72A00046BD1 /* InformationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053F4282A92F72A00046BD1 /* InformationData.swift */; };
+		3084B4742AB55A8000D357BE /* WhiteInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3084B4732AB55A8000D357BE /* WhiteInputView.swift */; };
+		3084B4782ABAA37900D357BE /* SelfHelpButton2Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3084B4772ABAA37900D357BE /* SelfHelpButton2Button.swift */; };
 		3097557E2AB538EA00A3BBA2 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3097557D2AB538EA00A3BBA2 /* Video.swift */; };
 		309755822AB53B1D00A3BBA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309755812AB53B1D00A3BBA2 /* SceneDelegate.swift */; };
 		309755842AB53B6800A3BBA2 /* LoopingPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309755832AB53B6800A3BBA2 /* LoopingPlayer.swift */; };
 		309755862AB53C5A00A3BBA2 /* AppDelagate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309755852AB53C5A00A3BBA2 /* AppDelagate.swift */; };
 		3097558B2AB53D1C00A3BBA2 /* Finalsnow2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3097558A2AB53D1C00A3BBA2 /* Finalsnow2.mp4 */; };
-		30B036F92AA6106900BA25D5 /* CheckInEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B036F82AA6106900BA25D5 /* CheckInEditView.swift */; };
+		3097558D2AB544F200A3BBA2 /* OnBoardingControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3097558C2AB544F200A3BBA2 /* OnBoardingControlView.swift */; };
+		30AE2A1F2ABE84B400A9EA21 /* CheckinEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A1E2ABE84B400A9EA21 /* CheckinEditView.swift */; };
+		30B036F92AA6106900BA25D5 /* CreateCheckinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B036F82AA6106900BA25D5 /* CreateCheckinView.swift */; };
 		30B036FB2AA6108800BA25D5 /* CheckInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B036FA2AA6108800BA25D5 /* CheckInViewModel.swift */; };
 		30B036FD2AA610D800BA25D5 /* CheckInDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B036FC2AA610D800BA25D5 /* CheckInDataService.swift */; };
 		30F3CACD2AA2CB8F0065BB25 /* OnBoarding3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F3CACC2AA2CB8F0065BB25 /* OnBoarding3.swift */; };
@@ -129,12 +133,16 @@
 		3053F4242A92E02400046BD1 /* OpenAIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenAIService.swift; sourceTree = "<group>"; };
 		3053F4262A92E03000046BD1 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3053F4282A92F72A00046BD1 /* InformationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationData.swift; sourceTree = "<group>"; };
+		3084B4732AB55A8000D357BE /* WhiteInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteInputView.swift; sourceTree = "<group>"; };
+		3084B4772ABAA37900D357BE /* SelfHelpButton2Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfHelpButton2Button.swift; sourceTree = "<group>"; };
 		3097557D2AB538EA00A3BBA2 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		309755812AB53B1D00A3BBA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		309755832AB53B6800A3BBA2 /* LoopingPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoopingPlayer.swift; sourceTree = "<group>"; };
 		309755852AB53C5A00A3BBA2 /* AppDelagate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelagate.swift; sourceTree = "<group>"; };
 		3097558A2AB53D1C00A3BBA2 /* Finalsnow2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Finalsnow2.mp4; sourceTree = "<group>"; };
-		30B036F82AA6106900BA25D5 /* CheckInEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInEditView.swift; sourceTree = "<group>"; };
+		3097558C2AB544F200A3BBA2 /* OnBoardingControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingControlView.swift; sourceTree = "<group>"; };
+		30AE2A1E2ABE84B400A9EA21 /* CheckinEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinEditView.swift; sourceTree = "<group>"; };
+		30B036F82AA6106900BA25D5 /* CreateCheckinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCheckinView.swift; sourceTree = "<group>"; };
 		30B036FA2AA6108800BA25D5 /* CheckInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInViewModel.swift; sourceTree = "<group>"; };
 		30B036FC2AA610D800BA25D5 /* CheckInDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInDataService.swift; sourceTree = "<group>"; };
 		30F3CACC2AA2CB8F0065BB25 /* OnBoarding3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding3.swift; sourceTree = "<group>"; };
@@ -261,6 +269,7 @@
 				3053F3FE2A92DD0200046BD1 /* ShimmerEffect.swift */,
 				3053F4002A92DD0900046BD1 /* SettingsRowView.swift */,
 				3053F4022A92DD1100046BD1 /* InputView.swift */,
+				3084B4732AB55A8000D357BE /* WhiteInputView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -341,7 +350,8 @@
 			children = (
 				30B0371E2AA8266800BA25D5 /* CalendarViewModel */,
 				30F3CAEC2AA57C070065BB25 /* CheckInListView.swift */,
-				30B036F82AA6106900BA25D5 /* CheckInEditView.swift */,
+				30B036F82AA6106900BA25D5 /* CreateCheckinView.swift */,
+				30AE2A1E2ABE84B400A9EA21 /* CheckinEditView.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -425,6 +435,8 @@
 				30F3CAE82AA552A40065BB25 /* OnBoardingNextButton.swift */,
 				3097557D2AB538EA00A3BBA2 /* Video.swift */,
 				309755832AB53B6800A3BBA2 /* LoopingPlayer.swift */,
+				3097558C2AB544F200A3BBA2 /* OnBoardingControlView.swift */,
+				3084B4772ABAA37900D357BE /* SelfHelpButton2Button.swift */,
 			);
 			path = UserOnBoarding;
 			sourceTree = "<group>";
@@ -556,9 +568,10 @@
 				30B036FD2AA610D800BA25D5 /* CheckInDataService.swift in Sources */,
 				3053F40B2A92DD3200046BD1 /* LoginView.swift in Sources */,
 				30F3CAEF2AA586410065BB25 /* ChatInListModel.swift in Sources */,
+				3084B4742AB55A8000D357BE /* WhiteInputView.swift in Sources */,
 				3053F41B2A92DF3400046BD1 /* TabPosition.swift in Sources */,
 				30FD379A2AA1794F0071F843 /* OnBoarding1.swift in Sources */,
-				30B036F92AA6106900BA25D5 /* CheckInEditView.swift in Sources */,
+				30B036F92AA6106900BA25D5 /* CreateCheckinView.swift in Sources */,
 				30F3CAD92AA2EC210065BB25 /* Guilt.swift in Sources */,
 				3053F4292A92F72A00046BD1 /* InformationData.swift in Sources */,
 				3053F3FF2A92DD0200046BD1 /* ShimmerEffect.swift in Sources */,
@@ -570,6 +583,7 @@
 				3097557E2AB538EA00A3BBA2 /* Video.swift in Sources */,
 				302EEBC02AAD2C8C005F81AB /* UserDataDataService.swift in Sources */,
 				3053F3BD2A92DB0B00046BD1 /* AuthViewModel.swift in Sources */,
+				3084B4782ABAA37900D357BE /* SelfHelpButton2Button.swift in Sources */,
 				30F3CAE92AA552A40065BB25 /* OnBoardingNextButton.swift in Sources */,
 				302EEBBE2AAD2B7D005F81AB /* UserData.swift in Sources */,
 				3035135D2A9C2E4500C432FF /* Breathe.swift in Sources */,
@@ -581,6 +595,7 @@
 				3053F4252A92E02400046BD1 /* OpenAIService.swift in Sources */,
 				3053F4072A92DD2800046BD1 /* GoogleSiginBtn.swift in Sources */,
 				30B036FB2AA6108800BA25D5 /* CheckInViewModel.swift in Sources */,
+				30AE2A1F2ABE84B400A9EA21 /* CheckinEditView.swift in Sources */,
 				30F3CAD52AA2EC0C0065BB25 /* Shame.swift in Sources */,
 				3053F4102A92DD5000046BD1 /* ProfileView.swift in Sources */,
 				30F3CACF2AA2D2F50065BB25 /* OnBoarding1Gender.swift in Sources */,
@@ -590,6 +605,7 @@
 				3035135F2A9C365900C432FF /* ChatViewData.swift in Sources */,
 				30F3CADB2AA2EC2D0065BB25 /* Anxiety.swift in Sources */,
 				3053F4012A92DD0900046BD1 /* SettingsRowView.swift in Sources */,
+				3097558D2AB544F200A3BBA2 /* OnBoardingControlView.swift in Sources */,
 				30F3CADF2AA2EC4A0065BB25 /* Depression.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

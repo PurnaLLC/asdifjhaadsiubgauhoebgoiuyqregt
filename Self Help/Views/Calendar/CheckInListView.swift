@@ -21,14 +21,14 @@ struct CheckInListView: View {
     @ObservedObject var vm: CheckInViewModel
     @State private var isShowingSheet = false
     
-   
-
-    @StateObject var uservm = UserDataViewModel(ds: UserFirebaseDataService())
+    @ObservedObject var uservm: UserDataViewModel
     
     var body: some View {
         
+        
+        
+        
         VStack{
-            
             
             Chart{
                 ForEach(vm.checkins){checkin in
@@ -37,24 +37,25 @@ struct CheckInListView: View {
                     
                 }
             }.frame(width: 375, height: 180)
-            .chartYScale(domain: 0...10)
-            .chartXAxis{
-             
+                .chartYScale(domain: 0...10)
+                .chartXAxis{
+                    
                     AxisMarks(values: vm.checkins.map{ $0.date}){date in
                         AxisValueLabel(format: .dateTime.weekday())
-                    
+                        
+                    }
                 }
+            
+            
+            ForEach(uservm.userdatas) { userdata in
+                
+                Text("\(userdata.streak)")
+                
+                
+                
             }
             
-            VStack {
-                Text("\(uservm.userData.streak)")
-                      
-                Text("\(uservm.userData.lastcheckin)")
-                
-                }
             
-            
-     
             
             VStack{
                 
@@ -69,33 +70,33 @@ struct CheckInListView: View {
                     
                     
                     VStack{
-                       
-                    ScrollView{
                         
-                        
-
+                        ScrollView{
+                            
+                            
+                            
                             ForEach(vm.checkins.reversed()) { checkin in
+                                
                                 HStack{
-                                  
-                                    NavigationLink(destination: CheckInEditView(checkin: checkin, save: { returnedCheckIn in
-                                        vm.update(checkin: returnedCheckIn)
-                                    }, uservm: uservm)) {
-                                        // Your NavigationLink content
-                                    
-
-                                    
+                                    NavigationLink {
+                                        CheckinEditView(checkin: checkin) { returnedCheckIn in
+                                            vm.update(checkin: returnedCheckIn)
+                                        }
+                                    } label: {
+                                        
                                         HStack{
-                                            Text("\(checkin.day1to10) \(checkin.formattedDate())")
+                                            Text("\(checkin.formattedDate())")
                                                 .foregroundColor(.black)
                                                 .bold()
                                                 .lineLimit(1)
                                                 .minimumScaleFactor(0.00000000001)
                                                 .frame(maxWidth: .infinity, alignment: .leading)
-                                    
+                                            
                                         }
-                                        .padding(.leading, 8)
+                                        .padding(.leading, 5)
                                         
-                                        
+                                        Text("\(checkin.day1to10)")
+                                            .foregroundColor(.black)
                                     }
                                     
                                     HStack{
@@ -106,8 +107,6 @@ struct CheckInListView: View {
                                                 vm.delete(checkin: checkin)
                                                 
                                                 
-                                                    
-                                                
                                             } label: {
                                                 Image(systemName: "trash")
                                                     .resizable()
@@ -115,7 +114,7 @@ struct CheckInListView: View {
                                                     .foregroundColor(.red)
                                                     .cornerRadius(10)
                                                     .multilineTextAlignment(.center)
-                                                Text("Delete Checkin")
+                                                Text("Delete Chechin")
                                                 
                                                 
                                             }
@@ -137,52 +136,56 @@ struct CheckInListView: View {
                                     }
                                     .frame(maxWidth: 120, alignment: .trailing)
                                     .padding(.trailing, 10)
-
+                                    
                                     
                                     
                                     
                                 }
                                 .frame(width: 350, height: 50)
                                 .background(getBackgroundColor(checkin:checkin))
-                              
-                                
                                 .cornerRadius(10)
                                 
                                 
-               
-                      
+                                
                                 
                                 
                             }
-                        }
-                        
-                    }
-                    
-                    
-                    Button {
-                        
-                                isShowingSheet.toggle()
-                    } label: {
-                     Text("ADD")
-                        
-                      
-                     
-                    
-                    }
-
-                    
-                    
-                    .sheet(isPresented: $isShowingSheet) {
-                        NavigationStack {
-                            CheckInEditView(checkin: CheckIn(), save: { returnedCheckIn in
-                                vm.add(checkin: returnedCheckIn)
-                            }, uservm: uservm)
-                            .navigationTitle("Add Checkin")
+                            
                         }
                     }
-
+                    
+                }
+                
+            }
+            
+            
+            ForEach(uservm.userdatas) { userdata in
+            
+                Button {
+                    
+                    
+                    isShowingSheet.toggle()
+                    
+                    
+                } label: {
+                    
+                    Text("ADD")
+                    
+                }
+                
+                
+                .sheet(isPresented: $isShowingSheet) {
+                    NavigationStack {
+                        CreateCheckinView(checkin: CheckIn(), save: { returnedCheckIn in
+                            vm.add(checkin: returnedCheckIn)
+                        }, uservm: uservm, currentStreak: userdata.streak)
+                        
+                        .navigationTitle("Add Checkin")
+                    }
+                    
                 }
             }
+            
             
         }
        

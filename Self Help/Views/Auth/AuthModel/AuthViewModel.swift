@@ -61,29 +61,83 @@ class AuthViewModel: ObservableObject{
     
     
     
-    func createUser(withEmail email: String, password: String, fullname: String, messageContent: String) async throws {
-           do {
-               let result = try await Auth.auth().createUser(withEmail: email, password: password)
-               self.userSession = result.user
-               let user = User(id: result.user.uid, fullname: fullname, email: email)
-               let encodedUser = try Firestore.Encoder().encode(user)
-               try await Firestore.firestore().collection("users").document(user.id).setData(encodedUser)
-               
-               // Save message content to subcollection
-               let subcollectionData = ["content": messageContent]
-               let messagesCollectionRef = Firestore.firestore().collection("users").document(user.id).collection("messages")
-               let messageDocumentRef = try await messagesCollectionRef.addDocument(data: subcollectionData)
-               
-               // Create favorites subcollection within messages subcollection
-        
-               
-               await fetchUser()
-           } catch {
-               print("DEBUG: Failed to create user with error \(error.localizedDescription)")
-           }
-       }
-       
     
+    
+  /*  func add(_ userData: UserData) {
+        guard let userId = Auth.auth().currentUser?.uid else {
+            print("User is not authenticated.")
+            return
+        }
+        
+        var userDataWithUserId = userData
+        userDataWithUserId.userId = userId
+        
+        do {
+            let documentReference = try Firestore.firestore().collection("checkins").addDocument(from: userDataWithUserId)
+            userDataWithUserId.documentId = documentReference.documentID
+        } catch {
+            print("Error adding userData to Firestore: \(error)")
+        }
+    } */
+
+    
+    
+    
+    
+
+
+    func createUser(withEmail email: String, password: String, fullname: String, messageContent: String) async throws {
+        do {
+            let result = try await Auth.auth().createUser(withEmail: email, password: password)
+            self.userSession = result.user
+            let user = User(id: result.user.uid, fullname: fullname, email: email)
+            let encodedUser = try Firestore.Encoder().encode(user)
+            
+            let userData = UserData(userId: user.id, lastcheckin: Date(), streak: 0)
+
+            
+            
+            try await Firestore.firestore().collection("users").document(user.id).setData(encodedUser)
+            
+            // Save message content to subcollection
+            let subcollectionData = ["content": messageContent]
+            let messagesCollectionRef = Firestore.firestore().collection("users").document(user.id).collection("messages")
+            
+            
+            
+            
+            let messageDocumentRef = try await messagesCollectionRef.addDocument(data: subcollectionData)
+            let db = Firestore.firestore()
+            
+            let userDocumentRef = db.collection("usersdata").document(user.id)
+
+         
+            
+            do {
+                // Encode the UserData object as a dictionary
+                let userDataDict = try Firestore.Encoder().encode(userData)
+                
+                // Set the document data with the UserData dictionary
+                try await userDocumentRef.setData(userDataDict)
+                
+                // Document has been successfully added or updated
+                print("UserData document added/updated successfully")
+            } catch let error {
+                // Handle any errors that occur during encoding or document creation
+                print("Error adding UserData document: \(error.localizedDescription)")
+            }
+            
+            
+            
+            
+            // Create favorites subcollection within messages subcollection
+            
+            await fetchUser()
+        } catch {
+            print("DEBUG: Failed to create user with error \(error.localizedDescription)")
+        }
+    }
+
     
     
     
@@ -93,32 +147,57 @@ class AuthViewModel: ObservableObject{
             print("DEBUG: User not logged in.")
             return
         }
-        
+
         let uid = currentUser.uid
         let email = currentUser.email ?? ""
-        
         self.userSession = Auth.auth().currentUser
-        
         let newUser = User(id: uid, fullname: fullname, email: email)
         let encodedUser = try Firestore.Encoder().encode(newUser)
         try await Firestore.firestore().collection("users").document(uid).setData(encodedUser)
-        
-        
+
+        // ...
+
+        let userData = UserData(userId: uid, lastcheckin: Date(), streak: 0)
+
         // Save message content to subcollection
         let subcollectionData = ["content": messageContent]
         let messagesCollectionRef = Firestore.firestore().collection("users").document(uid).collection("messages")
         let _ = try await messagesCollectionRef.addDocument(data: subcollectionData)
+
         
-        // Create favorites subcollection within messages subcollection
-        let favoritesCollectionRef = Firestore.firestore().collection("users").document(uid).collection("favorites")
-        let _ = try await favoritesCollectionRef.addDocument(data: [:])
+        
+        let messageDocumentRef = try await messagesCollectionRef.addDocument(data: subcollectionData)
+        let db = Firestore.firestore()
+        
+        let userDocumentRef = db.collection("usersdata").document(uid)
+
+     
+        
+        do {
+            // Encode the UserData object as a dictionary
+            let userDataDict = try Firestore.Encoder().encode(userData)
+            
+            // Set the document data with the UserData dictionary
+            try await userDocumentRef.setData(userDataDict)
+            
+            // Document has been successfully added or updated
+            print("UserData document added/updated successfully")
+        } catch let error {
+            // Handle any errors that occur during encoding or document creation
+            print("Error adding UserData document: \(error.localizedDescription)")
+        }
+        
+        
         
         userSession = currentUser
-        
+
         await fetchUser()
-        
-        
     }
+
+    
+    
+
+
     
     
     func deleteUser(completion: @escaping (Result<Void, Error>) -> Void) {
@@ -135,8 +214,6 @@ class AuthViewModel: ObservableObject{
                 let messagesCollectionRef = Firestore.firestore().collection("messages").document(userId)
                 let favoritesCollectionRef = Firestore.firestore().collection("favorites").document(userId)
 
-   
-                
                 
                 userDocumentRef.updateData([
                     "messages": FieldValue.delete(),
@@ -227,7 +304,7 @@ class AuthViewModel: ObservableObject{
     }
     
     
-    func updateLastCheckin() {
+ /*   func updateLastCheckin() {
         let db = Firestore.firestore()
 
         if let userId = userSession?.uid {
@@ -252,13 +329,15 @@ class AuthViewModel: ObservableObject{
                 }
             }
         }
-    }
+    }*/
     
+
     
    
 
 
 
+    
     
 
 }
