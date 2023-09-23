@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "0D6C3C38-D9DD-4280-B091-54D5DEE47093"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6D6DC6EA-8F69-4E58-A5EB-17C199FB4812"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Self Help/Views/Home/ChatUpdatedView/ChatList/ChatListView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "6D6DC6EA-8F69-4E58-A5EB-17C199FB4812 - bec8b8abfadbeede"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Self_Help.ChatListView.body.getter : some"
+                  moduleName = "Self Help"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maxwellmeyer/Desktop/Self%20Help/Self%20Help/Views/Home/ChatUpdatedView/ChatList/ChatListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "1476">
+               </Location>
+               <Location
+                  uuid = "6D6DC6EA-8F69-4E58-A5EB-17C199FB4812 - e4d233258f50f558"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #5 () -&gt; () in Self_Help.ChatListView.body.getter : some"
+                  moduleName = "Self Help"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maxwellmeyer/Desktop/Self%20Help/Self%20Help/Views/Home/ChatUpdatedView/ChatList/ChatListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A0BBCA59-DB7C-42FB-89E4-A77EE8102668"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Self Help/Views/Calendar/CalendarView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "7"
+            endingLineNumber = "7"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
