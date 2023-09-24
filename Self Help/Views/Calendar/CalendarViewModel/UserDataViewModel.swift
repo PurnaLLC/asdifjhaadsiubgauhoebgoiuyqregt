@@ -10,43 +10,37 @@ import Combine
 import FirebaseAuth
 
 
-// ViewModel
+
+
+
 class UserDataViewModel: ObservableObject {
-    @Published private(set) var userData: UserData
     
-    private let ds: any UserDataService
+    @Published private(set)  var userdatas: [UserData] = []
+    
+    private let dataService: any UserDataService
+    
     private var cancellables = Set<AnyCancellable>()
     
-    init(ds: any UserDataService = UserFirebaseDataService()) {
-        self.ds = ds
-        self.userData = UserData() // Initialize userData with default values
-        
-        ds.get()
-            .sink(receiveCompletion: { _ in },
-                  receiveValue: { [weak self] userDatas in
-                    // Assuming you want the first user data in the array
-                    if let firstUserData = userDatas.first {
-                        self?.userData = firstUserData
-                    }
-                  })
+    init(dataService: any UserDataService) {
+           self.dataService = dataService
+           
+           dataService.get()
+            .sink { error in
+                fatalError("\(error)")
+            } receiveValue: { userdatas in
+                self.userdatas = userdatas 
+            }
             .store(in: &cancellables)
+       }
+
+    
+    func increaseStreak(_ userId: String, _ currentStreak : Int) {
+        
+        dataService.increaseStreak(userId, currentStreak: currentStreak)
+        
     }
     
-    func updateUserData(_ userData: UserData) {
-        ds.update(userData)
-    }
-    
-    // Other methods for managing UserData
-    
-    func updateStreak(_ newStreak: Int) {
-           // Modify the streak property of userData
-           self.userData.streak = newStreak
-           // You can also update the user data on your data service here if needed
-           ds.update(self.userData)
-        ds.update(userData)
-        }
-    
-    
+
     
     
 }

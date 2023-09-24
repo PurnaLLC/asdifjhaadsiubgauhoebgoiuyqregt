@@ -20,14 +20,21 @@ struct ContentsView: View {
     var body: some View {
         Group {
             if viewModel.currentUser != nil {
-                FlowerView(isMinimized: $isMinimized, numberOfPetals: $numberOfPetals, animationDuration: $animationDuration)
+             //   FlowerView(isMinimized: $isMinimized, numberOfPetals: $numberOfPetals, animationDuration: $animationDuration)
+                
+                
+                Home()
+                
+                
             } else {
               //  OnBoarding1()
                //    .background(HelperView())   // << here !!
 //                FlowerView(isMinimized: .constant(false),
 //                           numberOfPetals: .constant(5),
 //                           animationDuration: .constant(4.2))
-               getSwifty()
+                //           getSwifty()
+                
+                LoginView()
             }
         }
       

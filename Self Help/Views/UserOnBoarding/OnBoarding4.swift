@@ -10,24 +10,13 @@ import SwiftUI
 struct OnBoarding4: View {
     var body: some View {
         
-        NavigationView{
-            VStack{
-                Text("How do you deal with negative thoughts")
-                
-                
-                
-                
-                NavigationLink {
-                    
-                    OnBoarding5()
-                        .navigationBarBackButtonHidden(true)
-                    
-                }label: {
-                    OnBoardingNextButton()
-                }
-                
-                
-            }
+  
+        VStack{
+            Text("How do you deal with negative thoughts")
+                .foregroundColor(.white)
+
+            
         }
+                
     }
 }

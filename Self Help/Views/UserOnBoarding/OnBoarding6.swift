@@ -9,20 +9,14 @@ import SwiftUI
 
 struct OnBoarding6: View {
     var body: some View {
-        NavigationView{
+
             
             Text("When would you like noties")
-            NavigationLink {
-                
-                LoginView()
-                    .navigationBarBackButtonHidden(true)
-                
-            }label: {
-                OnBoardingNextButton()
-            }
+            .foregroundColor(.white)
+
             
         }
-    }
+    
 }
 
 struct OnBoarding6_Previews: PreviewProvider {

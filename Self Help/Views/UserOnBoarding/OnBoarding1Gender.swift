@@ -7,32 +7,30 @@
 
 import SwiftUI
 
-class OnBoarding1GenderVM: ObservableObject {
- 
-    @Published var userGender: String = ""
-}
 struct OnBoarding1Gender: View {
     
     @State private var isShowingGender: Bool = false
-    @StateObject private var vm = OnBoarding1GenderVM()
+    @ObservedObject  var vm:  OnBoardingControlViewViewModel
     
-    @StateObject private var vm2 = OnBoarding1VM()
+
     
     @State var username: String
     
-    @State private var isShowingFinishedButton: Bool = false
+    @Binding var isShowingFinishedButton: Bool
+    
+    var nextViewAction: () -> Void
+    
+    
     
     var body: some View {
-        NavigationView{
+
             
-            ZStack{
-                
-                Video()
+           
                 VStack {
                     VStack {
                         Text("What Gender are you \(username)")
                         
-                        InputView(text: $vm.userGender,
+                        WhiteInputView(text: $vm.userGender,
                                   title: " ",
                                   placeholder: "Name/Nick Name")
                         
@@ -51,17 +49,6 @@ struct OnBoarding1Gender: View {
                         }
                         
                         
-                        if isShowingFinishedButton {
-                            VStack {
-                                NavigationLink {
-                                    // destination view to navigation to
-                                    OnBoarding2(usergender: vm.userGender, username: vm2.username)
-                                        .navigationBarBackButtonHidden(true)
-                                }  label: {
-                                    OnBoardingNextButton()
-                                }
-                            }
-                        }
                     }
                 }
                 .onAppear {
@@ -70,8 +57,8 @@ struct OnBoarding1Gender: View {
                     defaults.set(username, forKey: "username")
                 }
             }
-        }
-    }
+        
+    
 }
 
 

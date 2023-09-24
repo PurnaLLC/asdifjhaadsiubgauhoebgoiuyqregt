@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		302EEBBE2AAD2B7D005F81AB /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302EEBBD2AAD2B7D005F81AB /* UserData.swift */; };
-		302EEBC02AAD2C8C005F81AB /* UserDataDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302EEBBF2AAD2C8C005F81AB /* UserDataDataService.swift */; };
-		302EEBC22AAD3368005F81AB /* UserDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302EEBC12AAD3368005F81AB /* UserDataViewModel.swift */; };
 		3035135D2A9C2E4500C432FF /* Breathe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3035135C2A9C2E4500C432FF /* Breathe.swift */; };
 		3035135F2A9C365900C432FF /* ChatViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3035135E2A9C365900C432FF /* ChatViewData.swift */; };
 		303513612A9C3C9200C432FF /* DataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303513602A9C3C9200C432FF /* DataViewModel.swift */; };
@@ -66,31 +63,38 @@
 		3053F4252A92E02400046BD1 /* OpenAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053F4242A92E02400046BD1 /* OpenAIService.swift */; };
 		3053F4272A92E03000046BD1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053F4262A92E03000046BD1 /* Constants.swift */; };
 		3053F4292A92F72A00046BD1 /* InformationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053F4282A92F72A00046BD1 /* InformationData.swift */; };
-		3097557E2AB538EA00A3BBA2 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3097557D2AB538EA00A3BBA2 /* Video.swift */; };
 		309755822AB53B1D00A3BBA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309755812AB53B1D00A3BBA2 /* SceneDelegate.swift */; };
-		309755842AB53B6800A3BBA2 /* LoopingPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309755832AB53B6800A3BBA2 /* LoopingPlayer.swift */; };
 		3097558B2AB53D1C00A3BBA2 /* Finalsnow2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3097558A2AB53D1C00A3BBA2 /* Finalsnow2.mp4 */; };
-		30B036F92AA6106900BA25D5 /* CheckInEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B036F82AA6106900BA25D5 /* CheckInEditView.swift */; };
-		30B036FB2AA6108800BA25D5 /* CheckInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B036FA2AA6108800BA25D5 /* CheckInViewModel.swift */; };
-		30B036FD2AA610D800BA25D5 /* CheckInDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B036FC2AA610D800BA25D5 /* CheckInDataService.swift */; };
-		30F3CACD2AA2CB8F0065BB25 /* OnBoarding3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F3CACC2AA2CB8F0065BB25 /* OnBoarding3.swift */; };
-		30F3CACF2AA2D2F50065BB25 /* OnBoarding1Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F3CACE2AA2D2F50065BB25 /* OnBoarding1Gender.swift */; };
-		30F3CAD52AA2EC0C0065BB25 /* Shame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F3CAD42AA2EC0C0065BB25 /* Shame.swift */; };
-		30F3CAD72AA2EC160065BB25 /* Anger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F3CAD62AA2EC160065BB25 /* Anger.swift */; };
-		30F3CAD92AA2EC210065BB25 /* Guilt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F3CAD82AA2EC210065BB25 /* Guilt.swift */; };
-		30F3CADB2AA2EC2D0065BB25 /* Anxiety.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F3CADA2AA2EC2D0065BB25 /* Anxiety.swift */; };
-		30F3CADD2AA2EC3B0065BB25 /* Fear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F3CADC2AA2EC3B0065BB25 /* Fear.swift */; };
-		30F3CADF2AA2EC4A0065BB25 /* Depression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F3CADE2AA2EC4A0065BB25 /* Depression.swift */; };
-		30F3CAE12AA2F2030065BB25 /* SelfHelpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F3CAE02AA2F2030065BB25 /* SelfHelpButton.swift */; };
-		30F3CAE32AA3EC390065BB25 /* OnBoarding4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F3CAE22AA3EC390065BB25 /* OnBoarding4.swift */; };
-		30F3CAE52AA3ECAA0065BB25 /* OnBoarding5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F3CAE42AA3ECAA0065BB25 /* OnBoarding5.swift */; };
-		30F3CAE72AA3F0F80065BB25 /* OnBoarding6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F3CAE62AA3F0F80065BB25 /* OnBoarding6.swift */; };
-		30F3CAE92AA552A40065BB25 /* OnBoardingNextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F3CAE82AA552A40065BB25 /* OnBoardingNextButton.swift */; };
-		30F3CAED2AA57C070065BB25 /* CheckInListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F3CAEC2AA57C070065BB25 /* CheckInListView.swift */; };
-		30F3CAEF2AA586410065BB25 /* ChatInListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F3CAEE2AA586410065BB25 /* ChatInListModel.swift */; };
+		30AE2A3D2ABFBA6F00A9EA21 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A3C2ABFBA6F00A9EA21 /* UserData.swift */; };
+		30AE2A3F2ABFBA7B00A9EA21 /* ChatInListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A3E2ABFBA7B00A9EA21 /* ChatInListModel.swift */; };
+		30AE2A432ABFBAAC00A9EA21 /* CheckInDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A422ABFBAAC00A9EA21 /* CheckInDataService.swift */; };
+		30AE2A452ABFBAC100A9EA21 /* UserDataDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A442ABFBAC100A9EA21 /* UserDataDataService.swift */; };
+		30AE2A472ABFBBC300A9EA21 /* Anger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A462ABFBBC300A9EA21 /* Anger.swift */; };
+		30AE2A492ABFBBC700A9EA21 /* Anxiety.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A482ABFBBC700A9EA21 /* Anxiety.swift */; };
+		30AE2A4B2ABFBBCC00A9EA21 /* Depression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A4A2ABFBBCC00A9EA21 /* Depression.swift */; };
+		30AE2A4D2ABFBBD000A9EA21 /* Fear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A4C2ABFBBD000A9EA21 /* Fear.swift */; };
+		30AE2A4F2ABFBBD400A9EA21 /* Guilt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A4E2ABFBBD400A9EA21 /* Guilt.swift */; };
+		30AE2A512ABFBBD800A9EA21 /* LoopingPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A502ABFBBD800A9EA21 /* LoopingPlayer.swift */; };
+		30AE2A532ABFBBDC00A9EA21 /* OnBoarding1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A522ABFBBDC00A9EA21 /* OnBoarding1.swift */; };
+		30AE2A552ABFBBE300A9EA21 /* OnBoarding1Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A542ABFBBE300A9EA21 /* OnBoarding1Gender.swift */; };
+		30AE2A572ABFBBE700A9EA21 /* OnBoarding2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A562ABFBBE700A9EA21 /* OnBoarding2.swift */; };
+		30AE2A592ABFBBF000A9EA21 /* OnBoarding3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A582ABFBBF000A9EA21 /* OnBoarding3.swift */; };
+		30AE2A5B2ABFBBF800A9EA21 /* OnBoarding4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A5A2ABFBBF800A9EA21 /* OnBoarding4.swift */; };
+		30AE2A5D2ABFBBFC00A9EA21 /* OnBoarding5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A5C2ABFBBFC00A9EA21 /* OnBoarding5.swift */; };
+		30AE2A5F2ABFBC0200A9EA21 /* OnBoarding6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A5E2ABFBC0200A9EA21 /* OnBoarding6.swift */; };
+		30AE2A612ABFBC0600A9EA21 /* OnBoardingControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A602ABFBC0600A9EA21 /* OnBoardingControlView.swift */; };
+		30AE2A632ABFBC0C00A9EA21 /* OnBoardingNextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A622ABFBC0C00A9EA21 /* OnBoardingNextButton.swift */; };
+		30AE2A652ABFBC1100A9EA21 /* SelfHelpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A642ABFBC1100A9EA21 /* SelfHelpButton.swift */; };
+		30AE2A672ABFBC1500A9EA21 /* SelfHelpButton2Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A662ABFBC1500A9EA21 /* SelfHelpButton2Button.swift */; };
+		30AE2A692ABFBC1900A9EA21 /* Shame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A682ABFBC1900A9EA21 /* Shame.swift */; };
+		30AE2A6B2ABFBC1E00A9EA21 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A6A2ABFBC1E00A9EA21 /* Video.swift */; };
+		30AE2A6F2ABFBC5E00A9EA21 /* CheckInListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A6E2ABFBC5E00A9EA21 /* CheckInListView.swift */; };
+		30AE2A712ABFBC6300A9EA21 /* CreateCheckinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A702ABFBC6200A9EA21 /* CreateCheckinView.swift */; };
+		30AE2A732ABFBC7400A9EA21 /* CheckInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A722ABFBC7400A9EA21 /* CheckInViewModel.swift */; };
+		30AE2A752ABFBC7800A9EA21 /* UserDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A742ABFBC7800A9EA21 /* UserDataViewModel.swift */; };
+		30AE2A772ABFBD5800A9EA21 /* WhiteInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A762ABFBD5800A9EA21 /* WhiteInputView.swift */; };
+		30AE2A792ABFBEC300A9EA21 /* CheckInEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A782ABFBEC200A9EA21 /* CheckInEdit.swift */; };
 		30FD37962AA16BE70071F843 /* ChatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD37952AA16BE70071F843 /* ChatListView.swift */; };
-		30FD379A2AA1794F0071F843 /* OnBoarding1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD37992AA1794F0071F843 /* OnBoarding1.swift */; };
-		30FD379D2AA187700071F843 /* OnBoarding2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD379C2AA187700071F843 /* OnBoarding2.swift */; };
 		A5787CE82ABBC65900973ACB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5787CE72ABBC65900973ACB /* AppDelegate.swift */; };
 		A5A886622AB9020700F3F64A /* FlowerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A8865D2AB9020700F3F64A /* FlowerView.swift */; };
 		A5A886652AB9020700F3F64A /* getSwifty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A886602AB9020700F3F64A /* getSwifty.swift */; };
@@ -170,9 +174,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		302EEBBD2AAD2B7D005F81AB /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
-		302EEBBF2AAD2C8C005F81AB /* UserDataDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataDataService.swift; sourceTree = "<group>"; };
-		302EEBC12AAD3368005F81AB /* UserDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataViewModel.swift; sourceTree = "<group>"; };
 		3035135C2A9C2E4500C432FF /* Breathe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breathe.swift; sourceTree = "<group>"; };
 		3035135E2A9C365900C432FF /* ChatViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewData.swift; sourceTree = "<group>"; };
 		303513602A9C3C9200C432FF /* DataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewModel.swift; sourceTree = "<group>"; };
@@ -202,31 +203,38 @@
 		3053F4242A92E02400046BD1 /* OpenAIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenAIService.swift; sourceTree = "<group>"; };
 		3053F4262A92E03000046BD1 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3053F4282A92F72A00046BD1 /* InformationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationData.swift; sourceTree = "<group>"; };
-		3097557D2AB538EA00A3BBA2 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		309755812AB53B1D00A3BBA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		309755832AB53B6800A3BBA2 /* LoopingPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoopingPlayer.swift; sourceTree = "<group>"; };
 		3097558A2AB53D1C00A3BBA2 /* Finalsnow2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Finalsnow2.mp4; sourceTree = "<group>"; };
-		30B036F82AA6106900BA25D5 /* CheckInEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInEditView.swift; sourceTree = "<group>"; };
-		30B036FA2AA6108800BA25D5 /* CheckInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInViewModel.swift; sourceTree = "<group>"; };
-		30B036FC2AA610D800BA25D5 /* CheckInDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInDataService.swift; sourceTree = "<group>"; };
-		30F3CACC2AA2CB8F0065BB25 /* OnBoarding3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding3.swift; sourceTree = "<group>"; };
-		30F3CACE2AA2D2F50065BB25 /* OnBoarding1Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding1Gender.swift; sourceTree = "<group>"; };
-		30F3CAD42AA2EC0C0065BB25 /* Shame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shame.swift; sourceTree = "<group>"; };
-		30F3CAD62AA2EC160065BB25 /* Anger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anger.swift; sourceTree = "<group>"; };
-		30F3CAD82AA2EC210065BB25 /* Guilt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guilt.swift; sourceTree = "<group>"; };
-		30F3CADA2AA2EC2D0065BB25 /* Anxiety.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anxiety.swift; sourceTree = "<group>"; };
-		30F3CADC2AA2EC3B0065BB25 /* Fear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fear.swift; sourceTree = "<group>"; };
-		30F3CADE2AA2EC4A0065BB25 /* Depression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Depression.swift; sourceTree = "<group>"; };
-		30F3CAE02AA2F2030065BB25 /* SelfHelpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfHelpButton.swift; sourceTree = "<group>"; };
-		30F3CAE22AA3EC390065BB25 /* OnBoarding4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding4.swift; sourceTree = "<group>"; };
-		30F3CAE42AA3ECAA0065BB25 /* OnBoarding5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding5.swift; sourceTree = "<group>"; };
-		30F3CAE62AA3F0F80065BB25 /* OnBoarding6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding6.swift; sourceTree = "<group>"; };
-		30F3CAE82AA552A40065BB25 /* OnBoardingNextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingNextButton.swift; sourceTree = "<group>"; };
-		30F3CAEC2AA57C070065BB25 /* CheckInListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckInListView.swift; sourceTree = "<group>"; };
-		30F3CAEE2AA586410065BB25 /* ChatInListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInListModel.swift; sourceTree = "<group>"; };
+		30AE2A3C2ABFBA6F00A9EA21 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		30AE2A3E2ABFBA7B00A9EA21 /* ChatInListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatInListModel.swift; sourceTree = "<group>"; };
+		30AE2A422ABFBAAC00A9EA21 /* CheckInDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckInDataService.swift; path = "../../../../Desktop/BACKUPFORSELFHELP/BACKUPFORSELFHELP/Self Help/DataProtocal/CheckInDataService.swift"; sourceTree = "<group>"; };
+		30AE2A442ABFBAC100A9EA21 /* UserDataDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataDataService.swift; sourceTree = "<group>"; };
+		30AE2A462ABFBBC300A9EA21 /* Anger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Anger.swift; sourceTree = "<group>"; };
+		30AE2A482ABFBBC700A9EA21 /* Anxiety.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Anxiety.swift; sourceTree = "<group>"; };
+		30AE2A4A2ABFBBCC00A9EA21 /* Depression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Depression.swift; sourceTree = "<group>"; };
+		30AE2A4C2ABFBBD000A9EA21 /* Fear.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fear.swift; sourceTree = "<group>"; };
+		30AE2A4E2ABFBBD400A9EA21 /* Guilt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Guilt.swift; sourceTree = "<group>"; };
+		30AE2A502ABFBBD800A9EA21 /* LoopingPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoopingPlayer.swift; sourceTree = "<group>"; };
+		30AE2A522ABFBBDC00A9EA21 /* OnBoarding1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoarding1.swift; sourceTree = "<group>"; };
+		30AE2A542ABFBBE300A9EA21 /* OnBoarding1Gender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoarding1Gender.swift; sourceTree = "<group>"; };
+		30AE2A562ABFBBE700A9EA21 /* OnBoarding2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoarding2.swift; sourceTree = "<group>"; };
+		30AE2A582ABFBBF000A9EA21 /* OnBoarding3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoarding3.swift; sourceTree = "<group>"; };
+		30AE2A5A2ABFBBF800A9EA21 /* OnBoarding4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoarding4.swift; sourceTree = "<group>"; };
+		30AE2A5C2ABFBBFC00A9EA21 /* OnBoarding5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoarding5.swift; sourceTree = "<group>"; };
+		30AE2A5E2ABFBC0200A9EA21 /* OnBoarding6.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoarding6.swift; sourceTree = "<group>"; };
+		30AE2A602ABFBC0600A9EA21 /* OnBoardingControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingControlView.swift; sourceTree = "<group>"; };
+		30AE2A622ABFBC0C00A9EA21 /* OnBoardingNextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingNextButton.swift; sourceTree = "<group>"; };
+		30AE2A642ABFBC1100A9EA21 /* SelfHelpButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfHelpButton.swift; sourceTree = "<group>"; };
+		30AE2A662ABFBC1500A9EA21 /* SelfHelpButton2Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfHelpButton2Button.swift; sourceTree = "<group>"; };
+		30AE2A682ABFBC1900A9EA21 /* Shame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shame.swift; sourceTree = "<group>"; };
+		30AE2A6A2ABFBC1E00A9EA21 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		30AE2A6E2ABFBC5E00A9EA21 /* CheckInListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckInListView.swift; sourceTree = "<group>"; };
+		30AE2A702ABFBC6200A9EA21 /* CreateCheckinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCheckinView.swift; sourceTree = "<group>"; };
+		30AE2A722ABFBC7400A9EA21 /* CheckInViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckInViewModel.swift; sourceTree = "<group>"; };
+		30AE2A742ABFBC7800A9EA21 /* UserDataViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataViewModel.swift; sourceTree = "<group>"; };
+		30AE2A762ABFBD5800A9EA21 /* WhiteInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteInputView.swift; sourceTree = "<group>"; };
+		30AE2A782ABFBEC200A9EA21 /* CheckInEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInEdit.swift; sourceTree = "<group>"; };
 		30FD37952AA16BE70071F843 /* ChatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListView.swift; sourceTree = "<group>"; };
-		30FD37992AA1794F0071F843 /* OnBoarding1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding1.swift; sourceTree = "<group>"; };
-		30FD379C2AA187700071F843 /* OnBoarding2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding2.swift; sourceTree = "<group>"; };
 		A5787CE72ABBC65900973ACB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5A8865D2AB9020700F3F64A /* FlowerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowerView.swift; sourceTree = "<group>"; };
 		A5A886602AB9020700F3F64A /* getSwifty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getSwifty.swift; sourceTree = "<group>"; };
@@ -388,13 +396,6 @@
 			path = "Self Help";
 			sourceTree = "<group>";
 		};
-		3053F3AE2A92B19C00046BD1 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
 		3053F3B62A92DA9C00046BD1 /* User */ = {
 			isa = PBXGroup;
 			children = (
@@ -409,6 +410,7 @@
 				3053F3FE2A92DD0200046BD1 /* ShimmerEffect.swift */,
 				3053F4002A92DD0900046BD1 /* SettingsRowView.swift */,
 				3053F4022A92DD1100046BD1 /* InputView.swift */,
+				30AE2A762ABFBD5800A9EA21 /* WhiteInputView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -488,9 +490,10 @@
 		3053F41C2A92DFCA00046BD1 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				30AE2A6E2ABFBC5E00A9EA21 /* CheckInListView.swift */,
+				30AE2A782ABFBEC200A9EA21 /* CheckInEdit.swift */,
+				30AE2A702ABFBC6200A9EA21 /* CreateCheckinView.swift */,
 				30B0371E2AA8266800BA25D5 /* CalendarViewModel */,
-				30F3CAEC2AA57C070065BB25 /* CheckInListView.swift */,
-				30B036F82AA6106900BA25D5 /* CheckInEditView.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -530,8 +533,8 @@
 		30B0371D2AA8263B00BA25D5 /* CheckIN */ = {
 			isa = PBXGroup;
 			children = (
-				30F3CAEE2AA586410065BB25 /* ChatInListModel.swift */,
-				302EEBBD2AAD2B7D005F81AB /* UserData.swift */,
+				30AE2A3E2ABFBA7B00A9EA21 /* ChatInListModel.swift */,
+				30AE2A3C2ABFBA6F00A9EA21 /* UserData.swift */,
 			);
 			path = CheckIN;
 			sourceTree = "<group>";
@@ -539,8 +542,8 @@
 		30B0371E2AA8266800BA25D5 /* CalendarViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				30B036FA2AA6108800BA25D5 /* CheckInViewModel.swift */,
-				302EEBC12AAD3368005F81AB /* UserDataViewModel.swift */,
+				30AE2A722ABFBC7400A9EA21 /* CheckInViewModel.swift */,
+				30AE2A742ABFBC7800A9EA21 /* UserDataViewModel.swift */,
 			);
 			path = CalendarViewModel;
 			sourceTree = "<group>";
@@ -548,9 +551,8 @@
 		30B0371F2AA826B100BA25D5 /* DataProtocal */ = {
 			isa = PBXGroup;
 			children = (
-				3053F3AE2A92B19C00046BD1 /* Preview Content */,
-				30B036FC2AA610D800BA25D5 /* CheckInDataService.swift */,
-				302EEBBF2AAD2C8C005F81AB /* UserDataDataService.swift */,
+				30AE2A422ABFBAAC00A9EA21 /* CheckInDataService.swift */,
+				30AE2A442ABFBAC100A9EA21 /* UserDataDataService.swift */,
 			);
 			path = DataProtocal;
 			sourceTree = "<group>";
@@ -558,23 +560,25 @@
 		30FD37972AA1775E0071F843 /* UserOnBoarding */ = {
 			isa = PBXGroup;
 			children = (
-				30FD37992AA1794F0071F843 /* OnBoarding1.swift */,
-				30F3CACE2AA2D2F50065BB25 /* OnBoarding1Gender.swift */,
-				30FD379C2AA187700071F843 /* OnBoarding2.swift */,
-				30F3CAD42AA2EC0C0065BB25 /* Shame.swift */,
-				30F3CAD62AA2EC160065BB25 /* Anger.swift */,
-				30F3CAD82AA2EC210065BB25 /* Guilt.swift */,
-				30F3CADA2AA2EC2D0065BB25 /* Anxiety.swift */,
-				30F3CADC2AA2EC3B0065BB25 /* Fear.swift */,
-				30F3CADE2AA2EC4A0065BB25 /* Depression.swift */,
-				30F3CACC2AA2CB8F0065BB25 /* OnBoarding3.swift */,
-				30F3CAE22AA3EC390065BB25 /* OnBoarding4.swift */,
-				30F3CAE42AA3ECAA0065BB25 /* OnBoarding5.swift */,
-				30F3CAE62AA3F0F80065BB25 /* OnBoarding6.swift */,
-				30F3CAE02AA2F2030065BB25 /* SelfHelpButton.swift */,
-				30F3CAE82AA552A40065BB25 /* OnBoardingNextButton.swift */,
-				3097557D2AB538EA00A3BBA2 /* Video.swift */,
-				309755832AB53B6800A3BBA2 /* LoopingPlayer.swift */,
+				30AE2A462ABFBBC300A9EA21 /* Anger.swift */,
+				30AE2A482ABFBBC700A9EA21 /* Anxiety.swift */,
+				30AE2A4A2ABFBBCC00A9EA21 /* Depression.swift */,
+				30AE2A4C2ABFBBD000A9EA21 /* Fear.swift */,
+				30AE2A4E2ABFBBD400A9EA21 /* Guilt.swift */,
+				30AE2A502ABFBBD800A9EA21 /* LoopingPlayer.swift */,
+				30AE2A522ABFBBDC00A9EA21 /* OnBoarding1.swift */,
+				30AE2A542ABFBBE300A9EA21 /* OnBoarding1Gender.swift */,
+				30AE2A562ABFBBE700A9EA21 /* OnBoarding2.swift */,
+				30AE2A582ABFBBF000A9EA21 /* OnBoarding3.swift */,
+				30AE2A5A2ABFBBF800A9EA21 /* OnBoarding4.swift */,
+				30AE2A5C2ABFBBFC00A9EA21 /* OnBoarding5.swift */,
+				30AE2A5E2ABFBC0200A9EA21 /* OnBoarding6.swift */,
+				30AE2A602ABFBC0600A9EA21 /* OnBoardingControlView.swift */,
+				30AE2A622ABFBC0C00A9EA21 /* OnBoardingNextButton.swift */,
+				30AE2A642ABFBC1100A9EA21 /* SelfHelpButton.swift */,
+				30AE2A662ABFBC1500A9EA21 /* SelfHelpButton2Button.swift */,
+				30AE2A682ABFBC1900A9EA21 /* Shame.swift */,
+				30AE2A6A2ABFBC1E00A9EA21 /* Video.swift */,
 			);
 			path = UserOnBoarding;
 			sourceTree = "<group>";
@@ -864,61 +868,65 @@
 			buildActionMask = 2147483647;
 			files = (
 				3053F4092A92DD2D00046BD1 /* SinginViewMOdel.swift in Sources */,
+				30AE2A712ABFBC6300A9EA21 /* CreateCheckinView.swift in Sources */,
+				30AE2A752ABFBC7800A9EA21 /* UserDataViewModel.swift in Sources */,
 				3053F4232A92E01800046BD1 /* ChatViewModel.swift in Sources */,
+				30AE2A3D2ABFBA6F00A9EA21 /* UserData.swift in Sources */,
 				303513612A9C3C9200C432FF /* DataViewModel.swift in Sources */,
-				30F3CAD72AA2EC160065BB25 /* Anger.swift in Sources */,
 				3053F3FB2A92DCB600046BD1 /* +View.swift in Sources */,
-				30F3CAE12AA2F2030065BB25 /* SelfHelpButton.swift in Sources */,
 				3053F3FD2A92DCBD00046BD1 /* FirebAuth.swift in Sources */,
+				30AE2A532ABFBBDC00A9EA21 /* OnBoarding1.swift in Sources */,
+				30AE2A732ABFBC7400A9EA21 /* CheckInViewModel.swift in Sources */,
+				30AE2A592ABFBBF000A9EA21 /* OnBoarding3.swift in Sources */,
 				3053F3AB2A92B19B00046BD1 /* ContentView.swift in Sources */,
 				3053F4052A92DD2200046BD1 /* RegistrationView.swift in Sources */,
-				302EEBC22AAD3368005F81AB /* UserDataViewModel.swift in Sources */,
 				3053F4272A92E03000046BD1 /* Constants.swift in Sources */,
 				3053F4192A92DF3000046BD1 /* TabModel.swift in Sources */,
-				30F3CAE32AA3EC390065BB25 /* OnBoarding4.swift in Sources */,
-				30F3CAED2AA57C070065BB25 /* CheckInListView.swift in Sources */,
 				3053F3A92A92B19B00046BD1 /* Self_HelpApp.swift in Sources */,
-				30F3CACD2AA2CB8F0065BB25 /* OnBoarding3.swift in Sources */,
-				30B036FD2AA610D800BA25D5 /* CheckInDataService.swift in Sources */,
+				30AE2A452ABFBAC100A9EA21 /* UserDataDataService.swift in Sources */,
 				3053F40B2A92DD3200046BD1 /* LoginView.swift in Sources */,
-				30F3CAEF2AA586410065BB25 /* ChatInListModel.swift in Sources */,
+				30AE2A5F2ABFBC0200A9EA21 /* OnBoarding6.swift in Sources */,
 				3053F41B2A92DF3400046BD1 /* TabPosition.swift in Sources */,
 				A5787CE82ABBC65900973ACB /* AppDelegate.swift in Sources */,
-				30FD379A2AA1794F0071F843 /* OnBoarding1.swift in Sources */,
-				30B036F92AA6106900BA25D5 /* CheckInEditView.swift in Sources */,
-				30F3CAD92AA2EC210065BB25 /* Guilt.swift in Sources */,
 				A5A886652AB9020700F3F64A /* getSwifty.swift in Sources */,
 				3053F4292A92F72A00046BD1 /* InformationData.swift in Sources */,
 				3053F3FF2A92DD0200046BD1 /* ShimmerEffect.swift in Sources */,
+				30AE2A432ABFBAAC00A9EA21 /* CheckInDataService.swift in Sources */,
+				30AE2A6B2ABFBC1E00A9EA21 /* Video.swift in Sources */,
 				3053F4142A92DEE600046BD1 /* User.swift in Sources */,
 				3053F4032A92DD1100046BD1 /* InputView.swift in Sources */,
 				309755822AB53B1D00A3BBA2 /* SceneDelegate.swift in Sources */,
+				30AE2A4D2ABFBBD000A9EA21 /* Fear.swift in Sources */,
+				30AE2A492ABFBBC700A9EA21 /* Anxiety.swift in Sources */,
 				3053F4212A92E01100046BD1 /* ChatView.swift in Sources */,
-				3097557E2AB538EA00A3BBA2 /* Video.swift in Sources */,
-				302EEBC02AAD2C8C005F81AB /* UserDataDataService.swift in Sources */,
+				30AE2A5D2ABFBBFC00A9EA21 /* OnBoarding5.swift in Sources */,
 				3053F3BD2A92DB0B00046BD1 /* AuthViewModel.swift in Sources */,
-				30F3CAE92AA552A40065BB25 /* OnBoardingNextButton.swift in Sources */,
-				302EEBBE2AAD2B7D005F81AB /* UserData.swift in Sources */,
+				30AE2A632ABFBC0C00A9EA21 /* OnBoardingNextButton.swift in Sources */,
 				3035135D2A9C2E4500C432FF /* Breathe.swift in Sources */,
-				30FD379D2AA187700071F843 /* OnBoarding2.swift in Sources */,
-				30F3CAE72AA3F0F80065BB25 /* OnBoarding6.swift in Sources */,
-				30F3CADD2AA2EC3B0065BB25 /* Fear.swift in Sources */,
 				3053F40D2A92DD3600046BD1 /* ForgotPassword.swift in Sources */,
-				30F3CAE52AA3ECAA0065BB25 /* OnBoarding5.swift in Sources */,
 				3053F4252A92E02400046BD1 /* OpenAIService.swift in Sources */,
+				30AE2A572ABFBBE700A9EA21 /* OnBoarding2.swift in Sources */,
 				3053F4072A92DD2800046BD1 /* GoogleSiginBtn.swift in Sources */,
-				30B036FB2AA6108800BA25D5 /* CheckInViewModel.swift in Sources */,
+				30AE2A552ABFBBE300A9EA21 /* OnBoarding1Gender.swift in Sources */,
 				A5A886622AB9020700F3F64A /* FlowerView.swift in Sources */,
-				30F3CAD52AA2EC0C0065BB25 /* Shame.swift in Sources */,
+				30AE2A652ABFBC1100A9EA21 /* SelfHelpButton.swift in Sources */,
+				30AE2A792ABFBEC300A9EA21 /* CheckInEdit.swift in Sources */,
 				3053F4102A92DD5000046BD1 /* ProfileView.swift in Sources */,
-				30F3CACF2AA2D2F50065BB25 /* OnBoarding1Gender.swift in Sources */,
 				30FD37962AA16BE70071F843 /* ChatListView.swift in Sources */,
+				30AE2A5B2ABFBBF800A9EA21 /* OnBoarding4.swift in Sources */,
+				30AE2A472ABFBBC300A9EA21 /* Anger.swift in Sources */,
 				3053F4172A92DF2B00046BD1 /* Home.swift in Sources */,
-				309755842AB53B6800A3BBA2 /* LoopingPlayer.swift in Sources */,
 				3035135F2A9C365900C432FF /* ChatViewData.swift in Sources */,
-				30F3CADB2AA2EC2D0065BB25 /* Anxiety.swift in Sources */,
+				30AE2A612ABFBC0600A9EA21 /* OnBoardingControlView.swift in Sources */,
+				30AE2A772ABFBD5800A9EA21 /* WhiteInputView.swift in Sources */,
+				30AE2A6F2ABFBC5E00A9EA21 /* CheckInListView.swift in Sources */,
+				30AE2A3F2ABFBA7B00A9EA21 /* ChatInListModel.swift in Sources */,
+				30AE2A672ABFBC1500A9EA21 /* SelfHelpButton2Button.swift in Sources */,
 				3053F4012A92DD0900046BD1 /* SettingsRowView.swift in Sources */,
-				30F3CADF2AA2EC4A0065BB25 /* Depression.swift in Sources */,
+				30AE2A692ABFBC1900A9EA21 /* Shame.swift in Sources */,
+				30AE2A4B2ABFBBCC00A9EA21 /* Depression.swift in Sources */,
+				30AE2A4F2ABFBBD400A9EA21 /* Guilt.swift in Sources */,
+				30AE2A512ABFBBD800A9EA21 /* LoopingPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

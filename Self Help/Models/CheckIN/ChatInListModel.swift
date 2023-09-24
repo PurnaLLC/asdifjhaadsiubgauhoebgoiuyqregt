@@ -18,7 +18,7 @@ struct CheckIn: Identifiable, Codable {
     var userId = ""
     var documentId: String? // Store the Firestore document ID here
     var datechart = Date()
-
+    
     
     func formattedDate() -> String {
         let dateFormatter = DateFormatter()

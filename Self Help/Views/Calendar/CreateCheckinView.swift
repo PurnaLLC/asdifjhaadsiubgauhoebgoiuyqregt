@@ -7,13 +7,18 @@
 
 import SwiftUI
 
-struct CheckInEditView: View {
+struct CreateCheckinView: View {
     @State var checkin: CheckIn
     var save: (CheckIn)->()
     
-    @ObservedObject var uservm: UserDataViewModel
-    
     @Environment(\.dismiss) var dismiss
+    
+    @ObservedObject var uservm: UserDataViewModel
+
+    @EnvironmentObject var viewModel: AuthViewModel
+    
+    
+    @State  var currentStreak: Int
 
     var body: some View {
 
@@ -64,7 +69,16 @@ struct CheckInEditView: View {
                     save(checkin)
                     dismiss()
                     
-                    uservm.updateStreak(uservm.userData.streak + 1) // Update the streak count
+                    
+                    
+                    if let user = viewModel.currentUser{
+                        
+                        
+                        uservm.increaseStreak(user.id, currentStreak)
+                        
+                        
+                        
+                    }
                     
                     
                 } label: {
