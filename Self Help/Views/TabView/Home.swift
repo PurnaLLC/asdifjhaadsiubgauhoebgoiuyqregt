@@ -37,7 +37,7 @@ struct Home: View {
                     }
                     .tag(Tab.chatview)
                 
-                Breathe()
+                BreathAnimationPickerView()
                     .tabItem {
                         Image(systemName: Tab.breathe.systemImage)
                         Text(Tab.breathe.rawValue)

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3035135D2A9C2E4500C432FF /* Breathe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3035135C2A9C2E4500C432FF /* Breathe.swift */; };
 		3035135F2A9C365900C432FF /* ChatViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3035135E2A9C365900C432FF /* ChatViewData.swift */; };
 		303513612A9C3C9200C432FF /* DataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303513602A9C3C9200C432FF /* DataViewModel.swift */; };
 		3053F3A92A92B19B00046BD1 /* Self_HelpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053F3A82A92B19B00046BD1 /* Self_HelpApp.swift */; };
@@ -94,10 +93,14 @@
 		30AE2A752ABFBC7800A9EA21 /* UserDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A742ABFBC7800A9EA21 /* UserDataViewModel.swift */; };
 		30AE2A772ABFBD5800A9EA21 /* WhiteInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A762ABFBD5800A9EA21 /* WhiteInputView.swift */; };
 		30AE2A792ABFBEC300A9EA21 /* CheckInEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A782ABFBEC200A9EA21 /* CheckInEdit.swift */; };
+		30CCD84D2AC20E1B0058299C /* SettingsForBreatheAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CCD84C2AC20E1B0058299C /* SettingsForBreatheAnimation.swift */; };
+		30CCD84F2AC20E200058299C /* BreatheAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CCD84E2AC20E200058299C /* BreatheAnimationView.swift */; };
+		30CCD8512AC20E240058299C /* BreathAnimationCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CCD8502AC20E240058299C /* BreathAnimationCategoryView.swift */; };
+		30CCD8552AC20E480058299C /* BreathAnimationPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CCD8542AC20E480058299C /* BreathAnimationPickerView.swift */; };
+		30CCD8572AC20E660058299C /* FlowerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CCD8562AC20E660058299C /* FlowerView.swift */; };
+		30CCD8592AC20E6E0058299C /* Transition+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CCD8582AC20E6E0058299C /* Transition+Extension.swift */; };
 		30FD37962AA16BE70071F843 /* ChatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD37952AA16BE70071F843 /* ChatListView.swift */; };
 		A5787CE82ABBC65900973ACB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5787CE72ABBC65900973ACB /* AppDelegate.swift */; };
-		A5A886622AB9020700F3F64A /* FlowerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A8865D2AB9020700F3F64A /* FlowerView.swift */; };
-		A5A886652AB9020700F3F64A /* getSwifty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A886602AB9020700F3F64A /* getSwifty.swift */; };
 		A5B64EA82AB66B5400ABEB3E /* cumFaceFlower.mov in Resources */ = {isa = PBXBuildFile; fileRef = A5B64EA72AB66B5400ABEB3E /* cumFaceFlower.mov */; };
 		A5B64EF22AB6736600ABEB3E /* pngSeq_00050.png in Resources */ = {isa = PBXBuildFile; fileRef = A5B64EAA2AB6736600ABEB3E /* pngSeq_00050.png */; };
 		A5B64EF32AB6736600ABEB3E /* pngSeq_00044.png in Resources */ = {isa = PBXBuildFile; fileRef = A5B64EAB2AB6736600ABEB3E /* pngSeq_00044.png */; };
@@ -174,7 +177,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3035135C2A9C2E4500C432FF /* Breathe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breathe.swift; sourceTree = "<group>"; };
 		3035135E2A9C365900C432FF /* ChatViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewData.swift; sourceTree = "<group>"; };
 		303513602A9C3C9200C432FF /* DataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewModel.swift; sourceTree = "<group>"; };
 		3053F3A52A92B19B00046BD1 /* Self Help.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Self Help.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -234,10 +236,14 @@
 		30AE2A742ABFBC7800A9EA21 /* UserDataViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataViewModel.swift; sourceTree = "<group>"; };
 		30AE2A762ABFBD5800A9EA21 /* WhiteInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteInputView.swift; sourceTree = "<group>"; };
 		30AE2A782ABFBEC200A9EA21 /* CheckInEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInEdit.swift; sourceTree = "<group>"; };
+		30CCD84C2AC20E1B0058299C /* SettingsForBreatheAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsForBreatheAnimation.swift; sourceTree = "<group>"; };
+		30CCD84E2AC20E200058299C /* BreatheAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreatheAnimationView.swift; sourceTree = "<group>"; };
+		30CCD8502AC20E240058299C /* BreathAnimationCategoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreathAnimationCategoryView.swift; sourceTree = "<group>"; };
+		30CCD8542AC20E480058299C /* BreathAnimationPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreathAnimationPickerView.swift; sourceTree = "<group>"; };
+		30CCD8562AC20E660058299C /* FlowerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowerView.swift; sourceTree = "<group>"; };
+		30CCD8582AC20E6E0058299C /* Transition+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Transition+Extension.swift"; sourceTree = "<group>"; };
 		30FD37952AA16BE70071F843 /* ChatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListView.swift; sourceTree = "<group>"; };
 		A5787CE72ABBC65900973ACB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A5A8865D2AB9020700F3F64A /* FlowerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowerView.swift; sourceTree = "<group>"; };
-		A5A886602AB9020700F3F64A /* getSwifty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getSwifty.swift; sourceTree = "<group>"; };
 		A5B64EA72AB66B5400ABEB3E /* cumFaceFlower.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = cumFaceFlower.mov; sourceTree = "<group>"; };
 		A5B64EAA2AB6736600ABEB3E /* pngSeq_00050.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pngSeq_00050.png; sourceTree = "<group>"; };
 		A5B64EAB2AB6736600ABEB3E /* pngSeq_00044.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pngSeq_00044.png; sourceTree = "<group>"; };
@@ -355,7 +361,12 @@
 		303513592A9C2D8A00C432FF /* Breathe */ = {
 			isa = PBXGroup;
 			children = (
-				3035135C2A9C2E4500C432FF /* Breathe.swift */,
+				30CCD8542AC20E480058299C /* BreathAnimationPickerView.swift */,
+				30CCD8502AC20E240058299C /* BreathAnimationCategoryView.swift */,
+				30CCD84E2AC20E200058299C /* BreatheAnimationView.swift */,
+				30CCD84C2AC20E1B0058299C /* SettingsForBreatheAnimation.swift */,
+				30CCD8562AC20E660058299C /* FlowerView.swift */,
+				30CCD8582AC20E6E0058299C /* Transition+Extension.swift */,
 			);
 			path = Breathe;
 			sourceTree = "<group>";
@@ -380,7 +391,6 @@
 		3053F3A72A92B19B00046BD1 /* Self Help */ = {
 			isa = PBXGroup;
 			children = (
-				A5A886592AB8FE6200F3F64A /* Animations */,
 				309755892AB53D0D00A3BBA2 /* Assets */,
 				3053F3BE2A92DB8D00046BD1 /* Helper */,
 				3053F3B72A92DAA000046BD1 /* Components */,
@@ -581,31 +591,6 @@
 				30AE2A6A2ABFBC1E00A9EA21 /* Video.swift */,
 			);
 			path = UserOnBoarding;
-			sourceTree = "<group>";
-		};
-		A5A886592AB8FE6200F3F64A /* Animations */ = {
-			isa = PBXGroup;
-			children = (
-				A5A8865A2AB9016400F3F64A /* nonagon */,
-				A5A8865B2AB9017500F3F64A /* flower */,
-			);
-			path = Animations;
-			sourceTree = "<group>";
-		};
-		A5A8865A2AB9016400F3F64A /* nonagon */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = nonagon;
-			sourceTree = "<group>";
-		};
-		A5A8865B2AB9017500F3F64A /* flower */ = {
-			isa = PBXGroup;
-			children = (
-				A5A886602AB9020700F3F64A /* getSwifty.swift */,
-				A5A8865D2AB9020700F3F64A /* FlowerView.swift */,
-			);
-			path = flower;
 			sourceTree = "<group>";
 		};
 		A5B64EA92AB6736600ABEB3E /* Comp 1 */ = {
@@ -880,6 +865,7 @@
 				30AE2A592ABFBBF000A9EA21 /* OnBoarding3.swift in Sources */,
 				3053F3AB2A92B19B00046BD1 /* ContentView.swift in Sources */,
 				3053F4052A92DD2200046BD1 /* RegistrationView.swift in Sources */,
+				30CCD8512AC20E240058299C /* BreathAnimationCategoryView.swift in Sources */,
 				3053F4272A92E03000046BD1 /* Constants.swift in Sources */,
 				3053F4192A92DF3000046BD1 /* TabModel.swift in Sources */,
 				3053F3A92A92B19B00046BD1 /* Self_HelpApp.swift in Sources */,
@@ -888,7 +874,7 @@
 				30AE2A5F2ABFBC0200A9EA21 /* OnBoarding6.swift in Sources */,
 				3053F41B2A92DF3400046BD1 /* TabPosition.swift in Sources */,
 				A5787CE82ABBC65900973ACB /* AppDelegate.swift in Sources */,
-				A5A886652AB9020700F3F64A /* getSwifty.swift in Sources */,
+				30CCD8552AC20E480058299C /* BreathAnimationPickerView.swift in Sources */,
 				3053F4292A92F72A00046BD1 /* InformationData.swift in Sources */,
 				3053F3FF2A92DD0200046BD1 /* ShimmerEffect.swift in Sources */,
 				30AE2A432ABFBAAC00A9EA21 /* CheckInDataService.swift in Sources */,
@@ -902,13 +888,12 @@
 				30AE2A5D2ABFBBFC00A9EA21 /* OnBoarding5.swift in Sources */,
 				3053F3BD2A92DB0B00046BD1 /* AuthViewModel.swift in Sources */,
 				30AE2A632ABFBC0C00A9EA21 /* OnBoardingNextButton.swift in Sources */,
-				3035135D2A9C2E4500C432FF /* Breathe.swift in Sources */,
 				3053F40D2A92DD3600046BD1 /* ForgotPassword.swift in Sources */,
 				3053F4252A92E02400046BD1 /* OpenAIService.swift in Sources */,
 				30AE2A572ABFBBE700A9EA21 /* OnBoarding2.swift in Sources */,
 				3053F4072A92DD2800046BD1 /* GoogleSiginBtn.swift in Sources */,
 				30AE2A552ABFBBE300A9EA21 /* OnBoarding1Gender.swift in Sources */,
-				A5A886622AB9020700F3F64A /* FlowerView.swift in Sources */,
+				30CCD84D2AC20E1B0058299C /* SettingsForBreatheAnimation.swift in Sources */,
 				30AE2A652ABFBC1100A9EA21 /* SelfHelpButton.swift in Sources */,
 				30AE2A792ABFBEC300A9EA21 /* CheckInEdit.swift in Sources */,
 				3053F4102A92DD5000046BD1 /* ProfileView.swift in Sources */,
@@ -916,12 +901,15 @@
 				30AE2A5B2ABFBBF800A9EA21 /* OnBoarding4.swift in Sources */,
 				30AE2A472ABFBBC300A9EA21 /* Anger.swift in Sources */,
 				3053F4172A92DF2B00046BD1 /* Home.swift in Sources */,
+				30CCD8572AC20E660058299C /* FlowerView.swift in Sources */,
 				3035135F2A9C365900C432FF /* ChatViewData.swift in Sources */,
+				30CCD84F2AC20E200058299C /* BreatheAnimationView.swift in Sources */,
 				30AE2A612ABFBC0600A9EA21 /* OnBoardingControlView.swift in Sources */,
 				30AE2A772ABFBD5800A9EA21 /* WhiteInputView.swift in Sources */,
 				30AE2A6F2ABFBC5E00A9EA21 /* CheckInListView.swift in Sources */,
 				30AE2A3F2ABFBA7B00A9EA21 /* ChatInListModel.swift in Sources */,
 				30AE2A672ABFBC1500A9EA21 /* SelfHelpButton2Button.swift in Sources */,
+				30CCD8592AC20E6E0058299C /* Transition+Extension.swift in Sources */,
 				3053F4012A92DD0900046BD1 /* SettingsRowView.swift in Sources */,
 				30AE2A692ABFBC1900A9EA21 /* Shame.swift in Sources */,
 				30AE2A4B2ABFBBCC00A9EA21 /* Depression.swift in Sources */,

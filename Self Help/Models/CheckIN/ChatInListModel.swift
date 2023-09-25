@@ -20,16 +20,16 @@ struct CheckIn: Identifiable, Codable {
     var datechart = Date()
     
     
+    
+    
+    
     func formattedDate() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE"
         return dateFormatter.string(from: date)
     }
-    
-    
-
-    
-    
 }
+
+
 
 
