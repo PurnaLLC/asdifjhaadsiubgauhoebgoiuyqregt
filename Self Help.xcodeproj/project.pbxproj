@@ -99,6 +99,8 @@
 		30CCD8552AC20E480058299C /* BreathAnimationPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CCD8542AC20E480058299C /* BreathAnimationPickerView.swift */; };
 		30CCD8572AC20E660058299C /* FlowerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CCD8562AC20E660058299C /* FlowerView.swift */; };
 		30CCD8592AC20E6E0058299C /* Transition+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CCD8582AC20E6E0058299C /* Transition+Extension.swift */; };
+		30CCD85B2AC2113B0058299C /* WimHofBreatheSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CCD85A2AC2113B0058299C /* WimHofBreatheSettings.swift */; };
+		30CCD85D2AC214660058299C /* WimHofBreathAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CCD85C2AC214660058299C /* WimHofBreathAnimationView.swift */; };
 		30FD37962AA16BE70071F843 /* ChatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD37952AA16BE70071F843 /* ChatListView.swift */; };
 		A5787CE82ABBC65900973ACB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5787CE72ABBC65900973ACB /* AppDelegate.swift */; };
 		A5B64EA82AB66B5400ABEB3E /* cumFaceFlower.mov in Resources */ = {isa = PBXBuildFile; fileRef = A5B64EA72AB66B5400ABEB3E /* cumFaceFlower.mov */; };
@@ -242,6 +244,8 @@
 		30CCD8542AC20E480058299C /* BreathAnimationPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreathAnimationPickerView.swift; sourceTree = "<group>"; };
 		30CCD8562AC20E660058299C /* FlowerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowerView.swift; sourceTree = "<group>"; };
 		30CCD8582AC20E6E0058299C /* Transition+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Transition+Extension.swift"; sourceTree = "<group>"; };
+		30CCD85A2AC2113B0058299C /* WimHofBreatheSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WimHofBreatheSettings.swift; sourceTree = "<group>"; };
+		30CCD85C2AC214660058299C /* WimHofBreathAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WimHofBreathAnimationView.swift; sourceTree = "<group>"; };
 		30FD37952AA16BE70071F843 /* ChatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListView.swift; sourceTree = "<group>"; };
 		A5787CE72ABBC65900973ACB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5B64EA72AB66B5400ABEB3E /* cumFaceFlower.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = cumFaceFlower.mov; sourceTree = "<group>"; };
@@ -367,6 +371,8 @@
 				30CCD84C2AC20E1B0058299C /* SettingsForBreatheAnimation.swift */,
 				30CCD8562AC20E660058299C /* FlowerView.swift */,
 				30CCD8582AC20E6E0058299C /* Transition+Extension.swift */,
+				30CCD85A2AC2113B0058299C /* WimHofBreatheSettings.swift */,
+				30CCD85C2AC214660058299C /* WimHofBreathAnimationView.swift */,
 			);
 			path = Breathe;
 			sourceTree = "<group>";
@@ -855,6 +861,7 @@
 				3053F4092A92DD2D00046BD1 /* SinginViewMOdel.swift in Sources */,
 				30AE2A712ABFBC6300A9EA21 /* CreateCheckinView.swift in Sources */,
 				30AE2A752ABFBC7800A9EA21 /* UserDataViewModel.swift in Sources */,
+				30CCD85D2AC214660058299C /* WimHofBreathAnimationView.swift in Sources */,
 				3053F4232A92E01800046BD1 /* ChatViewModel.swift in Sources */,
 				30AE2A3D2ABFBA6F00A9EA21 /* UserData.swift in Sources */,
 				303513612A9C3C9200C432FF /* DataViewModel.swift in Sources */,
@@ -864,6 +871,7 @@
 				30AE2A732ABFBC7400A9EA21 /* CheckInViewModel.swift in Sources */,
 				30AE2A592ABFBBF000A9EA21 /* OnBoarding3.swift in Sources */,
 				3053F3AB2A92B19B00046BD1 /* ContentView.swift in Sources */,
+				30CCD85B2AC2113B0058299C /* WimHofBreatheSettings.swift in Sources */,
 				3053F4052A92DD2200046BD1 /* RegistrationView.swift in Sources */,
 				30CCD8512AC20E240058299C /* BreathAnimationCategoryView.swift in Sources */,
 				3053F4272A92E03000046BD1 /* Constants.swift in Sources */,

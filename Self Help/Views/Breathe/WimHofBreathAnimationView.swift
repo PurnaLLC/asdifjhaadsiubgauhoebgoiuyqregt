@@ -1,16 +1,15 @@
 //
-//  ContentView.swift
-//  BreathingAnimation
+//  WimHofBreathAnimationView.swift
+//  Self Help
 //
-//  Created by Alexandru Turcanu on 19/03/2020.
-//  Copyright © 2020 CodingBytes. All rights reserved.
+//  Created by Maxwell Meyer on 9/25/23.
 //
 
 import SwiftUI
 
-import Combine
 
-enum breatheText {
+
+enum wimHofBreatheText {
     case breatheIn
     case breatheOut
     case holdStart
@@ -19,39 +18,6 @@ enum breatheText {
 }
 
 
-struct BreatheClockViewModel {
-    var minutes = 0
-    var seconds = 0
-    
-    var formattedTime: String {
-        return String(format: "%02d:%02d", minutes, seconds)
-    }
-    
-    mutating func reset() {
-        minutes = 0
-        seconds = 0
-    }
-    
-    // Start the countdown from a given number of seconds
-    mutating func startCountdown(from initialSeconds: Int) {
-        guard initialSeconds >= 0 else {
-            return // Ensure the input value is non-negative
-        }
-        
-        seconds = initialSeconds % 60
-        minutes = initialSeconds / 60
-    }
-    
-    // Decrement the countdown timer by 1 second
-    mutating func decrement() {
-        if seconds > 0 {
-            seconds -= 1
-        } else if minutes > 0 {
-            minutes -= 1
-            seconds = 59
-        }
-    }
-}
 
 
 
@@ -85,7 +51,7 @@ Text(vm.formattedTime)
 
 
 
-struct BreatheAnimationView: View {
+struct WimHofBreathAnimationView: View {
     @State private var numberOfPetals: Double = 7
     
     @State private var isMinimized = true
@@ -133,6 +99,10 @@ struct BreatheAnimationView: View {
     @State private var isCounting = false
     
     
+    @State var breath30HoldOut: Int
+    
+    @State var breath30HoldIn: Int
+
     
     @State  var maxBreathCount: Int
     
@@ -180,17 +150,17 @@ struct BreatheAnimationView: View {
                 
             case .holdEnd:
                 
-                if self.breathInHold == 0 {
+     //           if self.breathInHold == 0 {
                     
-                    Text("Breath In")
-                        .font(.system(size: 40))
-                }else{
-                    
+     //               Text("Breath In")
+    //                    .font(.system(size: 40))
+       //         }else{
+     
                     
                     Text("Hold")
                         .font(.system(size: 40))
                     
-                }
+       //         }
                 
                 
                 
@@ -311,6 +281,8 @@ struct BreatheAnimationView: View {
         currentBreathe = .holdStart
         
         
+        print ("\(self.breathInDuration)")
+        
         
         DispatchQueue.main.asyncAfter(deadline: .now() + TimeInterval(self.breathOutHold)) {
             
@@ -347,14 +319,52 @@ struct BreatheAnimationView: View {
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() +  TimeInterval(self.breathInDuration) +  TimeInterval(self.breathOutDuration)   + TimeInterval(self.breathInHold) +   TimeInterval(self.breathOutHold) ) {
-            
+
             
             
             if breathcount < maxBreathCount{
-                infiniteloop()
                 
-                breathcount += 1
+                if breathcount == 30{
+                    
+                    breathHold()
+                    
+                }else{
+                    
+                    
 
+                        if breathcount == 60{
+                            
+                            breathHold()
+                            
+                        }else{
+                            
+                            
+                       
+                                
+                                if breathcount == 90{
+                                    
+                                    breathHold()
+                                    
+                                }else{
+                                    
+                                    if breathcount == 120{
+                                        
+                                     
+                                        
+                                        breathHold()
+                                        
+                                    }else{
+                                        
+                                        
+                                        infiniteloop()
+                                        
+                                        breathcount += 1
+                                        
+                                    }
+                        }
+                    }
+                }
+                
                 
                 
             }else{
@@ -366,12 +376,76 @@ struct BreatheAnimationView: View {
         }
         
     }
+
+
+    func breathHold(){
+        
+        currentBreathe = .holdEnd
+        
+        
+        isMinimized = true
+            
+        
+        
+        
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() +  TimeInterval(breath30HoldOut) ) {
+            
+            isMinimized = false
+            
+            currentBreathe = .breatheIn
+            
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() +  TimeInterval(self.breathInDuration) ) {
+                
+                currentBreathe = .holdEnd
+                
+                
+                
+                
+                
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() +  TimeInterval(breath30HoldIn) ) {
+                    
+                    isMinimized = true
+                    
+                    currentBreathe = .breatheOut
+                    
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() +  TimeInterval(self.breathOutDuration) ) {
+                        infiniteloop()
+                        breathcount += 1
+                        
+                    }
+                    
+                }
+                
+                
+                
+                
+            }
+            
+            
+            
+            
+        }
+        
+        
+        
+        
+        
+    
     
     
     
 }
 
 
+        
+        
+    }
+    
+    
 
 
 
@@ -380,12 +454,13 @@ struct BreatheAnimationView: View {
 
 
 
-struct BreatheAnimationView_Previews: PreviewProvider {
+
+
+
+
+
+struct WimHofBreathAnimationView_Previews: PreviewProvider {
     static var previews: some View {
-        BreatheAnimationView(breathInHold: 1, breathOutHold: 1, breathOutDuration: 1, breathInDuration: 1, maxBreathCount: 1)
+        WimHofBreathAnimationView(breathInHold: 0, breathOutHold: 0, breathOutDuration: 2, breathInDuration: 2, breath30HoldOut: 90, breath30HoldIn: 150, maxBreathCount: 30)
     }
 }
-
-
-
-

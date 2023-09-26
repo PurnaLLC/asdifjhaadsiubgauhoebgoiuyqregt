@@ -157,7 +157,7 @@ struct SettingsForBreatheAnimationView: View {
                             
                             FlowerView(isMinimized: $isMinimized,
                                        numberOfPetals: $numberOfPetals,
-                                       animationDuration: $animationDuration
+                                       animationDuration: $animationDuration, circleDiameter: 150
                             ).transition(
                                 AnyTransition.asymmetric(
                                     insertion: AnyTransition.opacity.animation(Animation.default.delay(animationDuration)),
@@ -178,7 +178,7 @@ struct SettingsForBreatheAnimationView: View {
                         // This FlowerView creates a mask around the Main FlowerView
                         FlowerView(isMinimized: $isMinimized,
                                    numberOfPetals: $numberOfPetals,
-                                   animationDuration: $animationDuration ,
+                                   animationDuration: $animationDuration, circleDiameter: 100 ,
                                    color: Color(UIColor.black)
                         )
                         
@@ -188,7 +188,7 @@ struct SettingsForBreatheAnimationView: View {
                         // Main FlowerView
                         FlowerView(isMinimized: $isMinimized,
                                    numberOfPetals: $numberOfPetals,
-                                   animationDuration: $animationDuration)
+                                   animationDuration: $animationDuration, circleDiameter: 100)
                         
                         
                         Text("\(breathcount)")

@@ -16,7 +16,10 @@ struct FlowerView: View {
     @Binding var animationDuration: Double
 
     /// The diameter of each petal.
-    let circleDiameter: CGFloat = 160
+    let circleDiameter: CGFloat
+    
+    //160
+    
 
     /// The color of each petal. It is recommended to also use opacity to create an overlap effect.
     var color = Color(UIColor.cyan).opacity(0.6)
@@ -99,7 +102,7 @@ struct FlowerView_Previews: PreviewProvider {
     static var previews: some View {
         FlowerView(isMinimized: .constant(true),
                    numberOfPetals: .constant(5),
-                   animationDuration: .constant(4.2))
+                   animationDuration: .constant(4.2), circleDiameter: 160)
     }
 }
 
