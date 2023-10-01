@@ -40,7 +40,22 @@ class UserDataViewModel: ObservableObject {
         
     }
     
-
+    
+    
+    func updateStreakDate(_ userId: String, currentDate: Date){
+        
+        dataService.updateStreakDate(userId, newStreakDate: currentDate)
+        
+    
+    }
+    
+    
+    func resetStreak(_ userId: String){
+        
+        dataService.resetStreakDate(userId)
+        
+    }
+    
     
     
 }

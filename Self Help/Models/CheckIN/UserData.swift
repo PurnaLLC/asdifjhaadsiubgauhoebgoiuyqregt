@@ -12,6 +12,7 @@ import Firebase
 import FirebaseFirestore
 
 
+
 struct UserData: Identifiable, Codable {
     @DocumentID var id: String? = UUID().uuidString
     var userId = ""
@@ -28,6 +29,12 @@ struct UserData: Identifiable, Codable {
     
     
     
+    func formattedLastCheckinDate(date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM"
+        return dateFormatter.string(from: date)
+    }
+
     
     
     

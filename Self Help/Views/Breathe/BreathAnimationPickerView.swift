@@ -84,7 +84,7 @@ struct BreathAnimationPickerView: View {
                             SettingsForBreatheAnimationView(breathInHold: 0, breathOutHold: 0, breathOutDuration: 4, breathInDuration: 6,maxBreathCount: 30, DoubleMaxBreathCount: 30, previousTotalBreatheDuration: 10, previewsTotalBreatheSession: 30, totalBreatheDuration: 10 ,  totalBreatheSession: 300,  previousMaxBreathCount: 30)
                             
                         } label: {
-                            BreathAnimationCategoryView(title: "relaxora", description: "penis ara ara ara ara ara ara")
+                            BreathAnimationCategoryView(title: "relaxora", description: " ara ara ara ara ara ara")
                             
                         }
                         NavigationLink {
@@ -96,7 +96,7 @@ struct BreathAnimationPickerView: View {
                             
                             
                         } label: {
-                            BreathAnimationCategoryView(title: "Wim hof", description: "penis ara ara ara ara ara ara")
+                            BreathAnimationCategoryView(title: "Wim hof", description: " ara ara ara ara ara ara")
 
                         }
                         

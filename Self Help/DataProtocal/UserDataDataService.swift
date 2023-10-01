@@ -26,9 +26,16 @@ protocol UserDataService: ObservableObject {
     
     func updateUserDataInFirestore( _ userId : String, newStreak: Int)
     
-      
+
+        
     
+    func updateStreakDate(_ userId: String, newStreakDate: Date)
     
+        
+    
+    func updateStreakDateInFireStore(_ userId: String, lastcheckin: Date)
+    
+    func resetStreakDate(_ userId: String)
     
     
 }
@@ -37,7 +44,7 @@ protocol UserDataService: ObservableObject {
 
 
 class UserFirebaseDataService: UserDataService {
-
+  
     
     
     
@@ -106,6 +113,53 @@ class UserFirebaseDataService: UserDataService {
     }
     
     
+    
+    
+    
+    func updateStreakDate(_ userId: String, newStreakDate: Date) {
+        // Call the correct function name
+        updateStreakDateInFireStore(userId, lastcheckin: newStreakDate)
+    }
+
+    
+    func updateStreakDateInFireStore(_ userId: String, lastcheckin: Date) {
+        let userDocumentRef = firestoreCollection.document(userId)
+        
+        let updatedData: [String: Any] = [
+            "lastcheckin": lastcheckin,
+            // Add other fields if needed
+        ]
+        
+        userDocumentRef.updateData(updatedData) { error in
+            if let error = error {
+                print("Error updating UserData in Firestore: \(error.localizedDescription)")
+            } else {
+                print("UserData updated successfully")
+            }
+        }
+    }
+
+    
+    
+    func resetStreakDate(_ userId: String){
+        
+        let userDocumentRef = firestoreCollection.document(userId) // Replace 'userId' with the appropriate user ID
+        
+        // Create a dictionary with the updated userData fields
+        let updatedData: [String: Any] = [
+            "streak": 0
+            // Add other fields if needed
+        ]
+        
+        // Update the Firestore document with the new data
+        userDocumentRef.updateData(updatedData) { error in
+            if let error = error {
+                print("Error updating UserData in Firestore: \(error.localizedDescription)")
+            } else {
+                print("UserData updated successfully")
+            }
+        }
+    }
     
     private func loadUserData() {
         guard let userId = Auth.auth().currentUser?.uid else {

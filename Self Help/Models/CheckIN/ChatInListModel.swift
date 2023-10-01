@@ -8,6 +8,12 @@
 import Foundation
 import FirebaseFirestoreSwift
 
+import Firebase
+
+
+
+
+
 
 
 struct CheckIn: Identifiable, Codable {

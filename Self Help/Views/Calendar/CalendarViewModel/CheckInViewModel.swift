@@ -48,5 +48,23 @@ class CheckInViewModel: ObservableObject {
             ds.delete(checkin)
     }
     
+    func getLast7DaysCheckins() -> [CheckIn] {
+        let calendar = Calendar.current
+        let currentDate = Date()
+        
+        // Use a filter to get Checkins from the last 7 days
+        let last7DaysCheckins = checkins.filter { checkin in
+            if let checkinDate = calendar.date(bySettingHour: 0, minute: 0, second: 0, of: checkin.date) {
+                let daysAgo = calendar.dateComponents([.day], from: checkinDate, to: currentDate)
+                return daysAgo.day ?? 0 <= 7
+            }
+            return false
+        }
+        
+        return last7DaysCheckins
+    }
+    
+    
+    
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		302D6EFE2AC3A6BE00408E05 /* MessagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302D6EFD2AC3A6BE00408E05 /* MessagesModel.swift */; };
 		3035135F2A9C365900C432FF /* ChatViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3035135E2A9C365900C432FF /* ChatViewData.swift */; };
 		303513612A9C3C9200C432FF /* DataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303513602A9C3C9200C432FF /* DataViewModel.swift */; };
 		3053F3A92A92B19B00046BD1 /* Self_HelpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053F3A82A92B19B00046BD1 /* Self_HelpApp.swift */; };
@@ -62,6 +63,10 @@
 		3053F4252A92E02400046BD1 /* OpenAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053F4242A92E02400046BD1 /* OpenAIService.swift */; };
 		3053F4272A92E03000046BD1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053F4262A92E03000046BD1 /* Constants.swift */; };
 		3053F4292A92F72A00046BD1 /* InformationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053F4282A92F72A00046BD1 /* InformationData.swift */; };
+		3060FEFB2AC3B5D600CBE117 /* MessageDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060FEFA2AC3B5D600CBE117 /* MessageDataService.swift */; };
+		3060FEFE2AC3C40100CBE117 /* FirebaseMessagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060FEFD2AC3C40100CBE117 /* FirebaseMessagesViewModel.swift */; };
+		3060FF112AC5017E00CBE117 /* AISpeeach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060FF102AC5017E00CBE117 /* AISpeeach.swift */; };
+		3060FF152AC503DC00CBE117 /* AITalk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060FF142AC503DC00CBE117 /* AITalk.swift */; };
 		309755822AB53B1D00A3BBA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309755812AB53B1D00A3BBA2 /* SceneDelegate.swift */; };
 		3097558B2AB53D1C00A3BBA2 /* Finalsnow2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3097558A2AB53D1C00A3BBA2 /* Finalsnow2.mp4 */; };
 		30AE2A3D2ABFBA6F00A9EA21 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A3C2ABFBA6F00A9EA21 /* UserData.swift */; };
@@ -179,6 +184,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		302D6EFD2AC3A6BE00408E05 /* MessagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesModel.swift; sourceTree = "<group>"; };
 		3035135E2A9C365900C432FF /* ChatViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewData.swift; sourceTree = "<group>"; };
 		303513602A9C3C9200C432FF /* DataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewModel.swift; sourceTree = "<group>"; };
 		3053F3A52A92B19B00046BD1 /* Self Help.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Self Help.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -207,6 +213,11 @@
 		3053F4242A92E02400046BD1 /* OpenAIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenAIService.swift; sourceTree = "<group>"; };
 		3053F4262A92E03000046BD1 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3053F4282A92F72A00046BD1 /* InformationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationData.swift; sourceTree = "<group>"; };
+		3060FEFA2AC3B5D600CBE117 /* MessageDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDataService.swift; sourceTree = "<group>"; };
+		3060FEFD2AC3C40100CBE117 /* FirebaseMessagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseMessagesViewModel.swift; sourceTree = "<group>"; };
+		3060FF0F2AC5012400CBE117 /* Self-Help-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Self-Help-Info.plist"; sourceTree = SOURCE_ROOT; };
+		3060FF102AC5017E00CBE117 /* AISpeeach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AISpeeach.swift; sourceTree = "<group>"; };
+		3060FF142AC503DC00CBE117 /* AITalk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AITalk.swift; sourceTree = "<group>"; };
 		309755812AB53B1D00A3BBA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3097558A2AB53D1C00A3BBA2 /* Finalsnow2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Finalsnow2.mp4; sourceTree = "<group>"; };
 		30AE2A3C2ABFBA6F00A9EA21 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
@@ -362,6 +373,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		302D6EFC2AC3A63200408E05 /* AI Messages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "AI Messages";
+			sourceTree = "<group>";
+		};
 		303513592A9C2D8A00C432FF /* Breathe */ = {
 			isa = PBXGroup;
 			children = (
@@ -397,6 +415,7 @@
 		3053F3A72A92B19B00046BD1 /* Self Help */ = {
 			isa = PBXGroup;
 			children = (
+				3060FF0F2AC5012400CBE117 /* Self-Help-Info.plist */,
 				309755892AB53D0D00A3BBA2 /* Assets */,
 				3053F3BE2A92DB8D00046BD1 /* Helper */,
 				3053F3B72A92DAA000046BD1 /* Components */,
@@ -517,6 +536,7 @@
 		3053F41F2A92DFFE00046BD1 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				3060FEFC2AC3C3E600CBE117 /* FirebaseMessages */,
 				3053F4202A92E01100046BD1 /* ChatView.swift */,
 				30FD37952AA16BE70071F843 /* ChatListView.swift */,
 				303513602A9C3C9200C432FF /* DataViewModel.swift */,
@@ -527,6 +547,18 @@
 				3035135E2A9C365900C432FF /* ChatViewData.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		3060FEFC2AC3C3E600CBE117 /* FirebaseMessages */ = {
+			isa = PBXGroup;
+			children = (
+				302D6EFD2AC3A6BE00408E05 /* MessagesModel.swift */,
+				3060FEFA2AC3B5D600CBE117 /* MessageDataService.swift */,
+				3060FEFD2AC3C40100CBE117 /* FirebaseMessagesViewModel.swift */,
+				3060FF102AC5017E00CBE117 /* AISpeeach.swift */,
+				3060FF142AC503DC00CBE117 /* AITalk.swift */,
+			);
+			path = FirebaseMessages;
 			sourceTree = "<group>";
 		};
 		309755892AB53D0D00A3BBA2 /* Assets */ = {
@@ -540,6 +572,7 @@
 		30B0371C2AA8262900BA25D5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				302D6EFC2AC3A63200408E05 /* AI Messages */,
 				30B0371D2AA8263B00BA25D5 /* CheckIN */,
 				3053F3B62A92DA9C00046BD1 /* User */,
 			);
@@ -877,6 +910,7 @@
 				3053F4272A92E03000046BD1 /* Constants.swift in Sources */,
 				3053F4192A92DF3000046BD1 /* TabModel.swift in Sources */,
 				3053F3A92A92B19B00046BD1 /* Self_HelpApp.swift in Sources */,
+				3060FEFE2AC3C40100CBE117 /* FirebaseMessagesViewModel.swift in Sources */,
 				30AE2A452ABFBAC100A9EA21 /* UserDataDataService.swift in Sources */,
 				3053F40B2A92DD3200046BD1 /* LoginView.swift in Sources */,
 				30AE2A5F2ABFBC0200A9EA21 /* OnBoarding6.swift in Sources */,
@@ -886,15 +920,18 @@
 				3053F4292A92F72A00046BD1 /* InformationData.swift in Sources */,
 				3053F3FF2A92DD0200046BD1 /* ShimmerEffect.swift in Sources */,
 				30AE2A432ABFBAAC00A9EA21 /* CheckInDataService.swift in Sources */,
+				3060FF112AC5017E00CBE117 /* AISpeeach.swift in Sources */,
 				30AE2A6B2ABFBC1E00A9EA21 /* Video.swift in Sources */,
 				3053F4142A92DEE600046BD1 /* User.swift in Sources */,
 				3053F4032A92DD1100046BD1 /* InputView.swift in Sources */,
+				3060FEFB2AC3B5D600CBE117 /* MessageDataService.swift in Sources */,
 				309755822AB53B1D00A3BBA2 /* SceneDelegate.swift in Sources */,
 				30AE2A4D2ABFBBD000A9EA21 /* Fear.swift in Sources */,
 				30AE2A492ABFBBC700A9EA21 /* Anxiety.swift in Sources */,
 				3053F4212A92E01100046BD1 /* ChatView.swift in Sources */,
 				30AE2A5D2ABFBBFC00A9EA21 /* OnBoarding5.swift in Sources */,
 				3053F3BD2A92DB0B00046BD1 /* AuthViewModel.swift in Sources */,
+				302D6EFE2AC3A6BE00408E05 /* MessagesModel.swift in Sources */,
 				30AE2A632ABFBC0C00A9EA21 /* OnBoardingNextButton.swift in Sources */,
 				3053F40D2A92DD3600046BD1 /* ForgotPassword.swift in Sources */,
 				3053F4252A92E02400046BD1 /* OpenAIService.swift in Sources */,
@@ -903,6 +940,7 @@
 				30AE2A552ABFBBE300A9EA21 /* OnBoarding1Gender.swift in Sources */,
 				30CCD84D2AC20E1B0058299C /* SettingsForBreatheAnimation.swift in Sources */,
 				30AE2A652ABFBC1100A9EA21 /* SelfHelpButton.swift in Sources */,
+				3060FF152AC503DC00CBE117 /* AITalk.swift in Sources */,
 				30AE2A792ABFBEC300A9EA21 /* CheckInEdit.swift in Sources */,
 				3053F4102A92DD5000046BD1 /* ProfileView.swift in Sources */,
 				30FD37962AA16BE70071F843 /* ChatListView.swift in Sources */,
@@ -1053,6 +1091,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Self-Help-Info.plist";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1082,6 +1123,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Self-Help-Info.plist";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

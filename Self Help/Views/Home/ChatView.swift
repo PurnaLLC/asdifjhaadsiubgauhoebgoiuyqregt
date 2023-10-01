@@ -30,16 +30,38 @@ struct ChatView: View {
     @State private var showVideo = false
 
     
+    @StateObject var vm = FirebaseMessagesViewModel(ds: FirebaseMessageDataService())
+
+    
+    
+    
     var body: some View {
         NavigationView {
             VStack{
          
+       
+
+                
+            
                 if let dataOfTheDay = view2Model.dataOfTheDay {
-                    Text("Make \(dataOfTheDay.date) a great day")
-                        .font(.system(size: 39, weight: .ultraLight, design: .default))
-                        .frame(width: width * 0.8, height: height * 0.15,
-                               alignment: .top)
-                        .padding(.top, UIScreen.main.bounds.height * 0.025)
+            
+                
+                    
+                    let date = Date()
+                    
+                    
+      
+                        
+                        Text(" \(dataOfTheDay.greeting1 ?? "")  \(currentDateFormat(from: date)) \(dataOfTheDay.greeting2 ?? "") ")
+                        
+                            .font(.system(size: 39, weight: .ultraLight, design: .default))
+                            .frame(width: width * 0.8, height: height * 0.15,
+                                   alignment: .top)
+                            .padding(.top, UIScreen.main.bounds.height * 0.025)
+                  
+                    
+                    
+                    
                     
                     VStack(alignment: .leading){
                         HStack{
@@ -63,8 +85,8 @@ struct ChatView: View {
                                     .stroke(Color.black, lineWidth: 2)
                                     .frame(width: width, height: geometry.size.height)
                                 
-                                Text(dataOfTheDay.affirmation)
-                                    .padding()
+                            //    Text(dataOfTheDay.affirmation)
+                             //       .padding()
                             }
                             
                             
@@ -74,7 +96,7 @@ struct ChatView: View {
                                 Spacer()
                             }
                             .padding(.leading, 60)
-                            
+                         /*
                             HStack{
                                 Spacer()
                                 Text("  \(dataOfTheDay.challenge ?? "No challenge today")")
@@ -86,6 +108,9 @@ struct ChatView: View {
                                     )
                                     .padding(.trailing, 20)
                             }
+                            */
+                            
+                            
                             Spacer()
                         }
                         
@@ -99,12 +124,12 @@ struct ChatView: View {
                             Spacer()
                         }
                         .padding(.leading, 22)
-                        NavigationLink(destination: ChatList()) {
+                        NavigationLink(destination: ChatList( vm: vm)) {
                             // destination view to navigation to
                             
                             
                             
-                            
+                          /*
                             
                             HStack{
                                 Spacer()
@@ -119,6 +144,8 @@ struct ChatView: View {
                                     .padding(.trailing, 20)
                             }
                             
+                            */
+                            
                         }
                         Spacer()
                     }
@@ -126,7 +153,9 @@ struct ChatView: View {
                 }
                 else {
                     Text("Someone did an oopsie in this code...")
+        
                     
+        
                 }
                 
             }
@@ -158,6 +187,10 @@ struct ChatView: View {
                 }
             }
         }
+    
+
+    
+    
     }
 
   

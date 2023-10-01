@@ -17,15 +17,19 @@ struct ContentsView: View {
 
     let getUserDataTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
+    
+
+    
+    
     var body: some View {
         Group {
             if viewModel.currentUser != nil {
              //   FlowerView(isMinimized: $isMinimized, numberOfPetals: $numberOfPetals, animationDuration: $animationDuration)
                 
                 
-                Home()
+               Home()
                 
-                
+           
             } else {
               //  OnBoarding1()
                //    .background(HelperView())   // << here !!

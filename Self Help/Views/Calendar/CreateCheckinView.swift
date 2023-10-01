@@ -76,7 +76,7 @@ struct CreateCheckinView: View {
                         
                         uservm.increaseStreak(user.id, currentStreak)
                         
-                        
+                        uservm.updateStreakDate(user.id, currentDate: Date())
                         
                     }
                     

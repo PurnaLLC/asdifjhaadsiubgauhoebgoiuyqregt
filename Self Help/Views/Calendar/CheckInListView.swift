@@ -23,6 +23,11 @@ struct CheckInListView: View {
     
     @ObservedObject var uservm: UserDataViewModel
     
+    @EnvironmentObject var viewModel: AuthViewModel
+
+    
+    
+    
     var body: some View {
         
         
@@ -31,12 +36,20 @@ struct CheckInListView: View {
         VStack{
             
             Chart{
-                ForEach(vm.checkins){checkin in
-                    BarMark (x:.value("Day", checkin.date, unit: .weekday ),
-                             y: .value("Rating", checkin.day1to10))
+                
+                
+                
+                
+                ForEach(vm.getLast7DaysCheckins()) { checkin in
+                             BarMark(x: .value("Day", checkin.date, unit: .weekday),
+                                     y: .value("Rating", checkin.day1to10))
+                         }
+                
+                
+                
+            }
                     
-                }
-            }.frame(width: 375, height: 180)
+                .frame(width: 375, height: 180)
                 .chartYScale(domain: 0...10)
                 .chartXAxis{
                     
@@ -164,13 +177,52 @@ struct CheckInListView: View {
                 
                 Button {
                     
+                    let currentDate = Date()
+                              
+                    let formattedCurrentDate = userdata.formattedDate(date: currentDate)
+
                     
-                    isShowingSheet.toggle()
-                    
-                    
+                    if userdata.formattedDate(date: userdata.lastcheckin) == formattedCurrentDate {
+
+                    }else{
+                        
+                        isShowingSheet.toggle()
+                        
+                    }
                 } label: {
                     
                     Text("ADD")
+                    
+                }
+                
+                .onAppear{
+                    let currentDate = Date()
+                    let yesterdayDate = Calendar.current.date(byAdding: .day, value: -1, to: currentDate) ?? currentDate
+                    let formattedYesterdayDate = userdata.formattedLastCheckinDate(date: yesterdayDate)
+                    
+                    
+                    let userdataDate = userdata.lastcheckin
+                    let yesterdayUserDate = Calendar.current.date(byAdding: .day, value: -1, to: userdataDate) ?? userdataDate
+                    let formatedUserYesterdayDate = userdata.formattedLastCheckinDate(date: yesterdayUserDate)
+                    
+                    
+                    print("\(userdata.formattedDate(date: userdata.lastcheckin))")
+                    print("\(formattedYesterdayDate)")
+
+                    if formatedUserYesterdayDate == formattedYesterdayDate {
+                        
+                        
+                    }else{
+                        if let user = viewModel.currentUser{
+                            
+                            uservm.resetStreak(user.id)
+                            
+                            
+                        }
+                    }
+                        
+                        
+                    
                     
                 }
                 

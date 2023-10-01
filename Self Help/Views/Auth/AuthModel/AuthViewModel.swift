@@ -95,21 +95,20 @@ class AuthViewModel: ObservableObject{
             let user = User(id: result.user.uid, fullname: fullname, email: email)
             let encodedUser = try Firestore.Encoder().encode(user)
             
-            let userData = UserData(userId: user.id, lastcheckin: Date(), streak: 0)
+            
+            var lastcheckinS = Date(timeIntervalSinceReferenceDate: 0)
+
+            
+            let userData = UserData(userId: user.id, lastcheckin: lastcheckinS, streak: 0)
 
             
             
             try await Firestore.firestore().collection("users").document(user.id).setData(encodedUser)
             
-            // Save message content to subcollection
-            let subcollectionData = ["content": messageContent]
-            let messagesCollectionRef = Firestore.firestore().collection("users").document(user.id).collection("messages")
-            
-            
-            
-            
-            let messageDocumentRef = try await messagesCollectionRef.addDocument(data: subcollectionData)
+
             let db = Firestore.firestore()
+            
+            
             
             let userDocumentRef = db.collection("usersdata").document(user.id)
 
@@ -158,17 +157,14 @@ class AuthViewModel: ObservableObject{
         try await Firestore.firestore().collection("users").document(uid).setData(encodedUser)
 
         // ...
+        var lastcheckinS = Date(timeIntervalSinceReferenceDate: 0)
 
-        let userData = UserData(userId: uid, lastcheckin: Date(), streak: 0)
+        
+        let userData = UserData(userId: uid, lastcheckin: lastcheckinS, streak: 0)
 
-        // Save message content to subcollection
-        let subcollectionData = ["content": messageContent]
-        let messagesCollectionRef = Firestore.firestore().collection("users").document(uid).collection("messages")
-        let _ = try await messagesCollectionRef.addDocument(data: subcollectionData)
 
         
         
-        let messageDocumentRef = try await messagesCollectionRef.addDocument(data: subcollectionData)
         let db = Firestore.firestore()
         
         let userDocumentRef = db.collection("usersdata").document(uid)
@@ -250,8 +246,8 @@ class AuthViewModel: ObservableObject{
               //  try await userSession = nil
 
                 // Clear user session
-                userSession = nil
-            
+                self.userSession = nil // signs out user session and takes us back to login screen
+                self.currentUser = nil
 
                 // Clear UserDefaults
                 let defaults = UserDefaults.standard
