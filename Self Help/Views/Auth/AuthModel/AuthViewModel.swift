@@ -16,8 +16,7 @@ import SwiftUI
 import CryptoKit
 import FirebaseFirestore
 import AuthenticationServices
-
-
+import FirebaseAuthCombineSwift
 
 
 
@@ -26,10 +25,12 @@ protocol AuthenticationFormProtocol {
 }
 
 
+
 @MainActor
 class AuthViewModel: ObservableObject{
     @Published var userSession: FirebaseAuth.User?
     @Published var currentUser: User?
+    
     
 
 
@@ -88,7 +89,7 @@ class AuthViewModel: ObservableObject{
     
 
 
-    func createUser(withEmail email: String, password: String, fullname: String, messageContent: String) async throws {
+    func createUser(withEmail email: String, password: String, fullname: String,  userSelectedProblems: [String], userGender: String, userName: String) async throws {
         do {
             let result = try await Auth.auth().createUser(withEmail: email, password: password)
             self.userSession = result.user
@@ -98,8 +99,7 @@ class AuthViewModel: ObservableObject{
             
             var lastcheckinS = Date(timeIntervalSinceReferenceDate: 0)
 
-            
-            let userData = UserData(userId: user.id, lastcheckin: lastcheckinS, streak: 0)
+            let userData = UserData(userId: user.id, lastcheckin: lastcheckinS, streak: 0, userName: userGender, userGender: userGender, selectedProblems: userSelectedProblems )
 
             
             
@@ -143,7 +143,7 @@ class AuthViewModel: ObservableObject{
     
     
     
-    func createGmailUser(fullname: String, messageContent: String) async throws {
+    func createGmailUser(fullname: String, userSelectedProblems: [String], userGender: String, userName: String) async throws {
         guard let currentUser = Auth.auth().currentUser else {
             print("DEBUG: User not logged in.")
             return
@@ -160,8 +160,8 @@ class AuthViewModel: ObservableObject{
         var lastcheckinS = Date(timeIntervalSinceReferenceDate: 0)
 
         
-        let userData = UserData(userId: uid, lastcheckin: lastcheckinS, streak: 0)
 
+        let userData = UserData(userId: uid, lastcheckin: lastcheckinS, streak: 0, userName: userGender, userGender: userGender, selectedProblems: userSelectedProblems )
 
         
         

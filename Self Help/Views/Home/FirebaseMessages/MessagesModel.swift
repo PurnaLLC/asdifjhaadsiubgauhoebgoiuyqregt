@@ -20,6 +20,6 @@ struct FirebaseMessage: Identifiable, Codable {
     var userId = ""
     var documentId: String? // Store the Firestore document ID here
 
-     
     
+
 }

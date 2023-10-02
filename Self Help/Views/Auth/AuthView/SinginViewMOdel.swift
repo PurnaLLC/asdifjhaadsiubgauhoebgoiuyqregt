@@ -25,7 +25,7 @@ class SinginViewModel:ObservableObject{
         request.requestedScopes = [.fullName,.email]
         request.nonce = sha256(nonce)
     }
-    func SinginWithAppleCompletion( _ result: Result<ASAuthorization,Error>){
+    func SinginWithAppleCompletion( _ result: Result<ASAuthorization,Error>, selectedProblems: [String],userGender: String,  userName: String){
         switch result {
         case .success(let user):
             guard let credential = user.credential as? ASAuthorizationAppleIDCredential else{
@@ -49,7 +49,7 @@ class SinginViewModel:ObservableObject{
                         
                         Task {
                             do {
-                                try await self.viewModel.createGmailUser(fullname: "", messageContent: "hello")
+                                try await self.viewModel.createGmailUser(fullname: "", userSelectedProblems: selectedProblems ,userGender: userGender ,userName: userName)
                                 // TODO: Navigate to Home view
                             } catch {
                                 // TODO: Handle error from createUser

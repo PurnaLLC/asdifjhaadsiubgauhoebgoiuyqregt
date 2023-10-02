@@ -67,6 +67,8 @@
 		3060FEFE2AC3C40100CBE117 /* FirebaseMessagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060FEFD2AC3C40100CBE117 /* FirebaseMessagesViewModel.swift */; };
 		3060FF112AC5017E00CBE117 /* AISpeeach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060FF102AC5017E00CBE117 /* AISpeeach.swift */; };
 		3060FF152AC503DC00CBE117 /* AITalk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060FF142AC503DC00CBE117 /* AITalk.swift */; };
+		3060FF172AC9118400CBE117 /* AffirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060FF162AC9118400CBE117 /* AffirmationView.swift */; };
+		3060FF192AC9EBB400CBE117 /* ChallengeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060FF182AC9EBB400CBE117 /* ChallengeData.swift */; };
 		309755822AB53B1D00A3BBA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309755812AB53B1D00A3BBA2 /* SceneDelegate.swift */; };
 		3097558B2AB53D1C00A3BBA2 /* Finalsnow2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3097558A2AB53D1C00A3BBA2 /* Finalsnow2.mp4 */; };
 		30AE2A3D2ABFBA6F00A9EA21 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A3C2ABFBA6F00A9EA21 /* UserData.swift */; };
@@ -218,6 +220,8 @@
 		3060FF0F2AC5012400CBE117 /* Self-Help-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Self-Help-Info.plist"; sourceTree = SOURCE_ROOT; };
 		3060FF102AC5017E00CBE117 /* AISpeeach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AISpeeach.swift; sourceTree = "<group>"; };
 		3060FF142AC503DC00CBE117 /* AITalk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AITalk.swift; sourceTree = "<group>"; };
+		3060FF162AC9118400CBE117 /* AffirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffirmationView.swift; sourceTree = "<group>"; };
+		3060FF182AC9EBB400CBE117 /* ChallengeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeData.swift; sourceTree = "<group>"; };
 		309755812AB53B1D00A3BBA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3097558A2AB53D1C00A3BBA2 /* Finalsnow2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Finalsnow2.mp4; sourceTree = "<group>"; };
 		30AE2A3C2ABFBA6F00A9EA21 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
@@ -544,7 +548,9 @@
 				3053F4242A92E02400046BD1 /* OpenAIService.swift */,
 				3053F4262A92E03000046BD1 /* Constants.swift */,
 				3053F4282A92F72A00046BD1 /* InformationData.swift */,
+				3060FF162AC9118400CBE117 /* AffirmationView.swift */,
 				3035135E2A9C365900C432FF /* ChatViewData.swift */,
+				3060FF182AC9EBB400CBE117 /* ChallengeData.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -925,6 +931,7 @@
 				3053F4142A92DEE600046BD1 /* User.swift in Sources */,
 				3053F4032A92DD1100046BD1 /* InputView.swift in Sources */,
 				3060FEFB2AC3B5D600CBE117 /* MessageDataService.swift in Sources */,
+				3060FF172AC9118400CBE117 /* AffirmationView.swift in Sources */,
 				309755822AB53B1D00A3BBA2 /* SceneDelegate.swift in Sources */,
 				30AE2A4D2ABFBBD000A9EA21 /* Fear.swift in Sources */,
 				30AE2A492ABFBBC700A9EA21 /* Anxiety.swift in Sources */,
@@ -933,6 +940,7 @@
 				3053F3BD2A92DB0B00046BD1 /* AuthViewModel.swift in Sources */,
 				302D6EFE2AC3A6BE00408E05 /* MessagesModel.swift in Sources */,
 				30AE2A632ABFBC0C00A9EA21 /* OnBoardingNextButton.swift in Sources */,
+				3060FF192AC9EBB400CBE117 /* ChallengeData.swift in Sources */,
 				3053F40D2A92DD3600046BD1 /* ForgotPassword.swift in Sources */,
 				3053F4252A92E02400046BD1 /* OpenAIService.swift in Sources */,
 				30AE2A572ABFBBE700A9EA21 /* OnBoarding2.swift in Sources */,

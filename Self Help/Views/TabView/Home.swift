@@ -19,6 +19,14 @@ struct Home: View {
     
     @StateObject var uservm = UserDataViewModel(dataService: UserFirebaseDataService())
     
+    
+    
+    @StateObject var affirmationvm = AffirmationViewModel(ds: AffirmationFirebaseDataService())
+
+    
+    @StateObject var challengevm = ChallengesViewModel(ds: ChallengeFirebaseDataService() )
+    
+    
     init() {
         /// Hiding Tab Bar Due To SwiftUI iOS 16.4 Bug
         UITabBar.appearance().isHidden = true
@@ -29,7 +37,7 @@ struct Home: View {
             TabView(selection: $activeTab) {
                 
                 
-                ChatView().environmentObject(AuthViewModel())
+                ChatView( challengevm: challengevm, affirmationsvm: affirmationvm, uservm: uservm).environmentObject(AuthViewModel())
                     .tabItem {
                         Image(systemName: Tab.chatview.systemImage)
                         Text(Tab.chatview.rawValue)

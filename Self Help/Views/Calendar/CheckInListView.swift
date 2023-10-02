@@ -179,10 +179,10 @@ struct CheckInListView: View {
                     
                     let currentDate = Date()
                               
-                    let formattedCurrentDate = userdata.formattedDate(date: currentDate)
+                    let formattedCurrentDate = userdata.formattedLastCheckinDate(date: currentDate)
 
                     
-                    if userdata.formattedDate(date: userdata.lastcheckin) == formattedCurrentDate {
+                    if userdata.formattedLastCheckinDate(date: userdata.lastcheckin) == formattedCurrentDate {
 
                     }else{
                         
@@ -202,22 +202,34 @@ struct CheckInListView: View {
                     
                     
                     let userdataDate = userdata.lastcheckin
-                    let yesterdayUserDate = Calendar.current.date(byAdding: .day, value: -1, to: userdataDate) ?? userdataDate
-                    let formatedUserYesterdayDate = userdata.formattedLastCheckinDate(date: yesterdayUserDate)
+        //            let yesterdayUserDate = Calendar.current.date(byAdding: .day, value: -1, to: userdataDate) ?? userdataDate
+                    let formatedUserYesterdayDate = userdata.formattedLastCheckinDate(date: userdataDate)
                     
                     
-                    print("\(userdata.formattedDate(date: userdata.lastcheckin))")
+                    print("\(userdata.formattedLastCheckinDate(date: userdata.lastcheckin))")
                     print("\(formattedYesterdayDate)")
 
                     if formatedUserYesterdayDate == formattedYesterdayDate {
                         
                         
                     }else{
+                        
+                        let formatedUserCurrentDate = userdata.formattedLastCheckinDate(date: userdataDate)
+                        let formatedCurrentDate = userdata.formattedLastCheckinDate(date: currentDate)
+                        
+                        
+                        if formatedUserCurrentDate == formatedCurrentDate{
+                            
+                            
+                            
+                        }else{
+                        
+                        
                         if let user = viewModel.currentUser{
                             
                             uservm.resetStreak(user.id)
                             
-                            
+                        }
                         }
                     }
                         
@@ -266,5 +278,3 @@ struct CheckInListView: View {
     
 
 }
-
-

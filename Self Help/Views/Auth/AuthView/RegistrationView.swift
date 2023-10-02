@@ -15,6 +15,12 @@ struct RegistrationView: View {
     @Environment (\.dismiss) var dismiss
     @EnvironmentObject var viewModel: AuthViewModel
     
+    @State  var selectedProblems: [String]
+    @State  var userName: String
+    @State  var userGender: String
+    
+    
+    
     var body: some View {
         
         
@@ -78,7 +84,7 @@ struct RegistrationView: View {
             
             Button {
                 Task{
-                    try await viewModel.createUser(withEmail: email, password: password, fullname: fullname, messageContent: "hello")
+                    try await viewModel.createUser(withEmail: email, password: password, fullname: fullname, userSelectedProblems: selectedProblems ,userGender: userGender ,userName: userName)
                 }
             } label: {
                 HStack{
@@ -129,9 +135,3 @@ extension RegistrationView: AuthenticationFormProtocol{
 
 
 
-struct RegistrationView_Previews: PreviewProvider {
-    static var previews: some View {
-        RegistrationView().environmentObject(AuthViewModel())
-            .background(HelperView())   // << here !!
-    }
-}

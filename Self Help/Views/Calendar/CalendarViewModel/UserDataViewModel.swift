@@ -21,7 +21,7 @@ class UserDataViewModel: ObservableObject {
     
     private var cancellables = Set<AnyCancellable>()
     
-    init(dataService: any UserDataService) {
+    init(dataService: any UserDataService = UserFirebaseDataService()) {
            self.dataService = dataService
            
            dataService.get()

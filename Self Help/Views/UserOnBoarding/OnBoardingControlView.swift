@@ -53,26 +53,18 @@ struct OnBoardingControlView: View {
     
     
     @State private var isShowingFinishedButton = false
-    
     @State private var isShowingFinishedButton2 = false
-    
     
     
     
     @State var usergender: String
     @State var username: String
-    
-    
-    
     @State private var showShameView = false
     @State private var showAngerView = false
     @State private var showGuiltView = false
     @State private var showAnxietyView = false
     @State private var showFearView = false
     @State private var showDepressionView = false
-    
-    
-    
     @State private var showButton = true
     
     
@@ -403,7 +395,7 @@ struct OnBoardingControlView: View {
                             
                             
                             
-                            NavigationLink(destination: LoginView()) {
+                            NavigationLink(destination: LoginView(selectedProblems: vm.selectedProblems, userName: vm.userName, userGender: vm.userGender )) {
                                 Text("Next")
                             }
                             .navigationBarHidden(true)

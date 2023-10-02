@@ -13,13 +13,20 @@ import FirebaseFirestore
 
 
 
+
+
+
+
+
 struct UserData: Identifiable, Codable {
     @DocumentID var id: String? = UUID().uuidString
     var userId = ""
     var documentId: String? // Store the Firestore document ID here
     var lastcheckin = Date(timeIntervalSinceReferenceDate: 0)
     var streak = 0
-
+    var userName = ""
+    var userGender = ""
+    var selectedProblems: [String] = []
     
     func formattedDate(date: Date) -> String {
         let dateFormatter = DateFormatter()
@@ -31,7 +38,7 @@ struct UserData: Identifiable, Codable {
     
     func formattedLastCheckinDate(date: Date) -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM"
+        dateFormatter.dateFormat = "dd/MM/yyyy"
         return dateFormatter.string(from: date)
     }
 

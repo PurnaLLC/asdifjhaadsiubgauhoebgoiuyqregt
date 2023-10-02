@@ -30,6 +30,15 @@ struct LoginView: View {
     
     @EnvironmentObject var signinViewModel: SinginViewModel
     
+
+    
+    @State  var selectedProblems: [String]
+    @State  var userName: String
+    @State  var userGender: String
+    
+    
+
+    
     
     var body: some View {
         
@@ -138,7 +147,7 @@ struct LoginView: View {
                                         // Perform any additional actions on success
                                         Task {
                                             do {
-                                                try await viewModel.createGmailUser(fullname: "", messageContent: "hello")
+                                                try await viewModel.createGmailUser( fullname: fullname, userSelectedProblems:selectedProblems ,userGender: userGender ,userName: userName)
                                                 // TODO: Navigate to Home view
                                             } catch {
                                                 // TODO: Handle error from createUser
@@ -150,14 +159,13 @@ struct LoginView: View {
                             } .padding (.top, 200)
                                 .padding (.bottom, 20)
 
-                            
-                            
+                          
                             
                             
                             SignInWithAppleButton{request in
                                 signinViewModel.SinginWithAppleRequest(request)
                             } onCompletion: { result in
-                                signinViewModel.SinginWithAppleCompletion(result)
+                                signinViewModel.SinginWithAppleCompletion(result, selectedProblems: selectedProblems ,userGender: userGender ,userName: userName )
                             }
                             .cornerRadius(10)
                             .frame(width: 350, height: 50, alignment: .center)
@@ -173,7 +181,7 @@ struct LoginView: View {
                         //sign up button
                         
                         NavigationLink {
-                            RegistrationView()
+                            RegistrationView(selectedProblems: selectedProblems, userName: userName, userGender: userGender)
                                 .navigationBarBackButtonHidden(true)
                             
                         } label: {HStack(spacing: 3){
@@ -214,10 +222,4 @@ extension LoginView: AuthenticationFormProtocol{
     }
 }
 
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView().environmentObject(AuthViewModel())
-            .background(HelperView())   // << here !!
-    }
-}
 

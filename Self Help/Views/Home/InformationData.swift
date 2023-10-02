@@ -32,46 +32,46 @@ func fetchDataOfTheDay(completion: @escaping (DataOfTheDay?) -> Void) {
     // Define the dictionary mapping each day to data
     let dataOfTheDayMapping: [String: [String: Any]] = [
         "Monday": [
-            "greeting1": "SOME BS 1",
+            "greeting1": "SOME BS 1M",
             
-            "greeting2": "SOME BS 2"
+            "greeting2": "SOME BS 2M"
             
         ],
         
         "Tuesday": [
-            "greeting1": "SOME BS 1",
+            "greeting1": "SOME BS 1T",
             
-            "greeting2": "SOME BS 2"
+            "greeting2": "SOME BS 2T"
             
             
         ],
         
         "Wednesday": [
-            "greeting1": "SOME BS 1",
+            "greeting1": "SOME BS 1W",
             
-            "greeting2": "SOME BS 2"
+            "greeting2": "SOME BS 2W"
             
         ],
         "Thursday": [
-            "greeting1": "SOME BS 1",
+            "greeting1": "SOME BS 1Th",
             
-            "greeting2": "SOME BS 2"
+            "greeting2": "SOME BS 2Th"
             
         ],
         "Friday": [
-            "greeting1": "SOME BS 1",
+            "greeting1": "SOME BS 1F",
             
-            "greeting2": "SOME BS 2"
+            "greeting2": "SOME BS 2F"
         ],
         "Saturday": [
-            "greeting1": "SOME BS 1",
+            "greeting1": "SOME BS 1Sa",
             
-            "greeting2": "SOME BS 2"
+            "greeting2": "SOME BS 2Sa"
         ],
         "Sunday": [
-            "greeting1": "SOME BS 1",
+            "greeting1": "SOME BS 1Su",
             
-            "greeting2": "SOME BS 2"
+            "greeting2": "SOME BS 2Su"
         ],
       
         
