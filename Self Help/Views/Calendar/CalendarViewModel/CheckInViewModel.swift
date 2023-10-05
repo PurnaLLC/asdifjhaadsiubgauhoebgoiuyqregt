@@ -20,6 +20,9 @@ class CheckInViewModel: ObservableObject {
     
     init(ds: any DataService = FirebaseDataService()) {
         self.ds = ds
+        
+        
+        
         ds.get()
             .sink { error in
                 fatalError("\(error)")
