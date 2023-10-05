@@ -45,6 +45,44 @@ struct ChatList: View {
                         
                         Text("\(message.content)")
                         
+                        
+                        HStack{
+                            
+                            Menu {
+                                Button(role: .destructive) {
+                                    
+                                    vm.delete(firebasemessage: message)
+                                    
+                                } label: {
+                                    Image(systemName: "trash")
+                                        .resizable()
+                                        .frame(width: 24, height: 24)
+                                        .foregroundColor(.red)
+                                        .cornerRadius(10)
+                                        .multilineTextAlignment(.center)
+                                    Text("Delete Chechin")
+                                    
+                                    
+                                }
+                                
+                                
+                                
+                                
+                                
+                            } label: {
+                                Image(systemName: "trash")
+                                    .resizable()
+                                    .frame(width: 24, height: 24)
+                                    .foregroundColor(.black)
+                                    .cornerRadius(10)
+                                    .multilineTextAlignment(.center)
+                                
+                                
+                            }
+                        }
+                        .frame(maxWidth: 120, alignment: .trailing)
+                        .padding(.trailing, 10)
+                        
                     }
                     
                 }

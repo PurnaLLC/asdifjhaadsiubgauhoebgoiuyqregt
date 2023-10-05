@@ -19,7 +19,7 @@ import Combine
     
     class ViewModel: ObservableObject {
         
-        @Published var messages: [Message] = [Message(id: "first-message", role: .system, content: "", createdAt: Date())]
+        @Published var messages: [Message] = [Message(id: "first-message", role: .system, content: "You are an AI that helps people with their mental health. You will act as a friend or therapist. You will only talk about mental health. I am will talk with you about my day.", createdAt: Date())]
         
         
         
@@ -136,14 +136,6 @@ import Combine
         }
     }
 
-
-    
-    
-
-    
-    
-    
-    
 
 struct newCharacter: Identifiable{
     var id: String = UUID().uuidString

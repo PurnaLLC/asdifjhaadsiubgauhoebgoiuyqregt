@@ -105,13 +105,15 @@ struct ChatView: View {
                                 
                             }
                         }
-
-
+            
                         
-                        
-                        
-                        
-                        
+                            
+                            
+                            
+                            
+                            
+                            
+                    
                     }
 
                 

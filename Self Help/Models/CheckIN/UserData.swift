@@ -32,6 +32,8 @@ struct UserData: Identifiable, Codable {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE"
         return dateFormatter.string(from: date)
+        
+        
     }
     
     

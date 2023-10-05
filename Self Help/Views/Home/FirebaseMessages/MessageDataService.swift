@@ -13,8 +13,13 @@ protocol MessageDataService: ObservableObject {
     
     func get() -> AnyPublisher<[FirebaseMessage], Error>
     func add(_ firebaseMessage: FirebaseMessage)
-
+    
+    func delete(_ firebaseMessage: FirebaseMessage)
+    
+    
+    
 }
+
 
 
 
@@ -36,6 +41,9 @@ class FirebaseMessageDataService: MessageDataService {
         
         
     }
+    
+    
+    
 
     func get() -> AnyPublisher<[FirebaseMessage], Error>{
         return $messages.tryMap({$0}).eraseToAnyPublisher()
@@ -58,6 +66,23 @@ class FirebaseMessageDataService: MessageDataService {
         }
     }
 
+    
+    
+    func delete(_ firebaseMessage: FirebaseMessage) {
+        guard let documentID = firebaseMessage.id else {
+            return
+        }
+        let db = Firestore.firestore()
+        db.collection(collectionName).document(documentID).delete { error in
+            if let error = error {
+                print("Error deleting checkin from Firestore: \(error)")
+            } else {
+                print("Checkin deleted successfully.")
+            }
+        }
+    }
+    
+    
 
 
 

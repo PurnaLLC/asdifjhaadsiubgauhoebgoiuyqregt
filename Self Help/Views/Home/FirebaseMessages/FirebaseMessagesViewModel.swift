@@ -35,6 +35,8 @@ class FirebaseMessagesViewModel: ObservableObject {
         ds.add(firebasemessage)
     }
     
-    
+    func delete(firebasemessage: FirebaseMessage) {
+        ds.delete(firebasemessage)
+    }
 }
 

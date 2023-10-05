@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "07D1C8A1-67A8-49A9-8861-73EE701E41FF"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F42DB563-D671-40D9-8679-1EFFCD80E0E5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Self Help/Views/Breathe/WimHofBreathAnimationView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "394"
+            endingLineNumber = "394"
+            landmarkName = "breathHold()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D9BF845E-7624-4EE9-9FDC-46FAD239C64A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Self Help/Views/UserOnBoarding/OnBoardingControlView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "D9BF845E-7624-4EE9-9FDC-46FAD239C64A - ba5a045b8164b541"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;Self_Help.OnBoarding1, Self_Help.OnBoarding1Gender&gt;, SwiftUI._ConditionalContent&lt;Self_Help.OnBoarding2, Self_Help.Shame&gt;&gt;, SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;Self_Help.Anger, Self_Help.Guilt&gt;, SwiftUI._ConditionalContent&lt;Self_Help.Anxiety, Self_Help.Fear&gt;&gt;&gt;, SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;Self_Help.Depression, Self_Help.OnBoarding3&gt;, SwiftUI._ConditionalContent&lt;Self_Help.OnBoarding4, Self_Help.OnBoarding5&gt;&gt;, Self_Help.OnBoarding6&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt;&gt;)&gt; in closure #1 () -&gt; SwiftUI.ZStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;Self_Help.OnBoarding1, Self_Help.OnBoarding1Gender&gt;, SwiftUI._ConditionalContent&lt;Self_Help.OnBoarding2, Self_Help.Shame&gt;&gt;, SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;Self_Help.Anger, Self_Help.Guilt&gt;, SwiftUI._ConditionalContent&lt;Self_Help.Anxiety, Self_Help.Fear&gt;&gt;&gt;, SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;Self_Help.Depression, Self_Help.OnBoarding3&gt;, SwiftUI._ConditionalContent&lt;Self_Help.OnBoarding4, Self_Help.OnBoarding5&gt;&gt;, Self_Help.OnBoarding6&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt;&gt;)&gt;&gt; in Self_Help.OnBoardingControlView.body.getter : some"
+                  moduleName = "Self Help"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maxwellmeyer/Documents/asdifjhaadsiubgauhoebgoiuyqregt/Self%20Help/Views/UserOnBoarding/OnBoardingControlView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "788">
+               </Location>
+               <Location
+                  uuid = "D9BF845E-7624-4EE9-9FDC-46FAD239C64A - 78bc4c03737a8759"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;Self_Help.OnBoarding1, Self_Help.OnBoarding1Gender&gt;, SwiftUI._ConditionalContent&lt;Self_Help.OnBoarding2, Self_Help.Shame&gt;&gt;, SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;Self_Help.Anger, Self_Help.Guilt&gt;, SwiftUI._ConditionalContent&lt;Self_Help.Anxiety, Self_Help.Fear&gt;&gt;&gt;, SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;Self_Help.Depression, Self_Help.OnBoarding3&gt;, SwiftUI._ConditionalContent&lt;Self_Help.OnBoarding4, Self_Help.OnBoarding5&gt;&gt;, Self_Help.OnBoarding6&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;Self_Help.OnBoarding1, Self_Help.OnBoarding1Gender&gt;, SwiftUI._ConditionalContent&lt;Self_Help.OnBoarding2, Self_Help.Shame&gt;&gt;, SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;Self_Help.Anger, Self_Help.Guilt&gt;, SwiftUI._ConditionalContent&lt;Self_Help.Anxiety, Self_Help.Fear&gt;&gt;&gt;, SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;Self_Help.Depression, Self_Help.OnBoarding3&gt;, SwiftUI._ConditionalContent&lt;Self_Help.OnBoarding4, Self_Help.OnBoarding5&gt;&gt;, Self_Help.OnBoarding6&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt;&gt;)&gt; in closure #1 () -&gt; SwiftUI.ZStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;Self_Help.OnBoarding1, Self_Help.OnBoarding1Gender&gt;, SwiftUI._ConditionalContent&lt;Self_Help.OnBoarding2, Self_Help.Shame&gt;&gt;, SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;Self_Help.Anger, Self_Help.Guilt&gt;, SwiftUI._ConditionalContent&lt;Self_Help.Anxiety, Self_Help.Fear&gt;&gt;&gt;, SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;Self_Help.Depression, Self_Help.OnBoarding3&gt;, SwiftUI._ConditionalContent&lt;Self_Help.OnBoarding4, Self_Help.OnBoarding5&gt;&gt;, Self_Help.OnBoarding6&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt;&gt;)&gt;&gt; in Self_Help.OnBoardingControlView.body.getter : some"
+                  moduleName = "Self Help"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maxwellmeyer/Documents/asdifjhaadsiubgauhoebgoiuyqregt/Self%20Help/Views/UserOnBoarding/OnBoardingControlView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "1072">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "72DDE338-3AB3-48BB-B954-911F61E98E9B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Self Help/Views/UserOnBoarding/OnBoardingControlView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "85554D5C-C755-4FD8-8490-7972329B3F20"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Self Help/Views/UserOnBoarding/OnBoardingControlView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "85554D5C-C755-4FD8-8490-7972329B3F20 - ba5a045b8164b541"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;Self_Help.OnBoarding1, Self_Help.OnBoarding1Gender&gt;, SwiftUI._ConditionalContent&lt;Self_Help.OnBoarding2, Self_Help.Shame&gt;&gt;, SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;Self_Help.Anger, Self_Help.Guilt&gt;, SwiftUI._ConditionalContent&lt;Self_Help.Anxiety, Self_Help.Fear&gt;&gt;&gt;, SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;Self_Help.Depression, Self_Help.OnBoarding3&gt;, SwiftUI._ConditionalContent&lt;Self_Help.OnBoarding4, Self_Help.OnBoarding5&gt;&gt;, Self_Help.OnBoarding6&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt;&gt;)&gt; in closure #1 () -&gt; SwiftUI.ZStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;Self_Help.OnBoarding1, Self_Help.OnBoarding1Gender&gt;, SwiftUI._ConditionalContent&lt;Self_Help.OnBoarding2, Self_Help.Shame&gt;&gt;, SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;Self_Help.Anger, Self_Help.Guilt&gt;, SwiftUI._ConditionalContent&lt;Self_Help.Anxiety, Self_Help.Fear&gt;&gt;&gt;, SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;Self_Help.Depression, Self_Help.OnBoarding3&gt;, SwiftUI._ConditionalContent&lt;Self_Help.OnBoarding4, Self_Help.OnBoarding5&gt;&gt;, Self_Help.OnBoarding6&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt;&gt;)&gt;&gt; in Self_Help.OnBoardingControlView.body.getter : some"
+                  moduleName = "Self Help"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maxwellmeyer/Documents/asdifjhaadsiubgauhoebgoiuyqregt/Self%20Help/Views/UserOnBoarding/OnBoardingControlView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "788">
+               </Location>
+               <Location
+                  uuid = "85554D5C-C755-4FD8-8490-7972329B3F20 - 78bc4c03737a8759"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;Self_Help.OnBoarding1, Self_Help.OnBoarding1Gender&gt;, SwiftUI._ConditionalContent&lt;Self_Help.OnBoarding2, Self_Help.Shame&gt;&gt;, SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;Self_Help.Anger, Self_Help.Guilt&gt;, SwiftUI._ConditionalContent&lt;Self_Help.Anxiety, Self_Help.Fear&gt;&gt;&gt;, SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;Self_Help.Depression, Self_Help.OnBoarding3&gt;, SwiftUI._ConditionalContent&lt;Self_Help.OnBoarding4, Self_Help.OnBoarding5&gt;&gt;, Self_Help.OnBoarding6&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;Self_Help.OnBoarding1, Self_Help.OnBoarding1Gender&gt;, SwiftUI._ConditionalContent&lt;Self_Help.OnBoarding2, Self_Help.Shame&gt;&gt;, SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;Self_Help.Anger, Self_Help.Guilt&gt;, SwiftUI._ConditionalContent&lt;Self_Help.Anxiety, Self_Help.Fear&gt;&gt;&gt;, SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;Self_Help.Depression, Self_Help.OnBoarding3&gt;, SwiftUI._ConditionalContent&lt;Self_Help.OnBoarding4, Self_Help.OnBoarding5&gt;&gt;, Self_Help.OnBoarding6&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt;&gt;)&gt; in closure #1 () -&gt; SwiftUI.ZStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;Self_Help.OnBoarding1, Self_Help.OnBoarding1Gender&gt;, SwiftUI._ConditionalContent&lt;Self_Help.OnBoarding2, Self_Help.Shame&gt;&gt;, SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;Self_Help.Anger, Self_Help.Guilt&gt;, SwiftUI._ConditionalContent&lt;Self_Help.Anxiety, Self_Help.Fear&gt;&gt;&gt;, SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;Self_Help.Depression, Self_Help.OnBoarding3&gt;, SwiftUI._ConditionalContent&lt;Self_Help.OnBoarding4, Self_Help.OnBoarding5&gt;&gt;, Self_Help.OnBoarding6&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt;&gt;)&gt;&gt; in Self_Help.OnBoardingControlView.body.getter : some"
+                  moduleName = "Self Help"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maxwellmeyer/Documents/asdifjhaadsiubgauhoebgoiuyqregt/Self%20Help/Views/UserOnBoarding/OnBoardingControlView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "1072">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
