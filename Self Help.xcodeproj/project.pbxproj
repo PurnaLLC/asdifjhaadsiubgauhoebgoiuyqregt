@@ -10,6 +10,7 @@
 		302D6EFE2AC3A6BE00408E05 /* MessagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302D6EFD2AC3A6BE00408E05 /* MessagesModel.swift */; };
 		3035135F2A9C365900C432FF /* ChatViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3035135E2A9C365900C432FF /* ChatViewData.swift */; };
 		303513612A9C3C9200C432FF /* DataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303513602A9C3C9200C432FF /* DataViewModel.swift */; };
+		304606552ACF4F8600452DEE /* CheckInDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304606542ACF4F8600452DEE /* CheckInDataService.swift */; };
 		3053F3A92A92B19B00046BD1 /* Self_HelpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053F3A82A92B19B00046BD1 /* Self_HelpApp.swift */; };
 		3053F3AB2A92B19B00046BD1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053F3AA2A92B19B00046BD1 /* ContentView.swift */; };
 		3053F3AD2A92B19C00046BD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3053F3AC2A92B19C00046BD1 /* Assets.xcassets */; };
@@ -73,7 +74,6 @@
 		3097558B2AB53D1C00A3BBA2 /* Finalsnow2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3097558A2AB53D1C00A3BBA2 /* Finalsnow2.mp4 */; };
 		30AE2A3D2ABFBA6F00A9EA21 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A3C2ABFBA6F00A9EA21 /* UserData.swift */; };
 		30AE2A3F2ABFBA7B00A9EA21 /* ChatInListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A3E2ABFBA7B00A9EA21 /* ChatInListModel.swift */; };
-		30AE2A432ABFBAAC00A9EA21 /* CheckInDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A422ABFBAAC00A9EA21 /* CheckInDataService.swift */; };
 		30AE2A452ABFBAC100A9EA21 /* UserDataDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A442ABFBAC100A9EA21 /* UserDataDataService.swift */; };
 		30AE2A472ABFBBC300A9EA21 /* Anger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A462ABFBBC300A9EA21 /* Anger.swift */; };
 		30AE2A492ABFBBC700A9EA21 /* Anxiety.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AE2A482ABFBBC700A9EA21 /* Anxiety.swift */; };
@@ -189,6 +189,7 @@
 		302D6EFD2AC3A6BE00408E05 /* MessagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesModel.swift; sourceTree = "<group>"; };
 		3035135E2A9C365900C432FF /* ChatViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewData.swift; sourceTree = "<group>"; };
 		303513602A9C3C9200C432FF /* DataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewModel.swift; sourceTree = "<group>"; };
+		304606542ACF4F8600452DEE /* CheckInDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInDataService.swift; sourceTree = "<group>"; };
 		3053F3A52A92B19B00046BD1 /* Self Help.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Self Help.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3053F3A82A92B19B00046BD1 /* Self_HelpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Self_HelpApp.swift; sourceTree = "<group>"; };
 		3053F3AA2A92B19B00046BD1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -226,7 +227,6 @@
 		3097558A2AB53D1C00A3BBA2 /* Finalsnow2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Finalsnow2.mp4; sourceTree = "<group>"; };
 		30AE2A3C2ABFBA6F00A9EA21 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		30AE2A3E2ABFBA7B00A9EA21 /* ChatInListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatInListModel.swift; sourceTree = "<group>"; };
-		30AE2A422ABFBAAC00A9EA21 /* CheckInDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckInDataService.swift; path = "../../../../Desktop/BACKUPFORSELFHELP/BACKUPFORSELFHELP/Self Help/DataProtocal/CheckInDataService.swift"; sourceTree = "<group>"; };
 		30AE2A442ABFBAC100A9EA21 /* UserDataDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataDataService.swift; sourceTree = "<group>"; };
 		30AE2A462ABFBBC300A9EA21 /* Anger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Anger.swift; sourceTree = "<group>"; };
 		30AE2A482ABFBBC700A9EA21 /* Anxiety.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Anxiety.swift; sourceTree = "<group>"; };
@@ -606,7 +606,7 @@
 		30B0371F2AA826B100BA25D5 /* DataProtocal */ = {
 			isa = PBXGroup;
 			children = (
-				30AE2A422ABFBAAC00A9EA21 /* CheckInDataService.swift */,
+				304606542ACF4F8600452DEE /* CheckInDataService.swift */,
 				30AE2A442ABFBAC100A9EA21 /* UserDataDataService.swift */,
 			);
 			path = DataProtocal;
@@ -925,12 +925,12 @@
 				30CCD8552AC20E480058299C /* BreathAnimationPickerView.swift in Sources */,
 				3053F4292A92F72A00046BD1 /* InformationData.swift in Sources */,
 				3053F3FF2A92DD0200046BD1 /* ShimmerEffect.swift in Sources */,
-				30AE2A432ABFBAAC00A9EA21 /* CheckInDataService.swift in Sources */,
 				3060FF112AC5017E00CBE117 /* AISpeeach.swift in Sources */,
 				30AE2A6B2ABFBC1E00A9EA21 /* Video.swift in Sources */,
 				3053F4142A92DEE600046BD1 /* User.swift in Sources */,
 				3053F4032A92DD1100046BD1 /* InputView.swift in Sources */,
 				3060FEFB2AC3B5D600CBE117 /* MessageDataService.swift in Sources */,
+				304606552ACF4F8600452DEE /* CheckInDataService.swift in Sources */,
 				3060FF172AC9118400CBE117 /* AffirmationView.swift in Sources */,
 				309755822AB53B1D00A3BBA2 /* SceneDelegate.swift in Sources */,
 				30AE2A4D2ABFBBD000A9EA21 /* Fear.swift in Sources */,
